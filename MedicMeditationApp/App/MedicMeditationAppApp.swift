@@ -12,7 +12,7 @@ struct MedicMeditationApp: App {
 
     var body: some Scene {
         WindowGroup {
-            SignInView()
+            MenuView()
         }
     }
 }
