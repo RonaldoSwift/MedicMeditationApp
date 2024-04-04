@@ -22,7 +22,7 @@ struct MenuView: View {
                     Text("Home")
                 }
             
-            WelcomeView()
+            PersonView()
                 .tabItem {
                     Image(ImageResource.personIcon)
                     Text("Home")
