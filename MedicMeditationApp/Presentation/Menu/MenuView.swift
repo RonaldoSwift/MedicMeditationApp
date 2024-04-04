@@ -16,7 +16,7 @@ struct MenuView: View {
                     Text("Home")
                 }
             
-            WelcomeView()
+            MusicView()
                 .tabItem {
                     Image(ImageResource.musicIcon)
                     Text("Home")
