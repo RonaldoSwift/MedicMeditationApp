@@ -18,6 +18,8 @@
 		FA4592E42BBB569200C141CF /* MedicMeditationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E32BBB569200C141CF /* MedicMeditationAppUITests.swift */; };
 		FA4592E62BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */; };
 		FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592F52BBB673D00C141CF /* SignInView.swift */; };
+		FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F7E2BBE310E00FBF372 /* MusicView.swift */; };
+		FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F812BBE3CB500FBF372 /* ReproductorView.swift */; };
 		FA8E77482BBCE58A0093EFC2 /* GeneralButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */; };
 		FA8E774C2BBCE8870093EFC2 /* Colores.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774B2BBCE8870093EFC2 /* Colores.xcassets */; };
 		FA8E775C2BBCF9D60093EFC2 /* AlegreyaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */; };
@@ -96,6 +98,8 @@
 		FA4592E32BBB569200C141CF /* MedicMeditationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITests.swift; sourceTree = "<group>"; };
 		FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA4592F52BBB673D00C141CF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		FA794F7E2BBE310E00FBF372 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
+		FA794F812BBE3CB500FBF372 /* ReproductorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReproductorView.swift; sourceTree = "<group>"; };
 		FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButtonComponent.swift; sourceTree = "<group>"; };
 		FA8E774B2BBCE8870093EFC2 /* Colores.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colores.xcassets; sourceTree = "<group>"; };
 		FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 		FA4592F32BBB671500C141CF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA794F802BBE3C8B00FBF372 /* Reproductor */,
+				FA794F7D2BBE30FB00FBF372 /* Music */,
 				FA43A5802BBDD036001B2A5E /* Welcome */,
 				FA43A57D2BBDCBE1001B2A5E /* Menu */,
 				FA43A57A2BBDC3F7001B2A5E /* SignUp */,
@@ -256,6 +262,22 @@
 				FA4592CE2BBB569200C141CF /* MedicMeditationApp.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		FA794F7D2BBE30FB00FBF372 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				FA794F7E2BBE310E00FBF372 /* MusicView.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		FA794F802BBE3C8B00FBF372 /* Reproductor */ = {
+			isa = PBXGroup;
+			children = (
+				FA794F812BBE3CB500FBF372 /* ReproductorView.swift */,
+			);
+			path = Reproductor;
 			sourceTree = "<group>";
 		};
 		FA8E77452BBCE5520093EFC2 /* Core */ = {
@@ -492,7 +514,9 @@
 				FA4592D02BBB569200C141CF /* MedicMeditationApp.xcdatamodeld in Sources */,
 				FA4592C42BBB569100C141CF /* MedicMeditationAppApp.swift in Sources */,
 				FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */,
+				FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */,
 				FA43A5822BBDD057001B2A5E /* WelcomeView.swift in Sources */,
+				FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
