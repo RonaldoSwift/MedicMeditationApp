@@ -21,6 +21,7 @@
 		FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F7E2BBE310E00FBF372 /* MusicView.swift */; };
 		FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F812BBE3CB500FBF372 /* ReproductorView.swift */; };
 		FA794F852BBE426000FBF372 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F842BBE426000FBF372 /* PersonView.swift */; };
+		FA8DD3422BC5FF23009E8E9D /* README in Resources */ = {isa = PBXBuildFile; fileRef = FA8DD3412BC5FF23009E8E9D /* README */; };
 		FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */; };
 		FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */; };
 		FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B72BBF20DA000F3D7A /* SleepSessionView.swift */; };
@@ -105,6 +106,7 @@
 		FA794F7E2BBE310E00FBF372 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		FA794F812BBE3CB500FBF372 /* ReproductorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReproductorView.swift; sourceTree = "<group>"; };
 		FA794F842BBE426000FBF372 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		FA8DD3412BC5FF23009E8E9D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		FA8DF7B72BBF20DA000F3D7A /* SleepSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSessionView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		FA4592B72BBB569100C141CF = {
 			isa = PBXGroup;
 			children = (
+				FA8DD3412BC5FF23009E8E9D /* README */,
 				FA4592C22BBB569100C141CF /* MedicMeditationApp */,
 				FA4592D82BBB569200C141CF /* MedicMeditationAppTests */,
 				FA4592E22BBB569200C141CF /* MedicMeditationAppUITests */,
@@ -483,6 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8DD3422BC5FF23009E8E9D /* README in Resources */,
 				FA8E775F2BBCF9D60093EFC2 /* AlegreyaSans-Italic.ttf in Resources */,
 				FA8E774C2BBCE8870093EFC2 /* Colores.xcassets in Resources */,
 				FA8E77712BBCF9D60093EFC2 /* AlegreyaSans-BlackItalic.ttf in Resources */,
