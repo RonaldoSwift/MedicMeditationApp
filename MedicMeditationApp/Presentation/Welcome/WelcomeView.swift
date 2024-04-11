@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    
+    @State var isActiveMeditation: Bool = false
+    @State var isActiveSleepSession: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Welcome back, Afreen!")
@@ -106,7 +110,7 @@ struct WelcomeView: View {
                                     .foregroundColor(Color.foreGroundCard)
                                 
                                 Button(action: {
-                                    
+                                    isActiveMeditation = true
                                 }, label: {
                                     HStack {
                                         Text("watch now")
@@ -158,7 +162,7 @@ struct WelcomeView: View {
                                     .foregroundColor(Color.foreGroundCard)
                                 
                                 Button(action: {
-                                    
+                                    isActiveSleepSession = true
                                 }, label: {
                                     HStack {
                                         Text("watch now")
@@ -188,6 +192,12 @@ struct WelcomeView: View {
             
         }
         .padding()
+        .navigation(MeditationView(), $isActiveMeditation)
+        .navigation(SleepSessionView(), $isActiveSleepSession)
+        .toolbar(content: {
+            TextToolbarContent(image: Image(ImageResource.paintingForest))
+        })
+        .navigationBarBackButtonHidden(true)
     }
 }
 

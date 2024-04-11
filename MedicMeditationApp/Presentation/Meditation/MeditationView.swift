@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MeditationView: View {
+    
+    @State var isActiveTools: Bool = false
+
     var body: some View {
         VStack(spacing: 20) {
             Text("Meditation")
@@ -27,7 +30,7 @@ struct MeditationView: View {
                 .foregroundColor(Color.buttonForeGround)
             
             Button(action: {
-                
+                isActiveTools = true
             }, label: {
                 Text("Start Now                ")
                     .font(.custom("AlegreyaSans-Medium", size: 25))
@@ -38,6 +41,7 @@ struct MeditationView: View {
             })
         }
         .padding()
+        .navigation(ToolsView(), $isActiveTools)
     }
 }
 

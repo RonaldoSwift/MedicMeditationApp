@@ -21,6 +21,9 @@
 		FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F7E2BBE310E00FBF372 /* MusicView.swift */; };
 		FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F812BBE3CB500FBF372 /* ReproductorView.swift */; };
 		FA794F852BBE426000FBF372 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F842BBE426000FBF372 /* PersonView.swift */; };
+		FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB0072BC71999004767E4 /* View+Extension.swift */; };
+		FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB0092BC719B6004767E4 /* NavigationModifier.swift */; };
+		FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */; };
 		FA8DD3422BC5FF23009E8E9D /* README in Resources */ = {isa = PBXBuildFile; fileRef = FA8DD3412BC5FF23009E8E9D /* README */; };
 		FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */; };
 		FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */; };
@@ -106,6 +109,9 @@
 		FA794F7E2BBE310E00FBF372 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		FA794F812BBE3CB500FBF372 /* ReproductorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReproductorView.swift; sourceTree = "<group>"; };
 		FA794F842BBE426000FBF372 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		FA7EB0072BC71999004767E4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		FA7EB0092BC719B6004767E4 /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
+		FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToolbarContent.swift; sourceTree = "<group>"; };
 		FA8DD3412BC5FF23009E8E9D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				FA43A57E2BBDCBFE001B2A5E /* MenuView.swift */,
+				FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 		FA4592C22BBB569100C141CF /* MedicMeditationApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA7EB0062BC7196C004767E4 /* Navigation */,
 				FA8E77862BBCFA700093EFC2 /* Info.plist */,
 				FA8E77492BBCE83C0093EFC2 /* Resources */,
 				FA4592F22BBB66FF00C141CF /* App */,
@@ -301,6 +309,15 @@
 				FA794F842BBE426000FBF372 /* PersonView.swift */,
 			);
 			path = Person;
+			sourceTree = "<group>";
+		};
+		FA7EB0062BC7196C004767E4 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FA7EB0072BC71999004767E4 /* View+Extension.swift */,
+				FA7EB0092BC719B6004767E4 /* NavigationModifier.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		FA8DF7B02BBF1887000F3D7A /* Meditation */ = {
@@ -562,12 +579,15 @@
 				FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */,
 				FA4592D02BBB569200C141CF /* MedicMeditationApp.xcdatamodeld in Sources */,
 				FA4592C42BBB569100C141CF /* MedicMeditationAppApp.swift in Sources */,
+				FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */,
 				FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */,
+				FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */,
 				FA794F852BBE426000FBF372 /* PersonView.swift in Sources */,
 				FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */,
 				FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */,
 				FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */,
 				FA43A5822BBDD057001B2A5E /* WelcomeView.swift in Sources */,
+				FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */,
 				FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

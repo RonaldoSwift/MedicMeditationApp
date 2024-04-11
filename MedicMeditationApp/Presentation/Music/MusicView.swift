@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MusicView: View {
+    
+    @State var isActiveReproductor: Bool = false
+    
     var body: some View {
         VStack {
             ZStack {
@@ -41,7 +44,9 @@ struct MusicView: View {
                 .padding(.trailing,80)
             }
             ScrollView   {
-                Button(action: {}, label: {
+                Button(action: {
+                    isActiveReproductor = true
+                }, label: {
                     HStack(spacing:80) {
                         HStack(spacing: 20) {
                             Image(ImageResource.paintingForest)
@@ -113,6 +118,7 @@ struct MusicView: View {
            
         }
         .padding()
+        .navigation(ReproductorView(), $isActiveReproductor)
     }
 }
 
