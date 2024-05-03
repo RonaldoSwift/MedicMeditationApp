@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TextToolbarContent: ToolbarContent {
-    var image: Image = Image(ImageResource.paintingForest)
+    var image: Image = Image(ImageResource.hamburguer)
 
     @Environment(\.presentationMode) var presentationMode
 
@@ -25,7 +25,7 @@ struct TextToolbarContent: ToolbarContent {
         }
 
         ToolbarItem(placement: .principal) {
-                Image(ImageResource.paintingForest)
+                Image(ImageResource.log)
                     .resizable()
                     .frame(width: 40, height: 40)
         }

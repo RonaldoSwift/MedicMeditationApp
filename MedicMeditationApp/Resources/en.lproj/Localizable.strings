@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  MedicMeditationApp
+
+  Created by Ronaldo Andre on 29/04/24.
+  
+*/
+
+//Textos en ingles
+
+//SignIn
+"signIn.title.text" = "Sign In";
+"signIn.subtitle.text" = "Sign in now to acces your excercises";
+"signIn.subtitleDos.text" = "and saved music.";
+"signIn.email.text" = "Email Address";
+"signIn.password.text" = "Password";
+"signIn.forgotPassword.text" = "Forgot Password?";
+"signIn.donthaveAnAccount.text" = "Dont have  an account?";
+"signIn.signUp.text" = "Sign Up";
+
+//SignUp
+"signUp.title.text" = "Sign Up";
+"signUp.subtitle.text" = "Sign up now for free and start";
+"signUp.subtitleDos.text" = "meditating, and explore Medic.";
+"signUp.name.text" = "Name";
+"signUp.emailAddress.text" = "Email Address";
+"signUp.password.text" = "Password";
+"signUp.alreadyHave.text" = "Already have an account?";
+"signUp.signIn.text" = "Sign In";

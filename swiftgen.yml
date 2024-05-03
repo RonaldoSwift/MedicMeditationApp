@@ -1,0 +1,35 @@
+input_dir: MedicMeditationApp/
+output_dir: MedicMeditationApp/Generado/
+
+fonts:
+  inputs:
+    - Resources/Fonts
+  outputs:
+    - templateName: swift5
+      params:
+        enumName: Fonts
+        forceProvidesNamespaces: true
+        publicAccess: true
+      output: Fonts.swift
+
+json:
+  inputs:
+   - Resources/JSON
+  outputs:
+   - templateName: runtime-swift4
+     output: JSON.swift
+
+strings:
+  inputs:
+    - Resources/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Strings.swift
+
+xcassets:
+  inputs:
+    - Resources/Assets/Imagenes.xcassets
+    - Resources/Assets/Colores.xcassets
+  outputs:
+    - templateName: swift5
+      output: Assets.swift
