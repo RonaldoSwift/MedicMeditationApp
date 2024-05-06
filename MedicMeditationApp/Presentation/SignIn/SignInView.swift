@@ -37,14 +37,13 @@ struct SignInView: View {
                     
                     TextField(L10n.SignIn.Email.text, text: $email)
                         .padding()
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                        .background(Color.colorTextField)
-                        .cornerRadius(10)
+                        
                     TextField(L10n.SignIn.Password.text, text: $password)
                         .padding()
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                        .background(Color.colorTextField)
-                        .cornerRadius(10)
                     
                     HStack {
                         Spacer()

@@ -13,15 +13,16 @@ struct AuthenticationRootView: View {
     @State var isActiveLogin: Bool = false
     @State var isActiveSignUp: Bool = false
     @State var isActiveForgotPasword: Bool = false
-     
+    
     var body: some View {
         NavigationView {
-            SignInView(onClickLogin: {
-                isActiveLogin = true
-            }, onClickSignUp: {
-                isActiveSignUp = true
-            }, onClickForgotPasword: {
-                isActiveForgotPasword = true
+            SignInView(
+                onClickLogin: {
+                    isActiveLogin = true
+                }, onClickSignUp: {
+                    isActiveSignUp = true
+                }, onClickForgotPasword: {
+                    isActiveForgotPasword = true
                 }
             )
             .navigation(MenuView(), $isActiveLogin)

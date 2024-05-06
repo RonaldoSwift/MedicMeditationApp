@@ -27,3 +27,11 @@
 "signUp.password.text" = "Password";
 "signUp.alreadyHave.text" = "Already have an account?";
 "signUp.signIn.text" = "Sign In";
+
+//Forgot Pasword
+"forgotPasword.title.text" = "Forgot Pasword";
+"forgotPasword.ForgottenYourPassword.text" = "Forgotten your password? Fill in the";
+"forgotPasword.BoxesToSend.text" = "boxes to send a verification email to";
+"forgotPasword.YourGmail.text" = "your gmail address.";
+"forgotPasword.emailAddress.text" = "Email Address";
+"forgotPasword.Accept.text" = "Accept";

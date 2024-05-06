@@ -19,7 +19,7 @@ struct MedicMeditationApp: App {
                 case .authentication:
                     AuthenticationRootView()
                 case .principal:
-                      PrincipalRootView()
+                    PrincipalRootView()
                 }
             }
             .environmentObject(appRootManager)

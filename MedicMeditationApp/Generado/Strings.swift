@@ -10,6 +10,32 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum ForgotPasword {
+    internal enum Accept {
+      /// Accept
+      internal static let text = L10n.tr("Localizable", "forgotPasword.Accept.text", fallback: "Accept")
+    }
+    internal enum BoxesToSend {
+      /// boxes to send a verification email to
+      internal static let text = L10n.tr("Localizable", "forgotPasword.BoxesToSend.text", fallback: "boxes to send a verification email to")
+    }
+    internal enum ForgottenYourPassword {
+      /// Forgotten your password? Fill in the
+      internal static let text = L10n.tr("Localizable", "forgotPasword.ForgottenYourPassword.text", fallback: "Forgotten your password? Fill in the")
+    }
+    internal enum YourGmail {
+      /// your gmail address.
+      internal static let text = L10n.tr("Localizable", "forgotPasword.YourGmail.text", fallback: "your gmail address.")
+    }
+    internal enum EmailAddress {
+      /// Email Address
+      internal static let text = L10n.tr("Localizable", "forgotPasword.emailAddress.text", fallback: "Email Address")
+    }
+    internal enum Title {
+      /// Forgot Pasword
+      internal static let text = L10n.tr("Localizable", "forgotPasword.title.text", fallback: "Forgot Pasword")
+    }
+  }
   internal enum SignIn {
     internal enum DonthaveAnAccount {
       /// Dont have  an account?

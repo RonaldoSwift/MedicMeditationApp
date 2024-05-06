@@ -23,24 +23,23 @@ struct ForgotPasswordView: View {
                             .padding(.bottom,20)
                             .padding(.top,20)
                         
-                        Text("Forgot Pasword")
-                            .font(.custom("AlegreyaSans-Medium", size: 30))
-                        Text("Forgotten your password? Fill in the")
-                            .font(.custom("AlegreyaSans-Regular", size: 22))
-                        Text("boxes to send a verification email to")
-                            .font(.custom("AlegreyaSans-Regular", size: 22))
-                        Text("your gmail address.")
-                            .font(.custom("AlegreyaSans-Regular", size: 22))
+                        Text(L10n.ForgotPasword.Title.text)
+                            .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 30))
+                        Text(L10n.ForgotPasword.ForgottenYourPassword.text)
+                            .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                        Text(L10n.ForgotPasword.BoxesToSend.text)
+                            .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                        Text(L10n.ForgotPasword.YourGmail.text)
+                            .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
                         
-                        TextField("Email Address", text: $email)
+                        TextField(L10n.ForgotPasword.EmailAddress.text, text: $email)
                             .padding()
-                            .font(.custom("AlegreyaSans-Regular", size: 18))
-                            .background(Color.colorTextField)
-                            .cornerRadius(10)
+                            .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                         
                         PrimaryButton(onClickInSitioWeb: {
                             isActiveSignIn = true
-                        }, textoDelButton: "Accept")
+                        }, textoDelButton: L10n.ForgotPasword.Accept.text)
                         
                     }
                     .padding()
