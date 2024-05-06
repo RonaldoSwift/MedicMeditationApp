@@ -17,57 +17,63 @@ struct SignUpView: View {
     @State var isActiveSignIn: Bool = false
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ZStack {
-                    VStack(alignment: .leading) {
-                        Image(ImageResource.log)
-                            .resizable()
-                            .frame(width: 170, height: 170)
-                        Text("Sign Up")
-                            .font(.custom("AlegreyaSans-Medium", size: 30))
-                        Text("Sign up now for free and start")
-                            .font(.custom("AlegreyaSans-Regular", size: 22))
-                        Text("meditating, and explore Medic.")
-                            .font(.custom("AlegreyaSans-Regular", size: 22))
-                        
-                        TextField("Name", text: $name)
-                            .padding()
-                            .cornerRadius(10)
-                        TextField("Email Address", text: $emailAddress)
-                            .padding()
-                            .cornerRadius(10)
-                        TextField("Password", text: $password)
-                            .padding()
-                            .cornerRadius(10)
-                        
-                        generalButtonComponent(onClickInSitioWeb: {
-                            isActiveMenu = true
-                        }, textoDelButton: "SIGNUP")
-                        
-                        HStack {
-                            Text("Already have an account?")
-                                .font(.custom("AlegreyaSans-Regular", size: 20))
-                            
-                            Button(action: {
-                                isActiveSignIn = true
-                            }, label: {
-                                Text("Sign In")
-                                    .font(.custom("AlegreyaSans-Bold", size: 20))
-                                    .foregroundColor(Color.buttonForeGround)
-                                
-                            })
-                        }
-                        .padding(.leading,50)
+        VStack {
+            ZStack {
+                VStack(alignment: .leading) {
+                    Image(ImageResource.log)
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.bottom,20)
+                        .padding(.top,20)
+                    
+                    Text(L10n.SignUp.Title.text)
+                        .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 30))
+                    Text(L10n.SignUp.Subtitle.text)
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                    Text(L10n.SignUp.SubtitleDos.text)
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                    
+                    TextField(L10n.SignUp.Name.text, text: $name)
+                        .padding()
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                        .foregroundColor(Color.gray)
+                        .background(Color.colorTextField)
+                        .cornerRadius(10)
+                    TextField(L10n.SignUp.EmailAddress.text, text: $emailAddress)
+                        .padding()
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                        .background(Color.colorTextField)
+                        .cornerRadius(10)
+                    TextField(L10n.SignUp.Password.text, text: $password)
+                        .padding()
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                        .background(Color.colorTextField)
+                        .cornerRadius(10)
+                    
+                    PrimaryButton(onClickInSitioWeb: {
+                        isActiveMenu = true
+                    }, textoDelButton: "SIGNUP")
+                    
+                    HStack {
+                        Text(L10n.SignUp.AlreadyHave.text)
+                            .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 20))
+                        Button(action: {
+                            isActiveSignIn = true
+                        }, label: {
+                            Text(L10n.SignUp.SignIn.text)
+                                .font(Fonts.AlegreyaSans.bold.swiftUIFont(size: 20))
+                                .foregroundColor(Color.buttonForeGround)
+                        })
                     }
-                    .padding()
+                    .padding(.leading,50)
                 }
-                Image(ImageResource.fondo)
-                    .edgesIgnoringSafeArea(.all)
+                .padding()
             }
-            .navigation(MenuView(), $isActiveMenu)
-            .navigation(SignInView(), $isActiveSignIn)
+            Image(ImageResource.fondo)
+                .edgesIgnoringSafeArea(.all)
         }
+        .navigation(MenuView(), $isActiveMenu)
+        .navigation(SignInView(onClickLogin: {}, onClickSignUp: {}, onClickForgotPasword: {}), $isActiveSignIn)
     }
 }
 

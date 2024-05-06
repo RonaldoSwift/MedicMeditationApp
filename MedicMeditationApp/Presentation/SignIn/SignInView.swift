@@ -9,73 +9,89 @@ import SwiftUI
 
 struct SignInView: View {
     
+    @EnvironmentObject private var appRootManager: AppRootManager
+    
     @State var email: String = ""
     @State var password: String = ""
     
-    @State var isActiveMenu: Bool = false
-    @State var isActiveSignUp: Bool = false
+    var onClickLogin: () -> Void
+    var onClickSignUp: () -> Void
+    var onClickForgotPasword: () -> Void
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ZStack {
-                    VStack(alignment: .leading) {
-                        Image(ImageResource.log)
+        VStack {
+            ZStack {
+                VStack(alignment: .leading) {
+                    Image(ImageResource.log)
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .padding(.bottom,20)
+                        .padding(.top,20)
+                    
+                    Text(L10n.SignIn.Title.text)
+                        .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 30))
+                    Text(L10n.SignIn.Subtitle.text)
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                    Text(L10n.SignIn.SubtitleDos.text)
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                    
+                    TextField(L10n.SignIn.Email.text, text: $email)
+                        .padding()
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
                         
-                        Text("Sign In")
-                            .font(.custom("AlegreyaSans-Medium", size: 30))
-                        Text("Sign in now to access your excercises")
-                            .font(.custom("AlegreyaSans-Regular", size: 22))
-                        Text("and save music.")
-                            .font(.custom("AlegreyaSans-Regular", size: 22))
-                        
-                        TextField("Email Address", text: $email)
-                            .padding()
-                            .cornerRadius(10)
-                        TextField("Password", text: $password)
-                            .padding()
-                            .cornerRadius(10)
-                        
-                        Button(action: {}, label: {
-                            Text("Forgot Password?")
-                                .font(.custom("AlegreyaSans-Regular", size: 14))
+                    TextField(L10n.SignIn.Password.text, text: $password)
+                        .padding()
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                    
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            onClickForgotPasword()
+                        }, label: {
+                            Text(L10n.SignIn.ForgotPassword.text)
+                                .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 14))
                                 .foregroundColor(Color.buttonForgot)
                             
                         })
-                        .padding(.leading,260)
-                        
-                        generalButtonComponent(onClickInSitioWeb: {
-                            isActiveMenu = true
-                        }, textoDelButton: "LOGIN")
-                        
-                        HStack {
-                            Text("Dont have  an account?")
-                                .font(.custom("AlegreyaSans-Regular", size: 20))
-                            
-                            Button(action: {
-                                isActiveSignUp = true
-                            }, label: {
-                                Text("Sign Up")
-                                    .font(.custom("AlegreyaSans-Bold", size: 20))
-                                    .foregroundColor(Color.buttonForeGround)
-                                
-                            })
-                        }
-                        .padding(.leading,50)
-                        
+                        .padding(.bottom,30)
                     }
-                    .padding()
+                    
+                    PrimaryButton(onClickInSitioWeb: {
+                        appRootManager.currentRoot = .principal
+                        //onClickLogin()
+                    }, textoDelButton: L10n.SignIn.Login.text)
+                    
+                    HStack {
+                        Spacer()
+                        Text(L10n.SignIn.DonthaveAnAccount.text)
+                            .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 20))
+                            .foregroundColor(Color.buttonForeGround)
+                        
+                        Button(action: {
+                            onClickSignUp()
+                        }, label: {
+                            Text(L10n.SignIn.SignUp.text)
+                                .font(Fonts.AlegreyaSans.bold.swiftUIFont(size: 20))
+                                .foregroundColor(Color.buttonForeGround)
+                        })
+                        Spacer()
+                    }
                 }
-                Spacer()
-                Image(ImageResource.fondo)
-                    .edgesIgnoringSafeArea(.all)
+                .padding()
             }
-            .navigation(MenuView(), $isActiveMenu)
-            .navigation(SignUpView(), $isActiveSignUp)
+            Spacer()
+            Image(ImageResource.fondo)
+                .edgesIgnoringSafeArea(.all)
         }
     }
 }
 
 #Preview {
-    SignInView()
+    SignInView(
+        onClickLogin: {},
+        onClickSignUp: {},
+        onClickForgotPasword: {}
+    )
 }

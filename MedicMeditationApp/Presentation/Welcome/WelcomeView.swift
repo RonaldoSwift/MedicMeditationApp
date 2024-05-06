@@ -188,8 +188,6 @@ struct WelcomeView: View {
             }
             .padding(.leading,10)
             
-            
-            
         }
         .padding()
         .navigation(MeditationView(), $isActiveMeditation)

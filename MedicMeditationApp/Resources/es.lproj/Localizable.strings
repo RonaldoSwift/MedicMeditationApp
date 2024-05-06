@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  MedicMeditationApp
+
+  Created by Ronaldo Andre on 29/04/24.
+  
+*/
+
+//SignIn
+"signIn.title.text" = "Iniciar sesión";
+"signIn.subtitle.text" = "Identifícate ahora para acceder a tus ejercicios";
+"signIn.subtitleDos.text" = "y música guardada.";
+"signIn.email.text" = "Dirección de correo electrónico";
+"signIn.password.text" = "Contraseña";
+"signIn.forgotPassword.text" = "¿Ha olvidado su contraseña?";
+"signIn.donthaveAnAccount.text" = "¿No tiene cuenta?";
+"signIn.login.text" = "INICIAR SESIÓN";
+"signIn.signUp.text" = "Inscribirse";
+
+//SignUp
+"signUp.title.text" = "Inscribirse";
+"signUp.subtitle.text" = "Regístrate gratis y empieza a";
+"signUp.subtitleDos.text" = "meditar y explorar Medic.";
+"signUp.name.text" = "Nombre";
+"signUp.emailAddress.text" = "Dirección de correo electrónico";
+"signUp.password.text" = "Contraseña";
+"signUp.alreadyHave.text" = "¿Ya tiene una cuenta?";
+"signUp.signIn.text" = "Iniciar sesión";
+
+//Forgot Pasword
+"forgotPasword.title.text" = "Contraseña olvidada";
+"forgotPasword.ForgottenYourPassword.text" = "¿Ha olvidado su contraseña? Rellene el";
+"forgotPasword.BoxesToSend.text" = "para enviar un correo electrónico de verificación a";
+"forgotPasword.YourGmail.text" = "tu dirección de gmail.";
+"forgotPasword.emailAddress.text" = "Dirección de correo electrónico";
+"forgotPasword.Accept.text" = "Acepto";
