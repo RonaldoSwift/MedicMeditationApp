@@ -35,24 +35,23 @@ struct SignUpView: View {
                     
                     TextField(L10n.SignUp.Name.text, text: $name)
                         .padding()
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
                         .foregroundColor(Color.gray)
-                        .background(Color.colorTextField)
-                        .cornerRadius(10)
+                        
                     TextField(L10n.SignUp.EmailAddress.text, text: $emailAddress)
                         .padding()
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                        .background(Color.colorTextField)
-                        .cornerRadius(10)
+                        
                     TextField(L10n.SignUp.Password.text, text: $password)
                         .padding()
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                        .background(Color.colorTextField)
-                        .cornerRadius(10)
                     
                     PrimaryButton(onClickInSitioWeb: {
                         isActiveMenu = true
-                    }, textoDelButton: "SIGNUP")
+                    }, textoDelButton: L10n.SignUp.SignUp.text)
                     
                     HStack {
                         Text(L10n.SignUp.AlreadyHave.text)

@@ -25,6 +25,7 @@
 "signUp.emailAddress.text" = "Dirección de correo electrónico";
 "signUp.password.text" = "Contraseña";
 "signUp.alreadyHave.text" = "¿Ya tiene una cuenta?";
+"signUp.signUp.text" = "INSCRIPCIÓN";
 "signUp.signIn.text" = "Iniciar sesión";
 
 //Forgot Pasword

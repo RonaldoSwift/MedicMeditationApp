@@ -98,6 +98,10 @@ internal enum L10n {
       /// Sign In
       internal static let text = L10n.tr("Localizable", "signUp.signIn.text", fallback: "Sign In")
     }
+    internal enum SignUp {
+      /// SIGNUP
+      internal static let text = L10n.tr("Localizable", "signUp.signUp.text", fallback: "SIGNUP")
+    }
     internal enum Subtitle {
       /// Sign up now for free and start
       internal static let text = L10n.tr("Localizable", "signUp.subtitle.text", fallback: "Sign up now for free and start")
