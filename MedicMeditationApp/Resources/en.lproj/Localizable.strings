@@ -16,6 +16,7 @@
 "signIn.password.text" = "Password";
 "signIn.forgotPassword.text" = "Forgot Password?";
 "signIn.donthaveAnAccount.text" = "Dont have  an account?";
+"signIn.login.text" = "LOGIN";
 "signIn.signUp.text" = "Sign Up";
 
 //SignUp

@@ -49,6 +49,10 @@ internal enum L10n {
       /// Forgot Password?
       internal static let text = L10n.tr("Localizable", "signIn.forgotPassword.text", fallback: "Forgot Password?")
     }
+    internal enum Login {
+      /// LOGIN
+      internal static let text = L10n.tr("Localizable", "signIn.login.text", fallback: "LOGIN")
+    }
     internal enum Password {
       /// Password
       internal static let text = L10n.tr("Localizable", "signIn.password.text", fallback: "Password")

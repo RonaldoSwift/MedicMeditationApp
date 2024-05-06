@@ -55,15 +55,16 @@ struct SignInView: View {
                                 .foregroundColor(Color.buttonForgot)
                             
                         })
-                        .padding(.bottom,50)
+                        .padding(.bottom,30)
                     }
                     
                     PrimaryButton(onClickInSitioWeb: {
                         appRootManager.currentRoot = .principal
                         //onClickLogin()
-                    }, textoDelButton: "LOGIN")
+                    }, textoDelButton: L10n.SignIn.Login.text)
                     
                     HStack {
+                        Spacer()
                         Text(L10n.SignIn.DonthaveAnAccount.text)
                             .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 20))
                             .foregroundColor(Color.buttonForeGround)
@@ -75,8 +76,8 @@ struct SignInView: View {
                                 .font(Fonts.AlegreyaSans.bold.swiftUIFont(size: 20))
                                 .foregroundColor(Color.buttonForeGround)
                         })
+                        Spacer()
                     }
-                    .padding(.leading,50)
                 }
                 .padding()
             }

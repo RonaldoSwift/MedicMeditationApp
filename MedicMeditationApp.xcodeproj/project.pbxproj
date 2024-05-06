@@ -116,6 +116,7 @@
 		FA4592E32BBB569200C141CF /* MedicMeditationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITests.swift; sourceTree = "<group>"; };
 		FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA4592F52BBB673D00C141CF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		FA5C0B492BE9740C001C6EDD /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FA7509792BE3FDE50079D5AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA75097A2BE414030079D5AA /* PrincipalRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalRootView.swift; sourceTree = "<group>"; };
 		FA794F7E2BBE310E00FBF372 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
@@ -575,6 +576,7 @@
 				en,
 				Base,
 				es,
+				"es-419",
 			);
 			mainGroup = FA4592B72BBB569100C141CF;
 			productRefGroup = FA4592C12BBB569100C141CF /* Products */;
@@ -730,6 +732,7 @@
 			children = (
 				FA7F869A2BE08B780081C77F /* en */,
 				FA7509792BE3FDE50079D5AA /* es */,
+				FA5C0B492BE9740C001C6EDD /* es-419 */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
