@@ -19,6 +19,7 @@
 		FA4592E62BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */; };
 		FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592F52BBB673D00C141CF /* SignInView.swift */; };
 		FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75097A2BE414030079D5AA /* PrincipalRootView.swift */; };
+		FA758A772BED2E3E007621EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA758A762BED2E3E007621EF /* .gitignore */; };
 		FA7927252BEC42440047F22C /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7927242BEC42440047F22C /* VerificationView.swift */; };
 		FA79272A2BEC4F280047F22C /* package.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927292BEC4F280047F22C /* package.json */; };
 		FA79272C2BEC50EC0047F22C /* ComponentVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */; };
@@ -46,7 +47,7 @@
 		FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */; };
 		FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */; };
 		FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B72BBF20DA000F3D7A /* SleepSessionView.swift */; };
-		FA8E77482BBCE58A0093EFC2 /* GeneralButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */; };
+		FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */; };
 		FA8E774C2BBCE8870093EFC2 /* Colores.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774B2BBCE8870093EFC2 /* Colores.xcassets */; };
 		FA8E775C2BBCF9D60093EFC2 /* AlegreyaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */; };
 		FA8E775D2BBCF9D60093EFC2 /* AlegreyaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */; };
@@ -125,8 +126,8 @@
 		FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA4592F52BBB673D00C141CF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FA5C0B492BE9740C001C6EDD /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		FA7509792BE3FDE50079D5AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA75097A2BE414030079D5AA /* PrincipalRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalRootView.swift; sourceTree = "<group>"; };
+		FA758A762BED2E3E007621EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FA7927242BEC42440047F22C /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		FA7927292BEC4F280047F22C /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentVerification.swift; sourceTree = "<group>"; };
@@ -155,7 +156,7 @@
 		FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		FA8DF7B72BBF20DA000F3D7A /* SleepSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSessionView.swift; sourceTree = "<group>"; };
-		FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButtonComponent.swift; sourceTree = "<group>"; };
+		FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		FA8E774B2BBCE8870093EFC2 /* Colores.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colores.xcassets; sourceTree = "<group>"; };
 		FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Bold.ttf"; sourceTree = "<group>"; };
 		FA8E774F2BBCF9D50093EFC2 /* AlegreyaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -348,6 +349,7 @@
 				FA79272F2BEC55120047F22C /* Response */,
 				FA7927292BEC4F280047F22C /* package.json */,
 				FA79272D2BEC542A0047F22C /* index.js */,
+				FA758A762BED2E3E007621EF /* .gitignore */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -491,7 +493,7 @@
 		FA8E77462BBCE5650093EFC2 /* ButtonStyle */ = {
 			isa = PBXGroup;
 			children = (
-				FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */,
+				FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */,
 			);
 			path = ButtonStyle;
 			sourceTree = "<group>";
@@ -623,7 +625,6 @@
 			knownRegions = (
 				en,
 				Base,
-				es,
 				"es-419",
 			);
 			mainGroup = FA4592B72BBB569100C141CF;
@@ -644,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8DD3422BC5FF23009E8E9D /* README.md in Resources */,
+				FA758A772BED2E3E007621EF /* .gitignore in Resources */,
 				FA8E775F2BBCF9D60093EFC2 /* AlegreyaSans-Italic.ttf in Resources */,
 				FA8E774C2BBCE8870093EFC2 /* Colores.xcassets in Resources */,
 				FA8E77712BBCF9D60093EFC2 /* AlegreyaSans-BlackItalic.ttf in Resources */,
@@ -715,7 +717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8E77482BBCE58A0093EFC2 /* GeneralButtonComponent.swift in Sources */,
+				FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */,
 				FA7927252BEC42440047F22C /* VerificationView.swift in Sources */,
 				FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */,
 				FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */,
@@ -787,7 +789,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA7F869A2BE08B780081C77F /* en */,
-				FA7509792BE3FDE50079D5AA /* es */,
 				FA5C0B492BE9740C001C6EDD /* es-419 */,
 			);
 			name = Localizable.strings;
