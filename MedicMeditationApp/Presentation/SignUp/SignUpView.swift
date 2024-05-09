@@ -13,8 +13,9 @@ struct SignUpView: View {
     @State var emailAddress: String = ""
     @State var password: String = ""
     
-    @State var isActiveMenu: Bool = false
-    @State var isActiveSignIn: Bool = false
+    @State var isActiveSignUp: Bool = false
+    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -33,31 +34,29 @@ struct SignUpView: View {
                     Text(L10n.SignUp.SubtitleDos.text)
                         .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
                     
-                    TextField(L10n.SignUp.Name.text, text: $name)
-                        .padding()
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                        .foregroundColor(Color.gray)
+                    VStack(spacing: 20){
+                        TextField(L10n.SignUp.Name.text, text: $name)
                         
-                    TextField(L10n.SignUp.EmailAddress.text, text: $emailAddress)
-                        .padding()
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                        TextField(L10n.SignUp.EmailAddress.text, text: $emailAddress)
                         
-                    TextField(L10n.SignUp.Password.text, text: $password)
-                        .padding()
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                        TextField(L10n.SignUp.Password.text, text: $password)
+                    }
+                    .padding()
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                    .foregroundColor(Color.gray)
                     
                     PrimaryButton(onClickInSitioWeb: {
-                        isActiveMenu = true
+                        isActiveSignUp = true
                     }, textoDelButton: L10n.SignUp.SignUp.text)
                     
                     HStack {
                         Text(L10n.SignUp.AlreadyHave.text)
                             .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 20))
                         Button(action: {
-                            isActiveSignIn = true
+                            
+                            presentationMode.wrappedValue.dismiss()
+                            
                         }, label: {
                             Text(L10n.SignUp.SignIn.text)
                                 .font(Fonts.AlegreyaSans.bold.swiftUIFont(size: 20))
@@ -71,8 +70,11 @@ struct SignUpView: View {
             Image(ImageResource.fondo)
                 .edgesIgnoringSafeArea(.all)
         }
-        .navigation(MenuView(), $isActiveMenu)
-        .navigation(SignInView(onClickLogin: {}, onClickSignUp: {}, onClickForgotPasword: {}), $isActiveSignIn)
+        .toolbar(content: {
+            BackToolbarContent()
+        })
+        .navigationBarBackButtonHidden(true)
+        .navigation(VerificationView(), $isActiveSignUp)
     }
 }
 
