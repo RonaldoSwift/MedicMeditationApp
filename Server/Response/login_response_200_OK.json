@@ -1,0 +1,8 @@
+{
+    "status": "success",
+    "data": {
+        "userName": "Ronaldo",
+        "mensaje": "El Usuario inicio session exitosamente"
+    },
+    "message": "exitoso"
+}

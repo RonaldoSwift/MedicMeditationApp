@@ -27,6 +27,7 @@
 "signUp.emailAddress.text" = "Email Address";
 "signUp.password.text" = "Password";
 "signUp.alreadyHave.text" = "Already have an account?";
+"signUp.signUp.text" = "SIGNUP";
 "signUp.signIn.text" = "Sign In";
 
 //Forgot Pasword

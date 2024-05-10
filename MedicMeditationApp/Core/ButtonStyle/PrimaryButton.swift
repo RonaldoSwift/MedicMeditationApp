@@ -17,7 +17,7 @@ struct PrimaryButton: View {
             onClickInSitioWeb()
         }, label: {
             Text(textoDelButton)
-                .font(.custom("Alegreya-Medium", size: 25))
+                .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 20))
                 .frame(maxWidth: .infinity)
                 .padding(.all, 20)
                 .foregroundStyle(.white)

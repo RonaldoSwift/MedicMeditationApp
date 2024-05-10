@@ -19,6 +19,14 @@
 		FA4592E62BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */; };
 		FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592F52BBB673D00C141CF /* SignInView.swift */; };
 		FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75097A2BE414030079D5AA /* PrincipalRootView.swift */; };
+		FA758A772BED2E3E007621EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA758A762BED2E3E007621EF /* .gitignore */; };
+		FA7927252BEC42440047F22C /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7927242BEC42440047F22C /* VerificationView.swift */; };
+		FA79272A2BEC4F280047F22C /* package.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927292BEC4F280047F22C /* package.json */; };
+		FA79272C2BEC50EC0047F22C /* ComponentVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */; };
+		FA79272E2BEC542A0047F22C /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = FA79272D2BEC542A0047F22C /* index.js */; };
+		FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927302BEC55480047F22C /* login_response_200_OK.json */; };
+		FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */; };
+		FA7927352BEC55C90047F22C /* verification_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927342BEC55C90047F22C /* verification_response_200_OK.json */; };
 		FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F7E2BBE310E00FBF372 /* MusicView.swift */; };
 		FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F812BBE3CB500FBF372 /* ReproductorView.swift */; };
 		FA794F852BBE426000FBF372 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F842BBE426000FBF372 /* PersonView.swift */; };
@@ -34,11 +42,12 @@
 		FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */; };
 		FA7F86922BE073690081C77F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA7F86912BE073690081C77F /* swiftgen.yml */; };
 		FA7F86992BE08B780081C77F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7F869B2BE08B780081C77F /* Localizable.strings */; };
+		FA8AD3102BEAFC630038552C /* BackToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */; };
 		FA8DD3422BC5FF23009E8E9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA8DD3412BC5FF23009E8E9D /* README.md */; };
 		FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */; };
 		FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */; };
 		FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B72BBF20DA000F3D7A /* SleepSessionView.swift */; };
-		FA8E77482BBCE58A0093EFC2 /* GeneralButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */; };
+		FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */; };
 		FA8E774C2BBCE8870093EFC2 /* Colores.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774B2BBCE8870093EFC2 /* Colores.xcassets */; };
 		FA8E775C2BBCF9D60093EFC2 /* AlegreyaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */; };
 		FA8E775D2BBCF9D60093EFC2 /* AlegreyaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */; };
@@ -117,8 +126,15 @@
 		FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA4592F52BBB673D00C141CF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FA5C0B492BE9740C001C6EDD /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		FA7509792BE3FDE50079D5AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA75097A2BE414030079D5AA /* PrincipalRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalRootView.swift; sourceTree = "<group>"; };
+		FA758A762BED2E3E007621EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FA7927242BEC42440047F22C /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		FA7927292BEC4F280047F22C /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentVerification.swift; sourceTree = "<group>"; };
+		FA79272D2BEC542A0047F22C /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		FA7927302BEC55480047F22C /* login_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login_response_200_OK.json; sourceTree = "<group>"; };
+		FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = signUp_response_200_OK.json; sourceTree = "<group>"; };
+		FA7927342BEC55C90047F22C /* verification_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verification_response_200_OK.json; sourceTree = "<group>"; };
 		FA794F7E2BBE310E00FBF372 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		FA794F812BBE3CB500FBF372 /* ReproductorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReproductorView.swift; sourceTree = "<group>"; };
 		FA794F842BBE426000FBF372 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
@@ -135,11 +151,12 @@
 		FA7F86912BE073690081C77F /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		FA7F86982BE081C60081C77F /* UserResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserResponse.json; sourceTree = "<group>"; };
 		FA7F869A2BE08B780081C77F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolbarContent.swift; sourceTree = "<group>"; };
 		FA8DD3412BC5FF23009E8E9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		FA8DF7B72BBF20DA000F3D7A /* SleepSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSessionView.swift; sourceTree = "<group>"; };
-		FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButtonComponent.swift; sourceTree = "<group>"; };
+		FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		FA8E774B2BBCE8870093EFC2 /* Colores.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colores.xcassets; sourceTree = "<group>"; };
 		FA8E774E2BBCF9D50093EFC2 /* AlegreyaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Bold.ttf"; sourceTree = "<group>"; };
 		FA8E774F2BBCF9D50093EFC2 /* AlegreyaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -187,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */,
+				FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -211,6 +229,7 @@
 		FA4592B72BBB569100C141CF = {
 			isa = PBXGroup;
 			children = (
+				FA7927262BEC4DCA0047F22C /* Server */,
 				FA7F86912BE073690081C77F /* swiftgen.yml */,
 				FA8DD3412BC5FF23009E8E9D /* README.md */,
 				FA4592C22BBB569100C141CF /* MedicMeditationApp */,
@@ -283,6 +302,7 @@
 		FA4592F32BBB671500C141CF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA7927232BEC421D0047F22C /* Verification */,
 				FA79CBEC2BE2A77F00B1B612 /* ForgotPasword */,
 				FA8DF7B42BBF18AF000F3D7A /* SleepSession */,
 				FA8DF7B32BBF18A6000F3D7A /* Tools */,
@@ -312,6 +332,36 @@
 				FA4592CE2BBB569200C141CF /* MedicMeditationApp.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		FA7927232BEC421D0047F22C /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				FA7927242BEC42440047F22C /* VerificationView.swift */,
+				FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		FA7927262BEC4DCA0047F22C /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				FA79272F2BEC55120047F22C /* Response */,
+				FA7927292BEC4F280047F22C /* package.json */,
+				FA79272D2BEC542A0047F22C /* index.js */,
+				FA758A762BED2E3E007621EF /* .gitignore */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		FA79272F2BEC55120047F22C /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FA7927302BEC55480047F22C /* login_response_200_OK.json */,
+				FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */,
+				FA7927342BEC55C90047F22C /* verification_response_200_OK.json */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		FA794F7D2BBE30FB00FBF372 /* Music */ = {
@@ -443,7 +493,7 @@
 		FA8E77462BBCE5650093EFC2 /* ButtonStyle */ = {
 			isa = PBXGroup;
 			children = (
-				FA8E77472BBCE58A0093EFC2 /* GeneralButtonComponent.swift */,
+				FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */,
 			);
 			path = ButtonStyle;
 			sourceTree = "<group>";
@@ -575,7 +625,6 @@
 			knownRegions = (
 				en,
 				Base,
-				es,
 				"es-419",
 			);
 			mainGroup = FA4592B72BBB569100C141CF;
@@ -596,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8DD3422BC5FF23009E8E9D /* README.md in Resources */,
+				FA758A772BED2E3E007621EF /* .gitignore in Resources */,
 				FA8E775F2BBCF9D60093EFC2 /* AlegreyaSans-Italic.ttf in Resources */,
 				FA8E774C2BBCE8870093EFC2 /* Colores.xcassets in Resources */,
 				FA8E77712BBCF9D60093EFC2 /* AlegreyaSans-BlackItalic.ttf in Resources */,
@@ -667,7 +717,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8E77482BBCE58A0093EFC2 /* GeneralButtonComponent.swift in Sources */,
+				FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */,
+				FA7927252BEC42440047F22C /* VerificationView.swift in Sources */,
 				FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */,
 				FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */,
 				FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */,
@@ -677,14 +728,21 @@
 				FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */,
 				FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */,
 				FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */,
+				FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */,
 				FA79CBFA2BE2B6AC00B1B612 /* Fonts.swift in Sources */,
 				FA794F852BBE426000FBF372 /* PersonView.swift in Sources */,
 				FA79CBEE2BE2A7A900B1B612 /* ForgotPasswordView.swift in Sources */,
+				FA79272A2BEC4F280047F22C /* package.json in Sources */,
+				FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */,
 				FA79CBF92BE2B6AC00B1B612 /* Strings.swift in Sources */,
+				FA79272C2BEC50EC0047F22C /* ComponentVerification.swift in Sources */,
 				FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */,
+				FA8AD3102BEAFC630038552C /* BackToolbarContent.swift in Sources */,
 				FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */,
 				FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */,
 				FA79CBF82BE2B6AC00B1B612 /* JSON.swift in Sources */,
+				FA7927352BEC55C90047F22C /* verification_response_200_OK.json in Sources */,
+				FA79272E2BEC542A0047F22C /* index.js in Sources */,
 				FA43A5822BBDD057001B2A5E /* WelcomeView.swift in Sources */,
 				FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */,
 				FA7E99AB2BE1DA2600F8CB88 /* AppRootManager.swift in Sources */,
@@ -731,7 +789,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA7F869A2BE08B780081C77F /* en */,
-				FA7509792BE3FDE50079D5AA /* es */,
 				FA5C0B492BE9740C001C6EDD /* es-419 */,
 			);
 			name = Localizable.strings;
