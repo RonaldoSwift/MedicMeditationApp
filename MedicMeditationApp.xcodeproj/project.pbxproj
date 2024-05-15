@@ -18,6 +18,8 @@
 		FA4592E42BBB569200C141CF /* MedicMeditationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E32BBB569200C141CF /* MedicMeditationAppUITests.swift */; };
 		FA4592E62BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */; };
 		FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592F52BBB673D00C141CF /* SignInView.swift */; };
+		FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */; };
+		FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD4A32BF3E66100AE5914 /* SignIn.swift */; };
 		FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75097A2BE414030079D5AA /* PrincipalRootView.swift */; };
 		FA758A772BED2E3E007621EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA758A762BED2E3E007621EF /* .gitignore */; };
 		FA7927252BEC42440047F22C /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7927242BEC42440047F22C /* VerificationView.swift */; };
@@ -42,6 +44,11 @@
 		FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */; };
 		FA7F86922BE073690081C77F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA7F86912BE073690081C77F /* swiftgen.yml */; };
 		FA7F86992BE08B780081C77F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7F869B2BE08B780081C77F /* Localizable.strings */; };
+		FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */; };
+		FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */; };
+		FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */; };
+		FA88D4D62BF2E76F00EB8BEA /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */; };
+		FA88D4D82BF2E78600EB8BEA /* VerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */; };
 		FA8AD3102BEAFC630038552C /* BackToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */; };
 		FA8DD3422BC5FF23009E8E9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA8DD3412BC5FF23009E8E9D /* README.md */; };
 		FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */; };
@@ -126,6 +133,8 @@
 		FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA4592F52BBB673D00C141CF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FA5C0B492BE9740C001C6EDD /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		FA6DD4A32BF3E66100AE5914 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		FA75097A2BE414030079D5AA /* PrincipalRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalRootView.swift; sourceTree = "<group>"; };
 		FA758A762BED2E3E007621EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FA7927242BEC42440047F22C /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
@@ -151,6 +160,11 @@
 		FA7F86912BE073690081C77F /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		FA7F86982BE081C60081C77F /* UserResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserResponse.json; sourceTree = "<group>"; };
 		FA7F869A2BE08B780081C77F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApi.swift; sourceTree = "<group>"; };
+		FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResponse.swift; sourceTree = "<group>"; };
 		FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolbarContent.swift; sourceTree = "<group>"; };
 		FA8DD3412BC5FF23009E8E9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
@@ -259,6 +273,7 @@
 				FA4592F22BBB66FF00C141CF /* App */,
 				FA8E77452BBCE5520093EFC2 /* Core */,
 				FA4592F32BBB671500C141CF /* Presentation */,
+				FA6DD49E2BF3E57A00AE5914 /* Doamin */,
 				FA4592F72BBB67CE00C141CF /* Data */,
 				FA4592C92BBB569200C141CF /* Preview Content */,
 			);
@@ -329,9 +344,35 @@
 		FA4592F72BBB67CE00C141CF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FA88D4C92BF2AC0D00EB8BEA /* MedicMeditationWebService */,
 				FA4592CE2BBB569200C141CF /* MedicMeditationApp.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		FA6DD49E2BF3E57A00AE5914 /* Doamin */ = {
+			isa = PBXGroup;
+			children = (
+				FA6DD49F2BF3E5B100AE5914 /* Repository */,
+				FA6DD4A22BF3E62100AE5914 /* Modelo */,
+			);
+			path = Doamin;
+			sourceTree = "<group>";
+		};
+		FA6DD49F2BF3E5B100AE5914 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FA6DD4A22BF3E62100AE5914 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				FA6DD4A32BF3E66100AE5914 /* SignIn.swift */,
+			);
+			path = Modelo;
 			sourceTree = "<group>";
 		};
 		FA7927232BEC421D0047F22C /* Verification */ = {
@@ -456,6 +497,34 @@
 				FA7F86982BE081C60081C77F /* UserResponse.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		FA88D4C92BF2AC0D00EB8BEA /* MedicMeditationWebService */ = {
+			isa = PBXGroup;
+			children = (
+				FA88D4CE2BF2AD8F00EB8BEA /* Modelo */,
+				FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */,
+				FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */,
+			);
+			path = MedicMeditationWebService;
+			sourceTree = "<group>";
+		};
+		FA88D4CE2BF2AD8F00EB8BEA /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				FA88D4D22BF2AE4E00EB8BEA /* Response */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		FA88D4D22BF2AE4E00EB8BEA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */,
+				FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */,
+				FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		FA8DF7B02BBF1887000F3D7A /* Meditation */ = {
@@ -718,10 +787,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */,
+				FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */,
 				FA7927252BEC42440047F22C /* VerificationView.swift in Sources */,
+				FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */,
 				FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */,
+				FA88D4D82BF2E78600EB8BEA /* VerificationResponse.swift in Sources */,
 				FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */,
 				FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */,
+				FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */,
 				FA4592D02BBB569200C141CF /* MedicMeditationApp.xcdatamodeld in Sources */,
 				FA4592C42BBB569100C141CF /* MedicMeditationApp.swift in Sources */,
 				FA79CBF22BE2B26400B1B612 /* AuthenticationRootView.swift in Sources */,
@@ -744,9 +817,12 @@
 				FA7927352BEC55C90047F22C /* verification_response_200_OK.json in Sources */,
 				FA79272E2BEC542A0047F22C /* index.js in Sources */,
 				FA43A5822BBDD057001B2A5E /* WelcomeView.swift in Sources */,
+				FA88D4D62BF2E76F00EB8BEA /* SignUpResponse.swift in Sources */,
 				FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */,
 				FA7E99AB2BE1DA2600F8CB88 /* AppRootManager.swift in Sources */,
 				FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */,
+				FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */,
+				FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */,
 				FA79CBF72BE2B6AC00B1B612 /* Assets.swift in Sources */,
 				FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */,
 			);

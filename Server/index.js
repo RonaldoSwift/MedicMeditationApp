@@ -14,21 +14,9 @@ server.post("/login", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
 
-        console.log("request: " + JSON.stringify(req.body));
-
-        let filteredUsers = dbjson.users.filter(
-            (user) => user.documentNumber == req.body.documentNumber
-        );  
-
-        if (filteredUsers.length === 0) {
-            res.status(404).jsonp({
-                status: "error",
-                data: null,
-                message: "Credentials are incorrect",
-            });
-        } else {
-            res.status(202).jsonp(loginResponse);
-        }
+        console.log("request: " + req.body);
+        res.status(202).jsonp(loginResponse);
+        
     }, delay);
 });
 
