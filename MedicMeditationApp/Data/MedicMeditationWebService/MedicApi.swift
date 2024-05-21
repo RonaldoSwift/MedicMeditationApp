@@ -12,12 +12,12 @@ class MedicApi {
     
     func fetchLogin() -> AnyPublisher<LoginResponse,Error> {
         guard let urlComponents = URLComponents(string: "http://localhost:8011/login") else {
-            return Fail(error: RonaldoError.errorURL)
+            return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()
         }
         
         guard let validUrl = urlComponents.url else {
-            return Fail(error: RonaldoError.errorDesconocido)
+            return Fail(error: MedicApiError.urlInvalido)
                 .eraseToAnyPublisher()
         }
         
@@ -32,7 +32,7 @@ class MedicApi {
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { (data: Data, response: URLResponse) in
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    throw RonaldoError.errorDesconocido
+                    throw MedicApiError.errorDesconocido
                 }
                 
                 if (200 ... 299 ~= httpResponse.statusCode) {
@@ -40,7 +40,7 @@ class MedicApi {
                 }
                 
                 let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data)
-                throw RonaldoError.errorData(errorResponse.message)
+                throw MedicApiError.errorData(errorResponse.message)
             }
             .decode(type: LoginResponse.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
@@ -48,12 +48,12 @@ class MedicApi {
     
     func fetchSignUp() -> AnyPublisher<SignUpResponse,Error> {
         guard let urlComponents = URLComponents(string: "http://localhost:8011/signUp") else {
-            return Fail(error: RonaldoError.errorURL)
+            return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()
         }
         
         guard let validUrl = urlComponents.url else {
-            return Fail(error: RonaldoError.errorDesconocido)
+            return Fail(error: MedicApiError.urlInvalido)
                 .eraseToAnyPublisher()
         }
         
@@ -68,7 +68,7 @@ class MedicApi {
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { (data: Data, response: URLResponse) in
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    throw RonaldoError.errorDesconocido
+                    throw MedicApiError.errorDesconocido
                 }
                 
                 if (200 ... 299 ~= httpResponse.statusCode) {
@@ -76,21 +76,21 @@ class MedicApi {
                 }
                 
                 let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data)
-                throw RonaldoError.errorData(errorResponse.message)
+                throw MedicApiError.errorData(errorResponse.message)
             }
             .decode(type: SignUpResponse.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
         
     }
     
-    func fetchSignUp() -> AnyPublisher<VerificationResponse,Error> {
+    func fetchVerification() -> AnyPublisher<VerificationResponse,Error> {
         guard let urlComponents = URLComponents(string: "http://localhost:8011/verification") else {
-            return Fail(error: RonaldoError.errorURL)
+            return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()
         }
         
         guard let validUrl = urlComponents.url else {
-            return Fail(error: RonaldoError.errorDesconocido)
+            return Fail(error: MedicApiError.urlInvalido)
                 .eraseToAnyPublisher()
         }
         
@@ -105,7 +105,7 @@ class MedicApi {
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { (data: Data, response: URLResponse) in
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    throw RonaldoError.errorDesconocido
+                    throw MedicApiError.errorDesconocido
                 }
                 
                 if (200 ... 299 ~= httpResponse.statusCode) {
@@ -113,18 +113,17 @@ class MedicApi {
                 }
                 
                 let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data)
-                throw RonaldoError.errorData(errorResponse.message)
+                throw MedicApiError.errorData(errorResponse.message)
             }
             .decode(type: VerificationResponse.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
         
     }
     
-    enum RonaldoError: Error, Equatable {
-        case errorURL
+    enum MedicApiError: Error, Equatable {
+        case errorURL //Usamos estes caso cuando la url tiene un caracter especial que no es aceptable
         case urlInvalido
         case errorData(String)
-        case errorStatusCode
         case errorDesconocido
     }
 }

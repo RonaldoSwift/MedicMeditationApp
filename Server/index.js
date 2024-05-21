@@ -14,7 +14,6 @@ server.post("/login", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
 
-        console.log("request: " + req.body);
         res.status(202).jsonp(loginResponse);
         
     }, delay);
