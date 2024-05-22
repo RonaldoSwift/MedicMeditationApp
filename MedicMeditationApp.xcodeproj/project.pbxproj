@@ -98,6 +98,9 @@
 		FA8E77832BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */; };
 		FA8E77842BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */; };
 		FA8E77852BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */; };
+		FA9236782BFE5D8B00433F23 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9236772BFE5D8B00433F23 /* SignInViewModel.swift */; };
+		FA92367B2BFE76DE00433F23 /* MemoriaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92367A2BFE76DE00433F23 /* MemoriaLogin.swift */; };
+		FA92367D2BFE949100433F23 /* LoginUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92367C2BFE949100433F23 /* LoginUiState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +190,9 @@
 		FA8E775A2BBCF9D60093EFC2 /* AlegreyaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FA8E77862BBCFA700093EFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FA9236772BFE5D8B00433F23 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		FA92367A2BFE76DE00433F23 /* MemoriaLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaLogin.swift; sourceTree = "<group>"; };
+		FA92367C2BFE949100433F23 /* LoginUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUiState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				FA4592F52BBB673D00C141CF /* SignInView.swift */,
+				FA9236772BFE5D8B00433F23 /* SignInViewModel.swift */,
+				FA92367C2BFE949100433F23 /* LoginUiState.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -344,6 +352,7 @@
 		FA4592F72BBB67CE00C141CF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FA9236792BFE767900433F23 /* Memoria */,
 				FA88D4C92BF2AC0D00EB8BEA /* MedicMeditationWebService */,
 				FA4592CE2BBB569200C141CF /* MedicMeditationApp.xcdatamodeld */,
 			);
@@ -608,6 +617,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FA9236792BFE767900433F23 /* Memoria */ = {
+			isa = PBXGroup;
+			children = (
+				FA92367A2BFE76DE00433F23 /* MemoriaLogin.swift */,
+			);
+			path = Memoria;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -790,8 +807,10 @@
 				FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */,
 				FA7927252BEC42440047F22C /* VerificationView.swift in Sources */,
 				FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */,
+				FA9236782BFE5D8B00433F23 /* SignInViewModel.swift in Sources */,
 				FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */,
 				FA88D4D82BF2E78600EB8BEA /* VerificationResponse.swift in Sources */,
+				FA92367D2BFE949100433F23 /* LoginUiState.swift in Sources */,
 				FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */,
 				FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */,
 				FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */,
@@ -805,6 +824,7 @@
 				FA79CBFA2BE2B6AC00B1B612 /* Fonts.swift in Sources */,
 				FA794F852BBE426000FBF372 /* PersonView.swift in Sources */,
 				FA79CBEE2BE2A7A900B1B612 /* ForgotPasswordView.swift in Sources */,
+				FA92367B2BFE76DE00433F23 /* MemoriaLogin.swift in Sources */,
 				FA79272A2BEC4F280047F22C /* package.json in Sources */,
 				FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */,
 				FA79CBF92BE2B6AC00B1B612 /* Strings.swift in Sources */,

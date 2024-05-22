@@ -10,6 +10,11 @@ import SwiftUI
 struct SignInView: View {
     
     @EnvironmentObject private var appRootManager: AppRootManager
+    @StateObject private var signInViewModel = SignInViewModel(loginRepository: LoginRepository(
+        medicApi: MedicApi(),
+        memoriaLogin: MemoriaLogin()
+    )
+    )
     
     @State var email: String = ""
     @State var password: String = ""
@@ -39,7 +44,7 @@ struct SignInView: View {
                         .padding()
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                        
+                    
                     TextField(L10n.SignIn.Password.text, text: $password)
                         .padding()
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -59,8 +64,9 @@ struct SignInView: View {
                     }
                     
                     PrimaryButton(onClickInSitioWeb: {
-                        appRootManager.currentRoot = .principal
+                        //appRootManager.currentRoot = .principal
                         //onClickLogin()
+                        signInViewModel.startLogin()
                     }, textoDelButton: L10n.SignIn.Login.text)
                     
                     HStack {
@@ -85,6 +91,18 @@ struct SignInView: View {
             Image(ImageResource.fondo)
                 .edgesIgnoringSafeArea(.all)
         }
+        .onReceive(signInViewModel.$loginState, perform: { loginState in
+            switch (loginState) {
+            case .inicial:
+                break
+            case .cargando:
+                break
+            case .error(let error):
+                print("Hubo un error \(error)")
+            case .success:
+                appRootManager.currentRoot = .principal
+            }
+        })
     }
 }
 
