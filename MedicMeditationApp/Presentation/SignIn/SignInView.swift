@@ -18,6 +18,10 @@ struct SignInView: View {
     
     @State var email: String = ""
     @State var password: String = ""
+    @State private var showAlert: Bool = false
+    @State private var showLoading: Bool = false
+    @State private var mensajeDeAlerta: String = ""
+    
     
     var onClickLogin: () -> Void
     var onClickSignUp: () -> Void
@@ -91,16 +95,31 @@ struct SignInView: View {
             Image(ImageResource.fondo)
                 .edgesIgnoringSafeArea(.all)
         }
+        
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Error"),
+                message: Text(mensajeDeAlerta),
+                dismissButton: .default(
+                    Text("Entendido"),
+                    action: {
+                    }
+                )
+            )
+        }
         .onReceive(signInViewModel.$loginState, perform: { loginState in
             switch (loginState) {
             case .inicial:
                 break
             case .cargando:
-                break
+                showLoading = true
             case .error(let error):
-                print("Hubo un error \(error)")
+                showAlert = true
+                showLoading = false
+                mensajeDeAlerta = error
             case .success:
                 appRootManager.currentRoot = .principal
+                showLoading = false
             }
         })
     }
