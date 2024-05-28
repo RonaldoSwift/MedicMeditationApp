@@ -6,14 +6,29 @@ const middlewares = jsonServer.defaults();
 const loginResponse = require("./response/login_response_200_OK.json");
 const signUpResponse = require("./response/signUp_response_200_OK.json");
 const verificationResponse = require("./response/verification_response_200_OK.json");
+const errorResponse = require("./Response/error_Response_404.json");
 const dbjson = require("./db.json");
+
+
+server.use(middlewares);
+server.use(jsonServer.bodyParser); // Sirve para interpretar el request 
 
 // AUTHENTICATION ENDPOINTS
 
 server.post("/login", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
+        console.log("request: " + JSON.stringify(req.body));
 
+        console.log("El correo es = "+ req.body.email);
+        if (req.body.email == "" ) {
+            res.status(403).jsonp(errorResponse)
+            return
+        }
+        if (req.body.pasword == "") {
+            res.status(401).jsonp(errorResponse)
+            return
+        } 
         res.status(202).jsonp(loginResponse);
         
     }, delay);

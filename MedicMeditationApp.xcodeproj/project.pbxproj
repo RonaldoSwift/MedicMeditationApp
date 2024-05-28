@@ -38,12 +38,17 @@
 		FA79CBF82BE2B6AC00B1B612 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBF42BE2B6AC00B1B612 /* JSON.swift */; };
 		FA79CBF92BE2B6AC00B1B612 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBF52BE2B6AC00B1B612 /* Strings.swift */; };
 		FA79CBFA2BE2B6AC00B1B612 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBF62BE2B6AC00B1B612 /* Fonts.swift */; };
+		FA7B05032C01837400312E14 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B05022C01837400312E14 /* SignUpViewModel.swift */; };
+		FA7B05052C01838B00312E14 /* SignUpUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B05042C01838B00312E14 /* SignUpUiState.swift */; };
+		FA7B05072C0188D100312E14 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B05062C0188D100312E14 /* SignUpRepository.swift */; };
+		FA7B05092C01890200312E14 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B05082C01890200312E14 /* SignUp.swift */; };
 		FA7E99AB2BE1DA2600F8CB88 /* AppRootManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E99AA2BE1DA2600F8CB88 /* AppRootManager.swift */; };
 		FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB0072BC71999004767E4 /* View+Extension.swift */; };
 		FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB0092BC719B6004767E4 /* NavigationModifier.swift */; };
 		FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */; };
 		FA7F86922BE073690081C77F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA7F86912BE073690081C77F /* swiftgen.yml */; };
 		FA7F86992BE08B780081C77F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7F869B2BE08B780081C77F /* Localizable.strings */; };
+		FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */; };
 		FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */; };
 		FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */; };
 		FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */; };
@@ -156,6 +161,10 @@
 		FA79CBF42BE2B6AC00B1B612 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		FA79CBF52BE2B6AC00B1B612 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		FA79CBF62BE2B6AC00B1B612 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FA7B05022C01837400312E14 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FA7B05042C01838B00312E14 /* SignUpUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUiState.swift; sourceTree = "<group>"; };
+		FA7B05062C0188D100312E14 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		FA7B05082C01890200312E14 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		FA7E99AA2BE1DA2600F8CB88 /* AppRootManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootManager.swift; sourceTree = "<group>"; };
 		FA7EB0072BC71999004767E4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		FA7EB0092BC719B6004767E4 /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
@@ -163,6 +172,7 @@
 		FA7F86912BE073690081C77F /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		FA7F86982BE081C60081C77F /* UserResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserResponse.json; sourceTree = "<group>"; };
 		FA7F869A2BE08B780081C77F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApi.swift; sourceTree = "<group>"; };
 		FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -223,8 +233,10 @@
 		FA43A57A2BBDC3F7001B2A5E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				FA7B05012C01835B00312E14 /* Component */,
 				FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */,
-				FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */,
+				FA7B05022C01837400312E14 /* SignUpViewModel.swift */,
+				FA7B05042C01838B00312E14 /* SignUpUiState.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -323,7 +335,6 @@
 		FA4592F32BBB671500C141CF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FA7927232BEC421D0047F22C /* Verification */,
 				FA79CBEC2BE2A77F00B1B612 /* ForgotPasword */,
 				FA8DF7B42BBF18AF000F3D7A /* SleepSession */,
 				FA8DF7B32BBF18A6000F3D7A /* Tools */,
@@ -333,6 +344,7 @@
 				FA794F7D2BBE30FB00FBF372 /* Music */,
 				FA43A5802BBDD036001B2A5E /* Welcome */,
 				FA43A57D2BBDCBE1001B2A5E /* Menu */,
+				FA7927232BEC421D0047F22C /* Verification */,
 				FA43A57A2BBDC3F7001B2A5E /* SignUp */,
 				FA4592F42BBB672700C141CF /* SignIn */,
 			);
@@ -372,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */,
+				FA7B05062C0188D100312E14 /* SignUpRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -380,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6DD4A32BF3E66100AE5914 /* SignIn.swift */,
+				FA7B05082C01890200312E14 /* SignUp.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -446,6 +460,14 @@
 			path = ForgotPasword;
 			sourceTree = "<group>";
 		};
+		FA7B05012C01835B00312E14 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		FA7E99A92BE1D5D900F8CB88 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +530,14 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		FA86AD7C2C0422FF00B4A3D1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		FA88D4C92BF2AC0D00EB8BEA /* MedicMeditationWebService */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +551,7 @@
 		FA88D4CE2BF2AD8F00EB8BEA /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
+				FA86AD7C2C0422FF00B4A3D1 /* Request */,
 				FA88D4D22BF2AE4E00EB8BEA /* Response */,
 			);
 			path = Modelo;
@@ -804,6 +835,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */,
+				FA7B05072C0188D100312E14 /* SignUpRepository.swift in Sources */,
 				FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */,
 				FA7927252BEC42440047F22C /* VerificationView.swift in Sources */,
 				FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */,
@@ -812,8 +844,11 @@
 				FA88D4D82BF2E78600EB8BEA /* VerificationResponse.swift in Sources */,
 				FA92367D2BFE949100433F23 /* LoginUiState.swift in Sources */,
 				FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */,
+				FA7B05032C01837400312E14 /* SignUpViewModel.swift in Sources */,
 				FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */,
 				FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */,
+				FA7B05092C01890200312E14 /* SignUp.swift in Sources */,
+				FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */,
 				FA4592D02BBB569200C141CF /* MedicMeditationApp.xcdatamodeld in Sources */,
 				FA4592C42BBB569100C141CF /* MedicMeditationApp.swift in Sources */,
 				FA79CBF22BE2B26400B1B612 /* AuthenticationRootView.swift in Sources */,
@@ -825,6 +860,7 @@
 				FA794F852BBE426000FBF372 /* PersonView.swift in Sources */,
 				FA79CBEE2BE2A7A900B1B612 /* ForgotPasswordView.swift in Sources */,
 				FA92367B2BFE76DE00433F23 /* MemoriaLogin.swift in Sources */,
+				FA7B05052C01838B00312E14 /* SignUpUiState.swift in Sources */,
 				FA79272A2BEC4F280047F22C /* package.json in Sources */,
 				FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */,
 				FA79CBF92BE2B6AC00B1B612 /* Strings.swift in Sources */,

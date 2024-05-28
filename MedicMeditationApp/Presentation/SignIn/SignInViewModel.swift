@@ -23,11 +23,24 @@ final class SignInViewModel: ObservableObject {
         self.loginRepository = loginRepository
     }
     
-    func startLogin() {
+    func startLogin(correo: String, password: String) {
+        
+        guard !correo.isEmpty else {
+            self.loginState = LoginUiState.error("Correo Vacio")
+            return
+        }
+        
+        if password.isEmpty {
+            self.loginState = LoginUiState.error("Password vacio")
+            return
+        }
         
         loginState = LoginUiState.cargando
         
-        loginRepository.getLoginFromWebService()
+        loginRepository.getLoginFromWebService(
+            email: correo,
+            pasword: password
+        )
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch (completion) {

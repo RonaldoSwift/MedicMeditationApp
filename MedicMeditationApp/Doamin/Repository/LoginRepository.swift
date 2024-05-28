@@ -28,11 +28,17 @@ class LoginRepository {
         return memoriaLogin.obtenerTokenDeUsuario()
     }
     
-    func getLoginFromWebService() -> AnyPublisher <SignIn, Error> {
-        medicApi.fetchLogin()
+    func getLoginFromWebService(email: String, pasword: String) -> AnyPublisher <SignIn, Error> {
+        
+        let loginRequest = LoginRequest(
+            email: email,
+            pasword: pasword
+        )
+        
+        return medicApi.fetchLogin(loginRequest: loginRequest)
             .map { (loginResponse: LoginResponse) in
                 SignIn(
-                    jwt: loginResponse.data.userName
+                    jwt: loginResponse.data.accessToken
                 )
             }
             .eraseToAnyPublisher()

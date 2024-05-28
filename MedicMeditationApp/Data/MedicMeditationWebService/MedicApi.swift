@@ -10,7 +10,7 @@ import Combine
 
 class MedicApi {
     
-    func fetchLogin() -> AnyPublisher<LoginResponse,Error> {
+    func fetchLogin(loginRequest: LoginRequest) -> AnyPublisher<LoginResponse,Error> {
         guard let urlComponents = URLComponents(string: "http://localhost:8011/login") else {
             return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()
@@ -27,6 +27,9 @@ class MedicApi {
         
         urlRequest.httpMethod = "POST"
         
+        let requestData = try! JSONEncoder().encode(loginRequest)
+        urlRequest.httpBody = requestData
+        
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
@@ -34,11 +37,12 @@ class MedicApi {
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw MedicApiError.errorDesconocido
                 }
-                
+                // 202 - Cuando la aplicacion es exitoso
                 if (200 ... 299 ~= httpResponse.statusCode) {
                     return data
                 }
                 
+                //404 - cualquier rango qeu supere al 200 y 299 en el servicio pasa automaticamente al errorResponse
                 let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data)
                 throw MedicApiError.errorData(errorResponse.message)
             }
