@@ -28,9 +28,17 @@ server.post("/login", (req, res) => {
         if (req.body.pasword == "") {
             res.status(401).jsonp(errorResponse)
             return
-        } 
-        res.status(202).jsonp(loginResponse);
+        }
         
+        let filterUsers = dbjson.users.filter ( (user) =>
+            user.email == req.body.email
+        );
+
+        if (filterUsers.length == 0) {
+            res.status(403).jsonp(errorResponse)
+        } else {
+            res.status(202).jsonp(loginResponse);
+        }
     }, delay);
 });
 
