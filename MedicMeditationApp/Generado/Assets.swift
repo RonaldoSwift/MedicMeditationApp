@@ -37,6 +37,7 @@ internal enum Asset {
   internal enum Imagenes {
     internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let backGroundCard = ImageAsset(name: "BackGroundCard")
+    internal static let backSignUp = ImageAsset(name: "BackSignUp")
     internal static let calculo = ImageAsset(name: "Calculo")
     internal static let calmIcon = ImageAsset(name: "CalmIcon")
     internal static let cardGreenBlack = ImageAsset(name: "CardGreenBlack")

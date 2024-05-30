@@ -21,9 +21,9 @@ struct SignUpResponse: Decodable {
 }
 
 struct SignUpDataResponse: Decodable {
-    var mensaje: String
+    var message: String
     
     enum CodingKeys: String, CodingKey {
-        case mensaje
+        case message = "mensaje"
     }
 }

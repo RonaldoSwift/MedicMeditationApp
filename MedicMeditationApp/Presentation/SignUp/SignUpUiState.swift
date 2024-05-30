@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum SignUpUiState {
+    case inicial
+    case cargando
+    case error(String)
+    case success
+}

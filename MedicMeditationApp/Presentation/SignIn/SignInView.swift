@@ -16,12 +16,11 @@ struct SignInView: View {
     )
     )
     
-    @State var email: String = ""
-    @State var password: String = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
     @State private var showAlert: Bool = false
     @State private var showLoading: Bool = false
     @State private var mensajeDeAlerta: String = ""
-    
     
     var onClickLogin: () -> Void
     var onClickSignUp: () -> Void

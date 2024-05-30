@@ -28,7 +28,7 @@ class LoginRepository {
         return memoriaLogin.obtenerTokenDeUsuario()
     }
     
-    func getLoginFromWebService(email: String, pasword: String) -> AnyPublisher <SignIn, Error> {
+    func getLoginFromWebService(email: String, pasword: String) -> AnyPublisher<SignIn,Error> {
         
         let loginRequest = LoginRequest(
             email: email,

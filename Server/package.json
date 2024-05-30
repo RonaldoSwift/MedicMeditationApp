@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "local": "json-server -p 8011 -r  -w db.json",
+    "local": "json-server --no-cors --port 8011 --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ronaldo Vargas",

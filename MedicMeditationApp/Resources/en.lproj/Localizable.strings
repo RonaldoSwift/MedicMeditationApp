@@ -18,6 +18,9 @@
 "signIn.donthaveAnAccount.text" = "Dont have  an account?";
 "signIn.login.text" = "LOGIN";
 "signIn.signUp.text" = "Sign Up";
+"signIn.EmptyMail.text" = "Correo Vacio";
+"signIn.EmptyPassword.text" = "Password vacio";
+
 
 //SignUp
 "signUp.title.text" = "Sign Up";

@@ -26,12 +26,12 @@ final class SignInViewModel: ObservableObject {
     func startLogin(correo: String, password: String) {
         
         guard !correo.isEmpty else {
-            self.loginState = LoginUiState.error("Correo Vacio")
+            self.loginState = LoginUiState.error(L10n.SignIn.EmptyMail.text)
             return
         }
         
         if password.isEmpty {
-            self.loginState = LoginUiState.error("Password vacio")
+            self.loginState = LoginUiState.error(L10n.SignIn.EmptyPassword.text)
             return
         }
         

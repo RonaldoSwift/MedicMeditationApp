@@ -10,8 +10,6 @@ import Combine
 import Dispatch
 
 @MainActor
-
 final class SignUpViewModel: ObservableObject {
-    
     
 }

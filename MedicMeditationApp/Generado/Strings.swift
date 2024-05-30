@@ -37,6 +37,14 @@ internal enum L10n {
     }
   }
   internal enum SignIn {
+    internal enum EmptyMail {
+      /// Correo Vacio
+      internal static let text = L10n.tr("Localizable", "signIn.EmptyMail.text", fallback: "Correo Vacio")
+    }
+    internal enum EmptyPassword {
+      /// Password vacio
+      internal static let text = L10n.tr("Localizable", "signIn.EmptyPassword.text", fallback: "Password vacio")
+    }
     internal enum DonthaveAnAccount {
       /// Dont have  an account?
       internal static let text = L10n.tr("Localizable", "signIn.donthaveAnAccount.text", fallback: "Dont have  an account?")
