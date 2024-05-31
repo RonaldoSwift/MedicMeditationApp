@@ -21,11 +21,11 @@ server.post("/login", (req, res) => {
         console.log("request: " + JSON.stringify(req.body));
 
         console.log("El correo es = "+ req.body.email);
-        if (req.body.email == "" || !/^[]+@gmail\.com$/.test(req.body.email)) {
+        if (req.body.email == "") {
             res.status(403).jsonp(errorResponse)
             return
         }
-        if (req.body.pasword == "" && req.body.pasword >= 5)  {
+        if (req.body.pasword == "")  {
             res.status(401).jsonp(errorResponse)
             return
         }
@@ -56,6 +56,7 @@ server.post("/signUp", (req, res) => {
 server.post("/verification", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
+        console.log("request: " + JSON.stringify(req.body));
 
         res.status(202).jsonp(verificationResponse);
         

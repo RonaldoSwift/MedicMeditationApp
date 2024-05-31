@@ -18,11 +18,11 @@ class SignUpRepository {
         self.medicApi = medicApi
     }
     
-    func getSignUpFromWebService() -> AnyPublisher <SignUp, Error> {
+    func getSignUpFromWebService() -> AnyPublisher<SignUp, Error> {
         medicApi.fetchSignUp()
             .map { (signUpResponse: SignUpResponse) in
                 SignUp(
-                    message: signUpResponse.message ?? "Error"
+                    message: signUpResponse.data.message 
                 )
             }
             .eraseToAnyPublisher()
