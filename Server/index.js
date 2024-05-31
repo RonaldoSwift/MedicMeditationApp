@@ -6,35 +6,47 @@ const middlewares = jsonServer.defaults();
 const loginResponse = require("./response/login_response_200_OK.json");
 const signUpResponse = require("./response/signUp_response_200_OK.json");
 const verificationResponse = require("./response/verification_response_200_OK.json");
+const errorResponse = require("./Response/error_Response_404.json");
 const dbjson = require("./db.json");
+
+
+server.use(middlewares);
+server.use(jsonServer.bodyParser); // Sirve para interpretar el request 
 
 // AUTHENTICATION ENDPOINTS
 
 server.post("/login", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
-
         console.log("request: " + JSON.stringify(req.body));
 
-        let filteredUsers = dbjson.users.filter(
-            (user) => user.documentNumber == req.body.documentNumber
-        );  
+        console.log("El correo es = "+ req.body.email);
+        if (req.body.email == "") {
+            res.status(403).jsonp(errorResponse)
+            return
+        }
+        if (req.body.pasword == "")  {
+            res.status(401).jsonp(errorResponse)
+            return
+        }
+        
+        let filterUsers = dbjson.users.filter ( (user) =>
+            user.email == req.body.email
+        );
 
-        if (filteredUsers.length === 0) {
-            res.status(404).jsonp({
-                status: "error",
-                data: null,
-                message: "Credentials are incorrect",
-            });
+        if (filterUsers.length == 0) {
+            res.status(403).jsonp(errorResponse)
         } else {
             res.status(202).jsonp(loginResponse);
         }
     }, delay);
 });
 
+// por ahora 
 server.post("/signUp", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
+        console.log("request: " + JSON.stringify(req.body));
 
         res.status(202).jsonp(signUpResponse);
         
@@ -44,6 +56,7 @@ server.post("/signUp", (req, res) => {
 server.post("/verification", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
+        console.log("request: " + JSON.stringify(req.body));
 
         res.status(202).jsonp(verificationResponse);
         
