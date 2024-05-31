@@ -22,7 +22,7 @@ class SignUpRepository {
         medicApi.fetchSignUp()
             .map { (signUpResponse: SignUpResponse) in
                 SignUp(
-                    message: signUpResponse.data.message 
+                    message: signUpResponse.data.message
                 )
             }
             .eraseToAnyPublisher()

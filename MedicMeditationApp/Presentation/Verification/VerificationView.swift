@@ -9,52 +9,83 @@ import SwiftUI
 
 struct VerificationView: View {
     
-    @State var numberUno: String = ""
-    @State var numberDos: String = ""
-    @State var numberTres: String = ""
-    @State var numberCuatro: String = ""
+    @StateObject private var verificationViewModel = VerificationViewModel(verificationRepository: VerificationRepository(
+            medicApi: MedicApi()
+        )
+    )
     
+    @State var codigo: String = ""
     @State var isActiveSignIn: Bool = false
+    @State private var showAlert: Bool = false
+    @State private var showLoading: Bool = false
+    @State private var mensajeDeAlerta: String = ""
     
     var body: some View {
         VStack {
-            ZStack {
-                VStack(alignment: .leading) {
-                    Image(ImageResource.log)
-                        .resizable()
-                        .frame(width: 80, height: 80)
-                        .padding(.bottom,20)
-                        .padding(.top,20)
-                    
-                    Text("Verify Phone Number")
-                        .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 30))
-                    Text("We have sent you a 4 digit code. Please")
-                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
-                    Text("enter here to Verify your Number.")
-                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
-                    
-                    HStack(spacing: 40){
-                        ForEach(0..<4) { index in
-                            //Observacion
-                            ComponentVerification(numberUno: numberUno)
-                        }
+            VStack(alignment: .leading) {
+                Image(ImageResource.log)
+                    .resizable()
+                    .frame(width: 80, height: 80)
+                    .padding(.bottom,20)
+                    .padding(.top,20)
+                
+                Text(L10n.Verification.Title.text)
+                    .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 30))
+                Text(L10n.Verification.SubTitle.text)
+                    .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                Text(L10n.Verification.SubtitleDos.text)
+                    .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                
+                HStack(spacing: 40){
+                    ForEach(0..<4) { index in
+                        //Observacion
+                        ComponentVerification(numberUno: codigo)
                     }
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                    .foregroundColor(Color.gray)
-                    
-                    PrimaryButton(onClickInSitioWeb: {
-                        isActiveSignIn = true
-                    }, textoDelButton: "Verify")
                 }
                 .padding()
-                .padding(.bottom,130)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                .foregroundColor(Color.gray)
                 
+                PrimaryButton(onClickInSitioWeb: {
+                    isActiveSignIn = true
+                    verificationViewModel.startVerification(codigo: codigo)
+                }, textoDelButton: L10n.Verification.Verify.text)
             }
+            .padding()
+            .padding(.bottom,130)
+            
+            Spacer()
             Image(ImageResource.fondo)
                 .edgesIgnoringSafeArea(.all)
         }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(L10n.Verification.Error.text),
+                message: Text(mensajeDeAlerta),
+                dismissButton: .default(
+                    Text(L10n.Verification.Understood.text),
+                    action: {
+                    }
+                )
+            )
+        }
+        .onReceive(verificationViewModel.$verificationUiState, perform: { verificationState in
+            switch (verificationState) {
+            case .inicial:
+                break
+            case.cargando:
+                showLoading = true
+            case.error(let error):
+                showAlert = true
+                showLoading = false
+                mensajeDeAlerta = error
+            case.success:
+                
+                showLoading = false
+            }
+        })
+        
         .toolbar(content: {
             BackToolbarContent()
         })

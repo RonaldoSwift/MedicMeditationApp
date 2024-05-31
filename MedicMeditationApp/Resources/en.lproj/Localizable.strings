@@ -21,7 +21,6 @@
 "signIn.EmptyMail.text" = "Correo Vacio";
 "signIn.EmptyPassword.text" = "Password vacio";
 
-
 //SignUp
 "signUp.title.text" = "Sign Up";
 "signUp.subtitle.text" = "Sign up now for free and start";
@@ -32,6 +31,14 @@
 "signUp.alreadyHave.text" = "Already have an account?";
 "signUp.signUp.text" = "SIGNUP";
 "signUp.signIn.text" = "Sign In";
+
+//Verification
+"verification.title.text" = "Verify Phone Number";
+"verification.subTitle.text" = "We have sent you a 4 digit code. Please";
+"verification.subtitleDos.text" = "enter here to Verify your Number.";
+"verification.verify.text" = "Verify";
+"verification.error.text" = "Error";
+"verification.understood.text" = "Understood";
 
 //Forgot Pasword
 "forgotPasword.title.text" = "Forgot Pasword";
