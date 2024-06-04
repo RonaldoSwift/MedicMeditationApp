@@ -9,4 +9,5 @@ import Foundation
 
 struct SignUp {
     let message: String
+    let codigo: String
 }

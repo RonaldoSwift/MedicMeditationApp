@@ -1,0 +1,8 @@
+{
+    "status": "success",
+    "data": {
+        "mensaje": "El envio el codigo exitosamente al correo",
+        "codigo": "AXM1"
+    },
+    "message": "exitoso"
+}

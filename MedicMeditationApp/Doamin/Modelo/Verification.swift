@@ -8,5 +8,5 @@
 import Foundation
 
 struct Verification {
-    let message: String
+    let codigo: String
 }

@@ -10,11 +10,17 @@ import SwiftUI
 struct VerificationView: View {
     
     @StateObject private var verificationViewModel = VerificationViewModel(verificationRepository: VerificationRepository(
-            medicApi: MedicApi()
-        )
+        medicApi: MedicApi()
+    ), signUpRepository: SignUpRepository(medicApi: MedicApi(), memoriaLogin: MemoriaLogin()
+                                         )
     )
     
-    @State var codigo: String = ""
+    @EnvironmentObject var signUpViewModel: SignUpViewModel
+    
+    @State var codigo1: String = ""
+    @State var codigo2: String = ""
+    @State var codigo3: String = ""
+    @State var codigo4: String = ""
     @State var isActiveSignIn: Bool = false
     @State private var showAlert: Bool = false
     @State private var showLoading: Bool = false
@@ -36,11 +42,13 @@ struct VerificationView: View {
                 Text(L10n.Verification.SubtitleDos.text)
                     .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
                 
-                HStack(spacing: 40){
-                    ForEach(0..<4) { index in
-                        //Observacion
-                        ComponentVerification(numberUno: codigo)
-                    }
+                HStack(spacing: 40) {
+                    
+                    VerificationTextField(numero: $codigo1)
+                    VerificationTextField(numero: $codigo2)
+                    VerificationTextField(numero: $codigo3)
+                    VerificationTextField(numero: $codigo4)
+                    
                 }
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -49,7 +57,12 @@ struct VerificationView: View {
                 
                 PrimaryButton(onClickInSitioWeb: {
                     isActiveSignIn = true
-                    verificationViewModel.startVerification(codigo: codigo)
+                   verificationViewModel.startVerification(
+                    codigo: "\(codigo1)\(codigo2)\(codigo3)\(codigo4)",
+                   nombre: "",
+                   correo: "",
+                   password: ""
+                   )
                 }, textoDelButton: L10n.Verification.Verify.text)
             }
             .padding()

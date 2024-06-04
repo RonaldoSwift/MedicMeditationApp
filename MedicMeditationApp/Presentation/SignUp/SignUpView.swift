@@ -11,13 +11,14 @@ struct SignUpView: View {
     
     @StateObject private var signUpViewModel = SignUpViewModel(
         signUpRepository: SignUpRepository(
-            medicApi: MedicApi()
+            medicApi: MedicApi(),
+            memoriaLogin: MemoriaLogin()
         )
     )
     
-    @State var name: String = ""
-    @State var emailAddress: String = ""
-    @State var password: String = ""
+    @State private var name: String = ""
+    @State private var emailAddress: String = ""
+    @State private var password: String = ""
     @State private var showAlert: Bool = false
     @State private var showLoading: Bool = false
     @State private var mensajeDeAlerta: String = ""
@@ -101,7 +102,7 @@ struct SignUpView: View {
                 showLoading = false
                 mensajeDeAlerta = error
             case.success:
-                
+                isActiveSignUp = true
                 showLoading = false
             }
         })

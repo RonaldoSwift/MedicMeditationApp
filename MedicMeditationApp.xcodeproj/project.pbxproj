@@ -24,7 +24,7 @@
 		FA758A772BED2E3E007621EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA758A762BED2E3E007621EF /* .gitignore */; };
 		FA7927252BEC42440047F22C /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7927242BEC42440047F22C /* VerificationView.swift */; };
 		FA79272A2BEC4F280047F22C /* package.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927292BEC4F280047F22C /* package.json */; };
-		FA79272C2BEC50EC0047F22C /* ComponentVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */; };
+		FA79272C2BEC50EC0047F22C /* VerificationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */; };
 		FA79272E2BEC542A0047F22C /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = FA79272D2BEC542A0047F22C /* index.js */; };
 		FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927302BEC55480047F22C /* login_response_200_OK.json */; };
 		FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */; };
@@ -48,6 +48,8 @@
 		FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */; };
 		FA7F86922BE073690081C77F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA7F86912BE073690081C77F /* swiftgen.yml */; };
 		FA7F86992BE08B780081C77F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7F869B2BE08B780081C77F /* Localizable.strings */; };
+		FA83B0502C0EC93E00AD2F75 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */; };
+		FA83B0522C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */; };
 		FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */; };
 		FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */; };
 		FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */; };
@@ -151,7 +153,7 @@
 		FA758A762BED2E3E007621EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FA7927242BEC42440047F22C /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		FA7927292BEC4F280047F22C /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
-		FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentVerification.swift; sourceTree = "<group>"; };
+		FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTextField.swift; sourceTree = "<group>"; };
 		FA79272D2BEC542A0047F22C /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		FA7927302BEC55480047F22C /* login_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login_response_200_OK.json; sourceTree = "<group>"; };
 		FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = signUp_response_200_OK.json; sourceTree = "<group>"; };
@@ -176,6 +178,8 @@
 		FA7F86912BE073690081C77F /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		FA7F86982BE081C60081C77F /* UserResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserResponse.json; sourceTree = "<group>"; };
 		FA7F869A2BE08B780081C77F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarUsuarioRequest.swift; sourceTree = "<group>"; };
 		FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApi.swift; sourceTree = "<group>"; };
@@ -412,7 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7927242BEC42440047F22C /* VerificationView.swift */,
-				FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */,
+				FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */,
 				FA8C1B1B2C0A630600943310 /* VerificationViewModel.swift */,
 				FA8C1B1D2C0A631C00943310 /* VerificationUiState.swift */,
 			);
@@ -546,6 +550,8 @@
 			isa = PBXGroup;
 			children = (
 				FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */,
+				FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */,
+				FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -878,9 +884,11 @@
 				FA79272A2BEC4F280047F22C /* package.json in Sources */,
 				FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */,
 				FA79CBF92BE2B6AC00B1B612 /* Strings.swift in Sources */,
-				FA79272C2BEC50EC0047F22C /* ComponentVerification.swift in Sources */,
+				FA79272C2BEC50EC0047F22C /* VerificationTextField.swift in Sources */,
+				FA83B0502C0EC93E00AD2F75 /* SignUpRequest.swift in Sources */,
 				FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */,
 				FA8AD3102BEAFC630038552C /* BackToolbarContent.swift in Sources */,
+				FA83B0522C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift in Sources */,
 				FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */,
 				FA8C1B1E2C0A631C00943310 /* VerificationUiState.swift in Sources */,
 				FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */,

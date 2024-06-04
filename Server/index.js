@@ -43,17 +43,22 @@ server.post("/login", (req, res) => {
 });
 
 // por ahora 
-server.post("/signUp", (req, res) => {
+server.post("/enviarCodigo", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
         console.log("request: " + JSON.stringify(req.body));
 
+        if (req.body.email == "") {
+            res.status(401).jsonp(errorResponse)
+            return
+        }
+
         res.status(202).jsonp(signUpResponse);
-        
+
     }, delay);
 });
 
-server.post("/verification", (req, res) => {
+server.post("/registrarUsuario", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
         console.log("request: " + JSON.stringify(req.body));

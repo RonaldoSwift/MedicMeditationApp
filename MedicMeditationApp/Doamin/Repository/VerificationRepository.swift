@@ -18,11 +18,18 @@ class VerificationRepository {
         self.medicApi = medicApi
     }
     
-    func getVerificationFromWebService() -> AnyPublisher<Verification, Error> {
-        medicApi.fetchVerification()
+    func registrarUsuarioFromWebService(nombre: String, correo: String, password: String) -> AnyPublisher<Verification, Error> {
+        
+        let registrarUsuarioRequest = RegistrarUsuarioRequest(
+            nombre: nombre,
+            correo: correo,
+            password: password
+        )
+        
+        return medicApi.fetchVerification(registrarUsuarioRequest: registrarUsuarioRequest)
             .map{ (verificationResponse: VerificationResponse) in
                 Verification(
-                    message: verificationResponse.data.message
+                    codigo: verificationResponse.data.message
                 )
             }
             .eraseToAnyPublisher()

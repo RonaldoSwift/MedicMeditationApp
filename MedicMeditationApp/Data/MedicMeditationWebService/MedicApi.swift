@@ -50,8 +50,8 @@ class MedicApi {
             .eraseToAnyPublisher()
     }
     
-    func fetchSignUp() -> AnyPublisher<SignUpResponse,Error> {
-        guard let urlComponents = URLComponents(string: "http://localhost:8011/signUp") else {
+    func fetchSignUp(signUpRequest: SignUpRequest) -> AnyPublisher<SignUpResponse,Error> {
+        guard let urlComponents = URLComponents(string: "http://localhost:8011/enviarCodigo") else {
             return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()
         }
@@ -66,6 +66,9 @@ class MedicApi {
         )
         
         urlRequest.httpMethod = "POST"
+        
+        let requestData = try! JSONEncoder().encode(signUpRequest)
+        urlRequest.httpBody = requestData
         
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -87,8 +90,8 @@ class MedicApi {
         
     }
     
-    func fetchVerification() -> AnyPublisher<VerificationResponse,Error> {
-        guard let urlComponents = URLComponents(string: "http://localhost:8011/verification") else {
+    func fetchVerification(registrarUsuarioRequest: RegistrarUsuarioRequest) -> AnyPublisher<VerificationResponse,Error> {
+        guard let urlComponents = URLComponents(string: "http://localhost:8011/registrarUsuario") else {
             return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()
         }
@@ -103,6 +106,9 @@ class MedicApi {
         )
         
         urlRequest.httpMethod = "POST"
+        
+        let requestData = try! JSONEncoder().encode(registrarUsuarioRequest)
+        urlRequest.httpBody = requestData
         
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         

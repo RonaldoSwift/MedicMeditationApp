@@ -22,10 +22,8 @@ struct VerificationResponse: Decodable {
 
 struct VerificationDataResponse: Decodable {
     var message: String
-    var codigo: String
     
     enum CodingKeys: String, CodingKey {
         case message = "mensaje"
-        case codigo = "codigo"
     }
 }

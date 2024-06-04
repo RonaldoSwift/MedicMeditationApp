@@ -25,12 +25,12 @@ final class SignUpViewModel: ObservableObject {
     func startSignUp(name: String, emailAddress: String, password: String) {
         
         guard !name.isEmpty else {
-            self.signUpState = SignUpUiState.error("Nombre Invalido")
+            self.signUpState = SignUpUiState.error("Nombre vacio")
          return
         }
         
         guard !emailAddress.isEmpty else {
-            self.signUpState = SignUpUiState.error("Email invalido")
+            self.signUpState = SignUpUiState.error("Correo Vacio")
             return
         }
         
@@ -46,7 +46,7 @@ final class SignUpViewModel: ObservableObject {
         
         signUpState = SignUpUiState.cargando
         
-        signUpRepository.getSignUpFromWebService()
+        signUpRepository.getSignUpFromWebService(email: emailAddress)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch (completion) {
@@ -56,8 +56,8 @@ final class SignUpViewModel: ObservableObject {
                     self.signUpState = SignUpUiState.error("Error en WebService \(error)")
                 }
             }, receiveValue: {(signUp: SignUp) in
+                self.signUpRepository.setCodigoEnMemoria(codigo: signUp.codigo)
                 self.signUpState = SignUpUiState.success
-                print(signUp)
             })
             .store(in: &cancellables)
     }
