@@ -15,7 +15,7 @@ struct VerificationView: View {
                                          )
     )
     
-    @EnvironmentObject var signUpViewModel: SignUpViewModel
+    @EnvironmentObject var sharedAuthenticationViewModel: SharedAuthenticationViewModel
     
     @State var codigo1: String = ""
     @State var codigo2: String = ""
@@ -59,9 +59,9 @@ struct VerificationView: View {
                     isActiveSignIn = true
                    verificationViewModel.startVerification(
                     codigo: "\(codigo1)\(codigo2)\(codigo3)\(codigo4)",
-                   nombre: "",
-                   correo: "",
-                   password: ""
+                    nombre: sharedAuthenticationViewModel.name,
+                    correo: sharedAuthenticationViewModel.email,
+                    password: sharedAuthenticationViewModel.password
                    )
                 }, textoDelButton: L10n.Verification.Verify.text)
             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA21A31F2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */; };
 		FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */; };
 		FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A57E2BBDCBFE001B2A5E /* MenuView.swift */; };
 		FA43A5822BBDD057001B2A5E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A5812BBDD057001B2A5E /* WelcomeView.swift */; };
@@ -132,6 +133,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FA43A57E2BBDCBFE001B2A5E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		FA43A5812BBDD057001B2A5E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 			children = (
 				FA7E99A92BE1D5D900F8CB88 /* Root */,
 				FA4592C32BBB569100C141CF /* MedicMeditationApp.swift */,
+				FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 				FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */,
 				FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */,
 				FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */,
+				FA21A31F2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift in Sources */,
 				FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */,
 				FA79CBFA2BE2B6AC00B1B612 /* Fonts.swift in Sources */,
 				FA794F852BBE426000FBF372 /* PersonView.swift in Sources */,

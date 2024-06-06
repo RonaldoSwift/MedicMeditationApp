@@ -34,7 +34,7 @@ class SignUpRepository {
             email: email
         )
         
-        return medicApi.fetchSignUp(signUpRequest: signUpRequest)
+        return medicApi.sendCode(signUpRequest: signUpRequest)
             .map { (signUpResponse: SignUpResponse) in
                 SignUp(
                     message: signUpResponse.data.message, codigo: signUpResponse.data.codigo

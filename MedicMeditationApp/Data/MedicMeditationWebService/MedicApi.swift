@@ -50,7 +50,7 @@ class MedicApi {
             .eraseToAnyPublisher()
     }
     
-    func fetchSignUp(signUpRequest: SignUpRequest) -> AnyPublisher<SignUpResponse,Error> {
+    func sendCode(signUpRequest: SignUpRequest) -> AnyPublisher<SignUpResponse,Error> {
         guard let urlComponents = URLComponents(string: "http://localhost:8011/enviarCodigo") else {
             return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()
@@ -90,7 +90,7 @@ class MedicApi {
         
     }
     
-    func fetchVerification(registrarUsuarioRequest: RegistrarUsuarioRequest) -> AnyPublisher<VerificationResponse,Error> {
+    func registerUser(registrarUsuarioRequest: RegistrarUsuarioRequest) -> AnyPublisher<VerificationResponse,Error> {
         guard let urlComponents = URLComponents(string: "http://localhost:8011/registrarUsuario") else {
             return Fail(error: MedicApiError.errorURL)
                 .eraseToAnyPublisher()

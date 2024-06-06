@@ -26,7 +26,7 @@ class VerificationRepository {
             password: password
         )
         
-        return medicApi.fetchVerification(registrarUsuarioRequest: registrarUsuarioRequest)
+        return medicApi.registerUser(registrarUsuarioRequest: registrarUsuarioRequest)
             .map{ (verificationResponse: VerificationResponse) in
                 Verification(
                     codigo: verificationResponse.data.message

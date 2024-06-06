@@ -16,6 +16,8 @@ struct SignUpView: View {
         )
     )
     
+    @EnvironmentObject var sharedViewModel: SharedAuthenticationViewModel
+    
     @State private var name: String = ""
     @State private var emailAddress: String = ""
     @State private var password: String = ""

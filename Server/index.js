@@ -4,8 +4,8 @@ const router = jsonServer.router("db.json");
 
 const middlewares = jsonServer.defaults();
 const loginResponse = require("./response/login_response_200_OK.json");
-const signUpResponse = require("./response/signUp_response_200_OK.json");
-const verificationResponse = require("./response/verification_response_200_OK.json");
+const signUpResponse = require("./response/enviarCodigo_response_200_OK.json");
+const verificationResponse = require("./response/registrarUsuario_response_200_OK.json");
 const errorResponse = require("./Response/error_Response_404.json");
 const dbjson = require("./db.json");
 

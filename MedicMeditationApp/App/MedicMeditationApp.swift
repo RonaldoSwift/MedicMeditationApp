@@ -12,8 +12,7 @@ struct MedicMeditationApp: App {
     
     @StateObject private var appRootManager = AppRootManager()
     
-    var signUpViewModel = SignUpViewModel(signUpRepository: SignUpRepository(medicApi: MedicApi(), memoriaLogin: MemoriaLogin()))
-    
+    var sharedAuthenticationViewModel = SharedAuthenticationViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -21,7 +20,7 @@ struct MedicMeditationApp: App {
                 switch appRootManager.currentRoot {
                 case .authentication:
                     AuthenticationRootView()
-                        .environmentObject(signUpViewModel)
+                        .environmentObject(sharedAuthenticationViewModel)
                 case .principal:
                     PrincipalRootView()
                 }
@@ -29,4 +28,8 @@ struct MedicMeditationApp: App {
             .environmentObject(appRootManager)
         }
     }
+    
+    
+    
+    
 }
