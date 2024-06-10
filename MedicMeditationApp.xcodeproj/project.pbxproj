@@ -340,9 +340,9 @@
 		FA4592F22BBB66FF00C141CF /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FA7E99A92BE1D5D900F8CB88 /* Root */,
 				FA4592C32BBB569100C141CF /* MedicMeditationApp.swift */,
 				FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */,
+				FA7E99A92BE1D5D900F8CB88 /* Root */,
 			);
 			path = App;
 			sourceTree = "<group>";

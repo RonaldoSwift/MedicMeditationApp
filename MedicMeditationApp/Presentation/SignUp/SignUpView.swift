@@ -16,7 +16,7 @@ struct SignUpView: View {
         )
     )
     
-    @EnvironmentObject var sharedViewModel: SharedAuthenticationViewModel
+    @EnvironmentObject var sharedAuthenticationViewModel: SharedAuthenticationViewModel
     
     @State private var name: String = ""
     @State private var emailAddress: String = ""
@@ -57,10 +57,14 @@ struct SignUpView: View {
                 .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
                 .foregroundColor(Color.gray)
                 
-                PrimaryButton(onClickInSitioWeb: {
-                    isActiveSignUp = true
-                    signUpViewModel.startSignUp(name: name, emailAddress: emailAddress, password: password)
-                }, textoDelButton: L10n.SignUp.SignUp.text)
+                if showLoading {
+                    ProgressView()
+                        .frame(maxWidth: .infinity)
+                } else {
+                    PrimaryButton(onClickInSitioWeb: {
+                        signUpViewModel.startSignUp(name: name, emailAddress: emailAddress, password: password)
+                    }, textoDelButton: L10n.SignUp.SignUp.text)
+                }
                 
                 HStack {
                     Text(L10n.SignUp.AlreadyHave.text)
@@ -104,6 +108,10 @@ struct SignUpView: View {
                 showLoading = false
                 mensajeDeAlerta = error
             case.success:
+                sharedAuthenticationViewModel.name = name
+                sharedAuthenticationViewModel.email = emailAddress
+                sharedAuthenticationViewModel.password = password
+                
                 isActiveSignUp = true
                 showLoading = false
             }

@@ -28,8 +28,4 @@ struct MedicMeditationApp: App {
             .environmentObject(appRootManager)
         }
     }
-    
-    
-    
-    
 }

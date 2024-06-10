@@ -48,7 +48,7 @@ server.post("/enviarCodigo", (req, res) => {
     setTimeout(() => {
         console.log("request: " + JSON.stringify(req.body));
 
-        if (req.body.email == "") {
+        if (Object.keys(req.body).length == 0 && req.body.email == "") {
             res.status(401).jsonp(errorResponse)
             return
         }
