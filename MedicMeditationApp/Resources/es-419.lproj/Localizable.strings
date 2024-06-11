@@ -16,6 +16,8 @@
 "signIn.donthaveAnAccount.text" = "¿No tiene cuenta?";
 "signIn.login.text" = "INICIAR SESIÓN";
 "signIn.signUp.text" = "Inscribirse";
+"signIn.EmptyMail.text" = "Correo Vacio";
+"signIn.EmptyPassword.text" = "Password vacio";
 
 //SignUp
 "signUp.title.text" = "Inscribirse";
@@ -27,6 +29,14 @@
 "signUp.alreadyHave.text" = "¿Ya tiene una cuenta?";
 "signUp.signUp.text" = "INSCRIPCIÓN";
 "signUp.signIn.text" = "Iniciar sesión";
+
+//Verification
+"verification.title.text" = "Verificar el número de teléfono";
+"verification.subTitle.text" = "Le hemos enviado un código de 4 dígitos. Por favor,";
+"verification.subtitleDos.text" = "entre aquí para verificar su número.";
+"verification.verify.text" = "Verifique";
+"verification.error.text" = "Error";
+"verification.understood.text" = "Entendido";
 
 //Forgot Pasword
 "forgotPasword.title.text" = "Contraseña olvidada";

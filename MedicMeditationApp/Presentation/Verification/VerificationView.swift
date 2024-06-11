@@ -9,57 +9,111 @@ import SwiftUI
 
 struct VerificationView: View {
     
-    @State var numberUno: String = ""
-    @State var numberDos: String = ""
-    @State var numberTres: String = ""
-    @State var numberCuatro: String = ""
+    @StateObject private var verificationViewModel = VerificationViewModel(verificationRepository: VerificationRepository(
+        medicApi: MedicApi()
+    ), signUpRepository: SignUpRepository(medicApi: MedicApi(), memoriaLogin: MemoriaLogin()
+                                         )
+    )
     
+    @EnvironmentObject var sharedAuthenticationViewModel: SharedAuthenticationViewModel
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State var codigo1: String = ""
+    @State var codigo2: String = ""
+    @State var codigo3: String = ""
+    @State var codigo4: String = ""
     @State var isActiveSignIn: Bool = false
+    @State private var showAlert: Bool = false
+    @State private var showLoading: Bool = false
+    @State private var mensajeDeAlerta: String = ""
+    @State private var tituloDeAlerta: String = ""
     
     var body: some View {
         VStack {
-            ZStack {
-                VStack(alignment: .leading) {
-                    Image(ImageResource.log)
-                        .resizable()
-                        .frame(width: 80, height: 80)
-                        .padding(.bottom,20)
-                        .padding(.top,20)
+            VStack(alignment: .leading) {
+                Image(ImageResource.log)
+                    .resizable()
+                    .frame(width: 80, height: 80)
+                    .padding(.bottom,20)
+                    .padding(.top,20)
+                
+                Text(L10n.Verification.Title.text)
+                    .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 30))
+                Text(L10n.Verification.SubTitle.text)
+                    .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                Text(L10n.Verification.SubtitleDos.text)
+                    .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                
+                HStack(spacing: 40) {
                     
-                    Text("Verify Phone Number")
-                        .font(Fonts.AlegreyaSans.medium.swiftUIFont(size: 30))
-                    Text("We have sent you a 4 digit code. Please")
-                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
-                    Text("enter here to Verify your Number.")
-                        .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 22))
+                    VerificationTextField(numero: $codigo1)
+                    VerificationTextField(numero: $codigo2)
+                    VerificationTextField(numero: $codigo3)
+                    VerificationTextField(numero: $codigo4)
                     
-                    HStack(spacing: 40){
-                        ForEach(0..<4) { index in
-                            //Observacion
-                            ComponentVerification(numberUno: numberUno)
-                        }
-                    }
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
-                    .foregroundColor(Color.gray)
-                    
-                    PrimaryButton(onClickInSitioWeb: {
-                        isActiveSignIn = true
-                    }, textoDelButton: "Verify")
                 }
                 .padding()
-                .padding(.bottom,130)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(Fonts.AlegreyaSans.regular.swiftUIFont(size: 18))
+                .foregroundColor(Color.gray)
                 
+                if showLoading {
+                    ProgressView()
+                        .frame(maxWidth: .infinity)
+                } else {
+                    PrimaryButton(onClickInSitioWeb: {
+                       verificationViewModel.startVerification(
+                        codigo: "\(codigo1)\(codigo2)\(codigo3)\(codigo4)",
+                        nombre: sharedAuthenticationViewModel.name,
+                        correo: sharedAuthenticationViewModel.email,
+                        password: sharedAuthenticationViewModel.password
+                       )
+                    }, textoDelButton: L10n.Verification.Verify.text)
+                }
             }
+            .padding()
+            .padding(.bottom,130)
+            
+            Spacer()
             Image(ImageResource.fondo)
                 .edgesIgnoringSafeArea(.all)
         }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(tituloDeAlerta),
+                message: Text(mensajeDeAlerta),
+                dismissButton: .default(
+                    Text(L10n.Verification.Understood.text),
+                    action: {
+                        if(tituloDeAlerta == "Exitoso") {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                )
+            )
+        }
+        .onReceive(verificationViewModel.$verificationUiState, perform: { verificationState in
+            switch (verificationState) {
+            case .inicial:
+                break
+            case.cargando:
+                showLoading = true
+            case.error(let error):
+                showLoading = false
+                tituloDeAlerta = "Error"
+                mensajeDeAlerta = error
+                showAlert = true
+            case.success:
+                showLoading = false
+                tituloDeAlerta = "Exitoso"
+                mensajeDeAlerta = "Se registro correctamente"
+                showAlert = true
+            }
+        })
         .toolbar(content: {
             BackToolbarContent()
         })
         .navigationBarBackButtonHidden(true)
-        .navigation(SignInView(onClickLogin: {}, onClickSignUp: {}, onClickForgotPasword: {}), $isActiveSignIn)
     }
 }
 

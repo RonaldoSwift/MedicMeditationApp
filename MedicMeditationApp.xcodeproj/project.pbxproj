@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA21A31F2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */; };
 		FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */; };
 		FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A57E2BBDCBFE001B2A5E /* MenuView.swift */; };
 		FA43A5822BBDD057001B2A5E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A5812BBDD057001B2A5E /* WelcomeView.swift */; };
@@ -24,7 +25,7 @@
 		FA758A772BED2E3E007621EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA758A762BED2E3E007621EF /* .gitignore */; };
 		FA7927252BEC42440047F22C /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7927242BEC42440047F22C /* VerificationView.swift */; };
 		FA79272A2BEC4F280047F22C /* package.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927292BEC4F280047F22C /* package.json */; };
-		FA79272C2BEC50EC0047F22C /* ComponentVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */; };
+		FA79272C2BEC50EC0047F22C /* VerificationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */; };
 		FA79272E2BEC542A0047F22C /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = FA79272D2BEC542A0047F22C /* index.js */; };
 		FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927302BEC55480047F22C /* login_response_200_OK.json */; };
 		FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */; };
@@ -48,6 +49,8 @@
 		FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */; };
 		FA7F86922BE073690081C77F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA7F86912BE073690081C77F /* swiftgen.yml */; };
 		FA7F86992BE08B780081C77F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7F869B2BE08B780081C77F /* Localizable.strings */; };
+		FA83B0502C0EC93E00AD2F75 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */; };
+		FA83B0522C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */; };
 		FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */; };
 		FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */; };
 		FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */; };
@@ -55,6 +58,10 @@
 		FA88D4D62BF2E76F00EB8BEA /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */; };
 		FA88D4D82BF2E78600EB8BEA /* VerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */; };
 		FA8AD3102BEAFC630038552C /* BackToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */; };
+		FA8C1B182C0A615100943310 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C1B172C0A615100943310 /* Verification.swift */; };
+		FA8C1B1A2C0A61B300943310 /* VerificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C1B192C0A61B300943310 /* VerificationRepository.swift */; };
+		FA8C1B1C2C0A630600943310 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C1B1B2C0A630600943310 /* VerificationViewModel.swift */; };
+		FA8C1B1E2C0A631C00943310 /* VerificationUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C1B1D2C0A631C00943310 /* VerificationUiState.swift */; };
 		FA8DD3422BC5FF23009E8E9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA8DD3412BC5FF23009E8E9D /* README.md */; };
 		FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */; };
 		FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */; };
@@ -126,6 +133,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FA43A57E2BBDCBFE001B2A5E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		FA43A5812BBDD057001B2A5E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -147,7 +155,7 @@
 		FA758A762BED2E3E007621EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FA7927242BEC42440047F22C /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		FA7927292BEC4F280047F22C /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
-		FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentVerification.swift; sourceTree = "<group>"; };
+		FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTextField.swift; sourceTree = "<group>"; };
 		FA79272D2BEC542A0047F22C /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		FA7927302BEC55480047F22C /* login_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login_response_200_OK.json; sourceTree = "<group>"; };
 		FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = signUp_response_200_OK.json; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 		FA7F86912BE073690081C77F /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		FA7F86982BE081C60081C77F /* UserResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserResponse.json; sourceTree = "<group>"; };
 		FA7F869A2BE08B780081C77F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarUsuarioRequest.swift; sourceTree = "<group>"; };
 		FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApi.swift; sourceTree = "<group>"; };
@@ -179,6 +189,10 @@
 		FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResponse.swift; sourceTree = "<group>"; };
 		FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolbarContent.swift; sourceTree = "<group>"; };
+		FA8C1B172C0A615100943310 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		FA8C1B192C0A61B300943310 /* VerificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationRepository.swift; sourceTree = "<group>"; };
+		FA8C1B1B2C0A630600943310 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
+		FA8C1B1D2C0A631C00943310 /* VerificationUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationUiState.swift; sourceTree = "<group>"; };
 		FA8DD3412BC5FF23009E8E9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA8DF7B12BBF189F000F3D7A /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		FA8DF7B52BBF1C26000F3D7A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
@@ -326,8 +340,9 @@
 		FA4592F22BBB66FF00C141CF /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FA7E99A92BE1D5D900F8CB88 /* Root */,
 				FA4592C32BBB569100C141CF /* MedicMeditationApp.swift */,
+				FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */,
+				FA7E99A92BE1D5D900F8CB88 /* Root */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -385,6 +400,7 @@
 			children = (
 				FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */,
 				FA7B05062C0188D100312E14 /* SignUpRepository.swift */,
+				FA8C1B192C0A61B300943310 /* VerificationRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -394,6 +410,7 @@
 			children = (
 				FA6DD4A32BF3E66100AE5914 /* SignIn.swift */,
 				FA7B05082C01890200312E14 /* SignUp.swift */,
+				FA8C1B172C0A615100943310 /* Verification.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -402,7 +419,9 @@
 			isa = PBXGroup;
 			children = (
 				FA7927242BEC42440047F22C /* VerificationView.swift */,
-				FA79272B2BEC50EC0047F22C /* ComponentVerification.swift */,
+				FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */,
+				FA8C1B1B2C0A630600943310 /* VerificationViewModel.swift */,
+				FA8C1B1D2C0A631C00943310 /* VerificationUiState.swift */,
 			);
 			path = Verification;
 			sourceTree = "<group>";
@@ -534,6 +553,8 @@
 			isa = PBXGroup;
 			children = (
 				FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */,
+				FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */,
+				FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -834,6 +855,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8C1B182C0A615100943310 /* Verification.swift in Sources */,
 				FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */,
 				FA7B05072C0188D100312E14 /* SignUpRepository.swift in Sources */,
 				FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */,
@@ -846,6 +868,7 @@
 				FA8DF7B22BBF189F000F3D7A /* MeditationView.swift in Sources */,
 				FA7B05032C01837400312E14 /* SignUpViewModel.swift in Sources */,
 				FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */,
+				FA8C1B1C2C0A630600943310 /* VerificationViewModel.swift in Sources */,
 				FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */,
 				FA7B05092C01890200312E14 /* SignUp.swift in Sources */,
 				FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */,
@@ -855,6 +878,7 @@
 				FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */,
 				FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */,
 				FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */,
+				FA21A31F2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift in Sources */,
 				FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */,
 				FA79CBFA2BE2B6AC00B1B612 /* Fonts.swift in Sources */,
 				FA794F852BBE426000FBF372 /* PersonView.swift in Sources */,
@@ -864,10 +888,13 @@
 				FA79272A2BEC4F280047F22C /* package.json in Sources */,
 				FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */,
 				FA79CBF92BE2B6AC00B1B612 /* Strings.swift in Sources */,
-				FA79272C2BEC50EC0047F22C /* ComponentVerification.swift in Sources */,
+				FA79272C2BEC50EC0047F22C /* VerificationTextField.swift in Sources */,
+				FA83B0502C0EC93E00AD2F75 /* SignUpRequest.swift in Sources */,
 				FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */,
 				FA8AD3102BEAFC630038552C /* BackToolbarContent.swift in Sources */,
+				FA83B0522C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift in Sources */,
 				FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */,
+				FA8C1B1E2C0A631C00943310 /* VerificationUiState.swift in Sources */,
 				FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */,
 				FA79CBF82BE2B6AC00B1B612 /* JSON.swift in Sources */,
 				FA7927352BEC55C90047F22C /* verification_response_200_OK.json in Sources */,
@@ -878,6 +905,7 @@
 				FA7E99AB2BE1DA2600F8CB88 /* AppRootManager.swift in Sources */,
 				FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */,
 				FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */,
+				FA8C1B1A2C0A61B300943310 /* VerificationRepository.swift in Sources */,
 				FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */,
 				FA79CBF72BE2B6AC00B1B612 /* Assets.swift in Sources */,
 				FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */,

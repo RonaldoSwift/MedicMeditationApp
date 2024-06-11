@@ -4,8 +4,8 @@ const router = jsonServer.router("db.json");
 
 const middlewares = jsonServer.defaults();
 const loginResponse = require("./response/login_response_200_OK.json");
-const signUpResponse = require("./response/signUp_response_200_OK.json");
-const verificationResponse = require("./response/verification_response_200_OK.json");
+const signUpResponse = require("./response/enviarCodigo_response_200_OK.json");
+const verificationResponse = require("./response/registrarUsuario_response_200_OK.json");
 const errorResponse = require("./Response/error_Response_404.json");
 const dbjson = require("./db.json");
 
@@ -43,17 +43,22 @@ server.post("/login", (req, res) => {
 });
 
 // por ahora 
-server.post("/signUp", (req, res) => {
+server.post("/enviarCodigo", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
         console.log("request: " + JSON.stringify(req.body));
 
+        if (Object.keys(req.body).length == 0 && req.body.email == "") {
+            res.status(401).jsonp(errorResponse)
+            return
+        }
+
         res.status(202).jsonp(signUpResponse);
-        
+
     }, delay);
 });
 
-server.post("/verification", (req, res) => {
+server.post("/registrarUsuario", (req, res) => {
     const delay = 2000; // In milliseconds
     setTimeout(() => {
         console.log("request: " + JSON.stringify(req.body));

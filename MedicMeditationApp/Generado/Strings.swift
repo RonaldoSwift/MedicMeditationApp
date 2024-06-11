@@ -123,6 +123,32 @@ internal enum L10n {
       internal static let text = L10n.tr("Localizable", "signUp.title.text", fallback: "Sign Up")
     }
   }
+  internal enum Verification {
+    internal enum Error {
+      /// Error
+      internal static let text = L10n.tr("Localizable", "verification.error.text", fallback: "Error")
+    }
+    internal enum SubTitle {
+      /// We have sent you a 4 digit code. Please
+      internal static let text = L10n.tr("Localizable", "verification.subTitle.text", fallback: "We have sent you a 4 digit code. Please")
+    }
+    internal enum SubtitleDos {
+      /// enter here to Verify your Number.
+      internal static let text = L10n.tr("Localizable", "verification.subtitleDos.text", fallback: "enter here to Verify your Number.")
+    }
+    internal enum Title {
+      /// Verify Phone Number
+      internal static let text = L10n.tr("Localizable", "verification.title.text", fallback: "Verify Phone Number")
+    }
+    internal enum Understood {
+      /// Understood
+      internal static let text = L10n.tr("Localizable", "verification.understood.text", fallback: "Understood")
+    }
+    internal enum Verify {
+      /// Verify
+      internal static let text = L10n.tr("Localizable", "verification.verify.text", fallback: "Verify")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

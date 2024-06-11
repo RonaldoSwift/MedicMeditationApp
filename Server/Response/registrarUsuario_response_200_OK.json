@@ -1,8 +1,7 @@
 {
     "status": "success",
     "data": {
-        "mensaje": "Verificacion exitosamente",
-        "codigo": "AXM1"
+        "mensaje": "Se registro al usuario exitosamente"
     },
     "message": "exitoso"
 }

@@ -105,7 +105,7 @@ struct SignInView: View {
                 title: Text("Error"),
                 message: Text(mensajeDeAlerta),
                 dismissButton: .default(
-                    Text("Entendido"),
+                    Text(L10n.Verification.Understood.text),
                     action: {
                     }
                 )
