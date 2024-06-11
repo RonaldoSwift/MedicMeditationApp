@@ -61,6 +61,7 @@ final class SignInViewModel: ObservableObject {
                     self.loginState = LoginUiState.error("Error de Web Service \(error)")
                 }
             }, receiveValue: {(signIn: SignIn) in
+                self.loginRepository.saveUserLoggedInCache(isLogged: true)
                 self.loginRepository.saveTokenInMemory(jwtToken: signIn.jwt)
                 self.loginState = LoginUiState.success
                 print(signIn)

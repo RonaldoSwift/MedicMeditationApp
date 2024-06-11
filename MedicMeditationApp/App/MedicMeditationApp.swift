@@ -14,13 +14,19 @@ struct MedicMeditationApp: App {
     
     var sharedAuthenticationViewModel = SharedAuthenticationViewModel()
     
+    var memoriaLogin = MemoriaLogin()
+    
     var body: some Scene {
         WindowGroup {
             Group {
                 switch appRootManager.currentRoot {
                 case .authentication:
-                    AuthenticationRootView()
-                        .environmentObject(sharedAuthenticationViewModel)
+                    if memoriaLogin.getUserLogged() == true {
+                        PrincipalRootView()
+                    } else {
+                        AuthenticationRootView()
+                            .environmentObject(sharedAuthenticationViewModel)
+                    }
                 case .principal:
                     PrincipalRootView()
                 }

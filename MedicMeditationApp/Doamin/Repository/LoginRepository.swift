@@ -20,6 +20,10 @@ class LoginRepository {
         self.memoriaLogin = memoriaLogin
     }
     
+    func saveUserLoggedInCache(isLogged: Bool) {
+        memoriaLogin.setUserLogged(isLogged: isLogged)
+    }
+    
     func saveTokenInMemory(jwtToken: String) {
         memoriaLogin.setTokenDeUsuario(jwtToken: jwtToken)
     }
