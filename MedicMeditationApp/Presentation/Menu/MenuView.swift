@@ -13,21 +13,23 @@ struct MenuView: View {
             WelcomeView()
                 .tabItem {
                     Image(systemName: "house")
-                    Text("Home")
                 }
             
             MusicView()
                 .tabItem {
-                    Image(ImageResource.musicIcon)
-                    Text("Home")
+                    Image(systemName: "music.note.list")
                 }
             
             PersonView()
                 .tabItem {
-                    Image(ImageResource.personIcon)
-                    Text("Home")
+                    Image(systemName: "person")
                 }
         }
+        .accentColor(Color.buttonBack)
+        .toolbar(content: {
+            TextToolbarContent()
+        })
+        .navigationBarBackButtonHidden(true)
     }
 }
 

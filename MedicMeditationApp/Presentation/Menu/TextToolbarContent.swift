@@ -20,18 +20,18 @@ struct TextToolbarContent: ToolbarContent {
             } label: {
                 image
                     .resizable()
-                    .frame(width: 40, height: 40)
+                    .frame(width: 20, height: 20)
             }
         }
 
         ToolbarItem(placement: .principal) {
                 Image(ImageResource.log)
                     .resizable()
-                    .frame(width: 40, height: 40)
+                    .frame(width: 50, height: 50)
         }
 
         ToolbarItem(placement: .navigationBarTrailing) {
-            Button(action: /*@START_MENU_TOKEN@*/ {}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {}, label: {
                 Image(ImageResource.person)
                     .resizable()
                     .frame(width: 40, height: 40)
