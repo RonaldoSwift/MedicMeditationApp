@@ -21,7 +21,6 @@ struct PersonView: View {
                     .foregroundColor(Color.gray)
 
             }
-            
 
             HStack(spacing: 120) {
                 Button(action: {}, label: {

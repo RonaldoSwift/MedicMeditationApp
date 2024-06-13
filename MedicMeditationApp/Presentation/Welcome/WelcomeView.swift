@@ -187,15 +187,11 @@ struct WelcomeView: View {
                 .cornerRadius(12)
             }
             .padding(.leading,10)
-            
+            .padding(.bottom,100)
         }
         .padding()
         .navigation(MeditationView(), $isActiveMeditation)
         .navigation(SleepSessionView(), $isActiveSleepSession)
-        .toolbar(content: {
-            TextToolbarContent(image: Image(ImageResource.paintingForest))
-        })
-        .navigationBarBackButtonHidden(true)
     }
 }
 
