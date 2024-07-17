@@ -10,10 +10,12 @@ import SwiftUI
 struct SignInView: View {
     
     @EnvironmentObject private var appRootManager: AppRootManager
-    @StateObject private var signInViewModel = SignInViewModel(loginRepository: LoginRepository(
-        medicApi: MedicApi(),
-        memoriaLogin: MemoriaLogin()
-    )
+    @StateObject private var signInViewModel = SignInViewModel(
+        loginRepository: LoginRepository(
+            medicApi: MedicJSApi(),
+            memoriaLogin: MemoriaLogin(),
+            dataBaseGRDB: MedicMeditationGRDB()
+        )
     )
     
     @State private var email: String = ""

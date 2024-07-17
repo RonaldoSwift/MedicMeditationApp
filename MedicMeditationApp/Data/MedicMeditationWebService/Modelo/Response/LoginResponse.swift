@@ -21,14 +21,19 @@ struct LoginResponse: Decodable {
 }
 
 struct LoginDataResponse: Decodable {
-    var userName: String
-    var message: String
     var accessToken: String
-    
+    var userId: Int
+    var nameAndLastName: String
+    var email: String
+    var age: Int
+    var message: String
     
     enum CodingKeys: String, CodingKey {
-        case userName
+        case nameAndLastName = "name_and_LastName"
+        case userId
         case message = "mensaje"
         case accessToken = "access_token"
+        case email = "email"
+        case age = "age"
     }
 }

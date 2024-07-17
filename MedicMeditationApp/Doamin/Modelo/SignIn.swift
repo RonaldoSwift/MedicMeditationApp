@@ -9,4 +9,8 @@ import Foundation
 
 struct SignIn {
     let jwt: String
+    let idDeUsuario: Int
+    let nombreYApellidoDeUsuario: String
+    let correo: String
+    let edad: Int
 }

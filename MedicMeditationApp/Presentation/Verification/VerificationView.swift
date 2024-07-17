@@ -10,8 +10,8 @@ import SwiftUI
 struct VerificationView: View {
     
     @StateObject private var verificationViewModel = VerificationViewModel(verificationRepository: VerificationRepository(
-        medicApi: MedicApi()
-    ), signUpRepository: SignUpRepository(medicApi: MedicApi(), memoriaLogin: MemoriaLogin()
+        medicApi: MedicJSApi()
+    ), signUpRepository: SignUpRepository(medicApi: MedicJSApi(), memoriaLogin: MemoriaLogin()
                                          )
     )
     

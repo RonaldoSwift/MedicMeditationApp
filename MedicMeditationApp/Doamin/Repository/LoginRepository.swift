@@ -10,14 +10,16 @@ import Combine
 
 class LoginRepository {
     
-    private let medicApi: MedicApi
+    private let medicJSApi: MedicJSApi
     private let memoriaLogin: MemoriaLogin
+    private let dataBaseGRDB: MedicMeditationGRDB
     
     var cancelLables = Set<AnyCancellable>()
     
-    init(medicApi: MedicApi, memoriaLogin: MemoriaLogin) {
-        self.medicApi = medicApi
+    init(medicApi: MedicJSApi, memoriaLogin: MemoriaLogin, dataBaseGRDB: MedicMeditationGRDB) {
+        self.medicJSApi = medicApi
         self.memoriaLogin = memoriaLogin
+        self.dataBaseGRDB = dataBaseGRDB
     }
     
     func saveUserLoggedInCache(isLogged: Bool) {
@@ -39,12 +41,47 @@ class LoginRepository {
             pasword: pasword
         )
         
-        return medicApi.fetchLogin(loginRequest: loginRequest)
+        return medicJSApi.fetchLogin(loginRequest: loginRequest)
             .map { (loginResponse: LoginResponse) in
                 SignIn(
-                    jwt: loginResponse.data.accessToken
+                    jwt: loginResponse.data.accessToken,
+                    idDeUsuario: loginResponse.data.userId,
+                    nombreYApellidoDeUsuario: loginResponse.data.nameAndLastName,
+                    correo: loginResponse.data.email,
+                    edad: loginResponse.data.age
                 )
             }
             .eraseToAnyPublisher()
+    }
+    
+    // MARK: Funciones de Base De Datos , solo da la orden el publicador
+    func getPublicadorDeUsuariosDeBaseDeDatos() ->AnyPublisher<[Usuario], Error> {
+        dataBaseGRDB
+            .publicadorGetUsuarios
+            .map { (usuariosEntity: [UsuarioEntity]) in
+                usuariosEntity.map { (usuarioEntity: UsuarioEntity) in
+                    Usuario(
+                        id: usuarioEntity.id,
+                        nombreYApellido: usuarioEntity.name_and_LastName,
+                        correo: usuarioEntity.email,
+                        edad: usuarioEntity.age
+                    )
+                }
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func llamarUsuariosDeBaseDeDatos() {
+        dataBaseGRDB
+            .getUserFromTable()
+    }
+    
+    func insertarUsuarioEnBaseDeDatos(id:Int, nombreUsuario: String, correo: String, edad: Int) {
+        dataBaseGRDB.insertUserIntTable(
+            id: id,
+            nombreYApellidoDeUsuario: nombreUsuario,
+            correo: correo,
+            edad: edad
+        )
     }
 }

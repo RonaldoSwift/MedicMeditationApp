@@ -1,0 +1,6 @@
+framework module Pods_MedicMeditationAppTests {
+  umbrella header "Pods-MedicMeditationAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -20,7 +20,7 @@ struct MenuView: View {
                     Image(systemName: "music.note.list")
                 }
             
-            PersonView()
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person")
                 }

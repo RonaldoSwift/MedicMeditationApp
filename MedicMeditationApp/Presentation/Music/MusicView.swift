@@ -10,115 +10,74 @@ import SwiftUI
 struct MusicView: View {
     
     @State var isActiveReproductor: Bool = false
+    @State private var musicArray : [Music] = []
+    @State private var showAlert: Bool = false
+    @State private var showLoading: Bool = false
+    @State private var mensajeDeAlerta: String = ""
+    
+    @StateObject private var musicViewModel = MusicViewModel(
+        musicRepository: MusicRepository(
+            medicPHPApi: MedicPHPApi()
+        )
+    )
     
     var body: some View {
         VStack {
-            ZStack {
-                Image(ImageResource.cardRelax)
-                
-                VStack(alignment: .leading) {
-                    Text("Relax Sounds")
-                        .font(.custom("AlegreyaSans-Medium", size: 27))
-                        .foregroundColor(Color.white)
-                    Text("Sometimes the most productive")
-                        .font(.custom("AlegreyaSans-Medium", size: 15))
-                        .foregroundColor(Color.white)
-                    Text("thing you can do is relax.")
-                        .font(.custom("AlegreyaSans-Medium", size: 15))
-                        .foregroundColor(Color.white)
-                    
-                    Button(action: {
-                        
-                    }, label: {
-                        HStack {
-                            Text("play now")
-                            Image(ImageResource.playBlack)
-                        }
-                        .font(.custom("AlegreyaSans-Medium", size: 15))
-                        .padding(.all, 15)
-                        .foregroundStyle(.black)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                    })
-                }
-                .padding(.trailing,80)
-            }
-            ScrollView   {
-                Button(action: {
-                    isActiveReproductor = true
-                }, label: {
-                    HStack(spacing:80) {
-                        HStack(spacing: 20) {
-                            Image(ImageResource.paintingForest)
-                            
-                            VStack(alignment: .leading) {
-                                Text("Painting Forest")
-                                    .font(.custom("AlegreyaSans-Medium", size: 20))
-
-                                Text("59899 Listening")
-                                    .font(.custom("AlegreyaSans-Light", size: 12))
-                            }
-                        }
-                        Text("20 Min")
-                            .font(.custom("AlegreyaSans-Medium", size: 15))
-                    }
-                })
-                .foregroundColor(Color.black)
-                
-                HStack(spacing:80) {
-                    HStack(spacing: 20) {
-                        Image(ImageResource.paintingForest)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Painting Forest")
-                                .font(.custom("AlegreyaSans-Medium", size: 20))
-
-                            Text("59899 Listening")
-                                .font(.custom("AlegreyaSans-Light", size: 12))
-                        }
-                    }
-                    Text("20 Min")
-                        .font(.custom("AlegreyaSans-Medium", size: 15))
-                }
-                
-                
-                HStack(spacing:80) {
-                    HStack(spacing: 20) {
-                        Image(ImageResource.paintingForest)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Painting Forest")
-                                .font(.custom("AlegreyaSans-Medium", size: 20))
-
-                            Text("59899 Listening")
-                                .font(.custom("AlegreyaSans-Light", size: 12))
-                        }
-                    }
-                    Text("20 Min")
-                        .font(.custom("AlegreyaSans-Medium", size: 15))
-                }
-                
-                HStack(spacing:80) {
-                    HStack(spacing: 20) {
-                        Image(ImageResource.paintingForest)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Painting Forest")
-                                .font(.custom("AlegreyaSans-Medium", size: 20))
-
-                            Text("59899 Listening")
-                                .font(.custom("AlegreyaSans-Light", size: 12))
-                        }
-                    }
-                    Text("20 Min")
-                        .font(.custom("AlegreyaSans-Medium", size: 15))
+            
+            MusicCard()
+            
+            ScrollView {
+                ForEach(musicArray, id: \.id) { music in
+                    celdaDeMusica(music: music)
                 }
             }
-            .padding(.top,20)
-           
         }
         .padding()
         .navigation(ReproductorView(), $isActiveReproductor)
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Error"),
+                message: Text(mensajeDeAlerta),
+                dismissButton: .default(
+                    Text(L10n.Verification.Understood.text),
+                    action: {
+                    }
+                )
+            )
+        }
+        .onReceive(musicViewModel.$musicState, perform: { musicState in
+            switch (musicState) {
+            case .inicial:
+                break
+            case .cargando:
+                showLoading = true
+            case .error(let error):
+                showAlert = true
+                showLoading = false
+                mensajeDeAlerta = error
+            case .success(let musicas):
+                musicArray = musicas
+                showLoading = false
+                break
+            }
+        })
+    }
+    
+    func celdaDeMusica(music: Music) -> some View {
+        return  HStack {
+            Image(ImageResource.paintingForest)
+            VStack(alignment:.leading) {
+                Text("\(music.nombre)")
+                    .font(.custom("AlegreyaSans-Medium", size: 20))
+                
+                Text("\(music.reproduccion) Listening")
+                    .font(.custom("AlegreyaSans-Light", size: 12))
+            }
+            Spacer()
+            Text("\(music.minuto) Min")
+                .font(.custom("AlegreyaSans-Medium", size: 15))
+        }
+        .padding()
     }
 }
 

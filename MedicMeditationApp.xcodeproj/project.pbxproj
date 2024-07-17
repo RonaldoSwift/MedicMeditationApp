@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44C080BBAC79B5366902074 /* Pods_MedicMeditationAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4EC36425ABB29DFDF82F1A /* Pods_MedicMeditationAppTests.framework */; };
+		A8F57A648B2D0EE9A8104254 /* Pods_MedicMeditationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677F4E7CB5FB328C39CD57E6 /* Pods_MedicMeditationApp.framework */; };
+		C5461E902D2565CF3FCA114C /* Pods_MedicMeditationApp_MedicMeditationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9AD8273E0066D838EC1305 /* Pods_MedicMeditationApp_MedicMeditationAppUITests.framework */; };
 		FA21A31F2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */; };
 		FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */; };
 		FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A57E2BBDCBFE001B2A5E /* MenuView.swift */; };
@@ -19,8 +22,19 @@
 		FA4592E42BBB569200C141CF /* MedicMeditationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E32BBB569200C141CF /* MedicMeditationAppUITests.swift */; };
 		FA4592E62BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */; };
 		FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4592F52BBB673D00C141CF /* SignInView.swift */; };
+		FA6641392C3C68C400E1B039 /* MedicPHPApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6641382C3C68C400E1B039 /* MedicPHPApi.swift */; };
+		FA67CD4E2C38741700AAF128 /* error_Response_404.json in Resources */ = {isa = PBXBuildFile; fileRef = FA67CD4B2C38741700AAF128 /* error_Response_404.json */; };
+		FA67CD4F2C38741700AAF128 /* enviarCodigo_response_200_OK.json in Resources */ = {isa = PBXBuildFile; fileRef = FA67CD4C2C38741700AAF128 /* enviarCodigo_response_200_OK.json */; };
+		FA67CD502C38741700AAF128 /* registrarUsuario_response_200_OK.json in Resources */ = {isa = PBXBuildFile; fileRef = FA67CD4D2C38741700AAF128 /* registrarUsuario_response_200_OK.json */; };
+		FA67CD522C3879D600AAF128 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CD512C3879D600AAF128 /* Usuario.swift */; };
+		FA67CD542C38AEE600AAF128 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CD532C38AEE600AAF128 /* ProfileViewModel.swift */; };
+		FA67CD562C38B0DF00AAF128 /* ProfileUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CD552C38B0DF00AAF128 /* ProfileUiState.swift */; };
 		FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */; };
 		FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD4A32BF3E66100AE5914 /* SignIn.swift */; };
+		FA70B4E72C3839F2003656E3 /* UsuarioEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70B4E62C3839F2003656E3 /* UsuarioEntity.swift */; };
+		FA70EC522C46C987001FF007 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70EC512C46C986001FF007 /* MusicViewModel.swift */; };
+		FA70EC542C46CA15001FF007 /* MusicUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70EC532C46CA15001FF007 /* MusicUiState.swift */; };
+		FA718D2D2C1CCF390040B0B7 /* MedicMeditationGRDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA718D2C2C1CCF390040B0B7 /* MedicMeditationGRDB.swift */; };
 		FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75097A2BE414030079D5AA /* PrincipalRootView.swift */; };
 		FA758A772BED2E3E007621EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA758A762BED2E3E007621EF /* .gitignore */; };
 		FA7927252BEC42440047F22C /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7927242BEC42440047F22C /* VerificationView.swift */; };
@@ -28,11 +42,9 @@
 		FA79272C2BEC50EC0047F22C /* VerificationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */; };
 		FA79272E2BEC542A0047F22C /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = FA79272D2BEC542A0047F22C /* index.js */; };
 		FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927302BEC55480047F22C /* login_response_200_OK.json */; };
-		FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */; };
-		FA7927352BEC55C90047F22C /* verification_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927342BEC55C90047F22C /* verification_response_200_OK.json */; };
 		FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F7E2BBE310E00FBF372 /* MusicView.swift */; };
 		FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F812BBE3CB500FBF372 /* ReproductorView.swift */; };
-		FA794F852BBE426000FBF372 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F842BBE426000FBF372 /* PersonView.swift */; };
+		FA794F852BBE426000FBF372 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F842BBE426000FBF372 /* ProfileView.swift */; };
 		FA79CBEE2BE2A7A900B1B612 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBED2BE2A7A900B1B612 /* ForgotPasswordView.swift */; };
 		FA79CBF22BE2B26400B1B612 /* AuthenticationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBF12BE2B26400B1B612 /* AuthenticationRootView.swift */; };
 		FA79CBF72BE2B6AC00B1B612 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBF32BE2B6AC00B1B612 /* Assets.swift */; };
@@ -43,6 +55,7 @@
 		FA7B05052C01838B00312E14 /* SignUpUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B05042C01838B00312E14 /* SignUpUiState.swift */; };
 		FA7B05072C0188D100312E14 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B05062C0188D100312E14 /* SignUpRepository.swift */; };
 		FA7B05092C01890200312E14 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B05082C01890200312E14 /* SignUp.swift */; };
+		FA7C2F342C47680C00DF832B /* MusicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C2F332C47680C00DF832B /* MusicCard.swift */; };
 		FA7E99AB2BE1DA2600F8CB88 /* AppRootManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E99AA2BE1DA2600F8CB88 /* AppRootManager.swift */; };
 		FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB0072BC71999004767E4 /* View+Extension.swift */; };
 		FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB0092BC719B6004767E4 /* NavigationModifier.swift */; };
@@ -53,7 +66,7 @@
 		FA83B0522C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */; };
 		FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */; };
 		FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */; };
-		FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */; };
+		FA88D4CD2BF2AC7E00EB8BEA /* MedicJSApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4CC2BF2AC7E00EB8BEA /* MedicJSApi.swift */; };
 		FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */; };
 		FA88D4D62BF2E76F00EB8BEA /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */; };
 		FA88D4D82BF2E78600EB8BEA /* VerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */; };
@@ -110,6 +123,9 @@
 		FA8E77832BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */; };
 		FA8E77842BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */; };
 		FA8E77852BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */; };
+		FA90AFB52C3F40F10030A185 /* MusicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90AFB42C3F40F10030A185 /* MusicResponse.swift */; };
+		FA90AFB72C3F64410030A185 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90AFB62C3F64410030A185 /* Music.swift */; };
+		FA90AFB92C3F64820030A185 /* MusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90AFB82C3F64820030A185 /* MusicRepository.swift */; };
 		FA9236782BFE5D8B00433F23 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9236772BFE5D8B00433F23 /* SignInViewModel.swift */; };
 		FA92367B2BFE76DE00433F23 /* MemoriaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92367A2BFE76DE00433F23 /* MemoriaLogin.swift */; };
 		FA92367D2BFE949100433F23 /* LoginUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92367C2BFE949100433F23 /* LoginUiState.swift */; };
@@ -133,6 +149,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C5E7B0BD43DEF48610A0805 /* Pods-MedicMeditationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicMeditationApp.release.xcconfig"; path = "Target Support Files/Pods-MedicMeditationApp/Pods-MedicMeditationApp.release.xcconfig"; sourceTree = "<group>"; };
+		3C9AD8273E0066D838EC1305 /* Pods_MedicMeditationApp_MedicMeditationAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicMeditationApp_MedicMeditationAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		677F4E7CB5FB328C39CD57E6 /* Pods_MedicMeditationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicMeditationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		698849F8A1FEF254F37D2DD6 /* Pods-MedicMeditationApp-MedicMeditationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicMeditationApp-MedicMeditationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MedicMeditationApp-MedicMeditationAppUITests/Pods-MedicMeditationApp-MedicMeditationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		901D9CD5BA885DDE4F131DD4 /* Pods-MedicMeditationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicMeditationAppTests.release.xcconfig"; path = "Target Support Files/Pods-MedicMeditationAppTests/Pods-MedicMeditationAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B4EC36425ABB29DFDF82F1A /* Pods_MedicMeditationAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicMeditationAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CAE585E0C92B9D588EE436 /* Pods-MedicMeditationAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicMeditationAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MedicMeditationAppTests/Pods-MedicMeditationAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA8FE3C47B98FC87014F7086 /* Pods-MedicMeditationApp-MedicMeditationAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicMeditationApp-MedicMeditationAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MedicMeditationApp-MedicMeditationAppUITests/Pods-MedicMeditationApp-MedicMeditationAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC85E31096A9008391502C2 /* Pods-MedicMeditationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicMeditationApp.debug.xcconfig"; path = "Target Support Files/Pods-MedicMeditationApp/Pods-MedicMeditationApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA43A57B2BBDC40E001B2A5E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FA43A57E2BBDCBFE001B2A5E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -149,8 +174,19 @@
 		FA4592E52BBB569200C141CF /* MedicMeditationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA4592F52BBB673D00C141CF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FA5C0B492BE9740C001C6EDD /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA6641382C3C68C400E1B039 /* MedicPHPApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicPHPApi.swift; sourceTree = "<group>"; };
+		FA67CD4B2C38741700AAF128 /* error_Response_404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_Response_404.json; sourceTree = "<group>"; };
+		FA67CD4C2C38741700AAF128 /* enviarCodigo_response_200_OK.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enviarCodigo_response_200_OK.json; sourceTree = "<group>"; };
+		FA67CD4D2C38741700AAF128 /* registrarUsuario_response_200_OK.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registrarUsuario_response_200_OK.json; sourceTree = "<group>"; };
+		FA67CD512C3879D600AAF128 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		FA67CD532C38AEE600AAF128 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		FA67CD552C38B0DF00AAF128 /* ProfileUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUiState.swift; sourceTree = "<group>"; };
 		FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		FA6DD4A32BF3E66100AE5914 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		FA70B4E62C3839F2003656E3 /* UsuarioEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioEntity.swift; sourceTree = "<group>"; };
+		FA70EC512C46C986001FF007 /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		FA70EC532C46CA15001FF007 /* MusicUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicUiState.swift; sourceTree = "<group>"; };
+		FA718D2C2C1CCF390040B0B7 /* MedicMeditationGRDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicMeditationGRDB.swift; sourceTree = "<group>"; };
 		FA75097A2BE414030079D5AA /* PrincipalRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalRootView.swift; sourceTree = "<group>"; };
 		FA758A762BED2E3E007621EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FA7927242BEC42440047F22C /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
@@ -158,11 +194,9 @@
 		FA79272B2BEC50EC0047F22C /* VerificationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTextField.swift; sourceTree = "<group>"; };
 		FA79272D2BEC542A0047F22C /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		FA7927302BEC55480047F22C /* login_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login_response_200_OK.json; sourceTree = "<group>"; };
-		FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = signUp_response_200_OK.json; sourceTree = "<group>"; };
-		FA7927342BEC55C90047F22C /* verification_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verification_response_200_OK.json; sourceTree = "<group>"; };
 		FA794F7E2BBE310E00FBF372 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		FA794F812BBE3CB500FBF372 /* ReproductorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReproductorView.swift; sourceTree = "<group>"; };
-		FA794F842BBE426000FBF372 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		FA794F842BBE426000FBF372 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FA79CBED2BE2A7A900B1B612 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		FA79CBF12BE2B26400B1B612 /* AuthenticationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRootView.swift; sourceTree = "<group>"; };
 		FA79CBF32BE2B6AC00B1B612 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -173,6 +207,7 @@
 		FA7B05042C01838B00312E14 /* SignUpUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUiState.swift; sourceTree = "<group>"; };
 		FA7B05062C0188D100312E14 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
 		FA7B05082C01890200312E14 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		FA7C2F332C47680C00DF832B /* MusicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCard.swift; sourceTree = "<group>"; };
 		FA7E99AA2BE1DA2600F8CB88 /* AppRootManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootManager.swift; sourceTree = "<group>"; };
 		FA7EB0072BC71999004767E4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		FA7EB0092BC719B6004767E4 /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
@@ -184,7 +219,7 @@
 		FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarUsuarioRequest.swift; sourceTree = "<group>"; };
 		FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApi.swift; sourceTree = "<group>"; };
+		FA88D4CC2BF2AC7E00EB8BEA /* MedicJSApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicJSApi.swift; sourceTree = "<group>"; };
 		FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResponse.swift; sourceTree = "<group>"; };
@@ -214,6 +249,9 @@
 		FA8E775A2BBCF9D60093EFC2 /* AlegreyaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		FA8E775B2BBCF9D60093EFC2 /* AlegreyaSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FA8E77862BBCFA700093EFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FA90AFB42C3F40F10030A185 /* MusicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicResponse.swift; sourceTree = "<group>"; };
+		FA90AFB62C3F64410030A185 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		FA90AFB82C3F64820030A185 /* MusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepository.swift; sourceTree = "<group>"; };
 		FA9236772BFE5D8B00433F23 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		FA92367A2BFE76DE00433F23 /* MemoriaLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaLogin.swift; sourceTree = "<group>"; };
 		FA92367C2BFE949100433F23 /* LoginUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUiState.swift; sourceTree = "<group>"; };
@@ -224,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F57A648B2D0EE9A8104254 /* Pods_MedicMeditationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44C080BBAC79B5366902074 /* Pods_MedicMeditationAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,12 +278,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5461E902D2565CF3FCA114C /* Pods_MedicMeditationApp_MedicMeditationAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		672E5B2D40DD7688F11D2E8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAC85E31096A9008391502C2 /* Pods-MedicMeditationApp.debug.xcconfig */,
+				3C5E7B0BD43DEF48610A0805 /* Pods-MedicMeditationApp.release.xcconfig */,
+				BA8FE3C47B98FC87014F7086 /* Pods-MedicMeditationApp-MedicMeditationAppUITests.debug.xcconfig */,
+				698849F8A1FEF254F37D2DD6 /* Pods-MedicMeditationApp-MedicMeditationAppUITests.release.xcconfig */,
+				A5CAE585E0C92B9D588EE436 /* Pods-MedicMeditationAppTests.debug.xcconfig */,
+				901D9CD5BA885DDE4F131DD4 /* Pods-MedicMeditationAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C050F0E212926D2C90627B59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				677F4E7CB5FB328C39CD57E6 /* Pods_MedicMeditationApp.framework */,
+				3C9AD8273E0066D838EC1305 /* Pods_MedicMeditationApp_MedicMeditationAppUITests.framework */,
+				9B4EC36425ABB29DFDF82F1A /* Pods_MedicMeditationAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA43A57A2BBDC3F7001B2A5E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +346,8 @@
 				FA4592D82BBB569200C141CF /* MedicMeditationAppTests */,
 				FA4592E22BBB569200C141CF /* MedicMeditationAppUITests */,
 				FA4592C12BBB569100C141CF /* Products */,
+				672E5B2D40DD7688F11D2E8A /* Pods */,
+				C050F0E212926D2C90627B59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -379,6 +445,7 @@
 		FA4592F72BBB67CE00C141CF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FA718D2B2C1CCF030040B0B7 /* DataBase */,
 				FA9236792BFE767900433F23 /* Memoria */,
 				FA88D4C92BF2AC0D00EB8BEA /* MedicMeditationWebService */,
 				FA4592CE2BBB569200C141CF /* MedicMeditationApp.xcdatamodeld */,
@@ -401,6 +468,7 @@
 				FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */,
 				FA7B05062C0188D100312E14 /* SignUpRepository.swift */,
 				FA8C1B192C0A61B300943310 /* VerificationRepository.swift */,
+				FA90AFB82C3F64820030A185 /* MusicRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -411,8 +479,27 @@
 				FA6DD4A32BF3E66100AE5914 /* SignIn.swift */,
 				FA7B05082C01890200312E14 /* SignUp.swift */,
 				FA8C1B172C0A615100943310 /* Verification.swift */,
+				FA67CD512C3879D600AAF128 /* Usuario.swift */,
+				FA90AFB62C3F64410030A185 /* Music.swift */,
 			);
 			path = Modelo;
+			sourceTree = "<group>";
+		};
+		FA70B4E52C383972003656E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA70B4E62C3839F2003656E3 /* UsuarioEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA718D2B2C1CCF030040B0B7 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				FA70B4E52C383972003656E3 /* Models */,
+				FA718D2C2C1CCF390040B0B7 /* MedicMeditationGRDB.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		FA7927232BEC421D0047F22C /* Verification */ = {
@@ -440,9 +527,10 @@
 		FA79272F2BEC55120047F22C /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				FA67CD4C2C38741700AAF128 /* enviarCodigo_response_200_OK.json */,
+				FA67CD4B2C38741700AAF128 /* error_Response_404.json */,
+				FA67CD4D2C38741700AAF128 /* registrarUsuario_response_200_OK.json */,
 				FA7927302BEC55480047F22C /* login_response_200_OK.json */,
-				FA7927322BEC55A80047F22C /* signUp_response_200_OK.json */,
-				FA7927342BEC55C90047F22C /* verification_response_200_OK.json */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -451,6 +539,8 @@
 			isa = PBXGroup;
 			children = (
 				FA794F7E2BBE310E00FBF372 /* MusicView.swift */,
+				FA70EC512C46C986001FF007 /* MusicViewModel.swift */,
+				FA70EC532C46CA15001FF007 /* MusicUiState.swift */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -466,7 +556,9 @@
 		FA794F832BBE424F00FBF372 /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				FA794F842BBE426000FBF372 /* PersonView.swift */,
+				FA794F842BBE426000FBF372 /* ProfileView.swift */,
+				FA67CD532C38AEE600AAF128 /* ProfileViewModel.swift */,
+				FA67CD552C38B0DF00AAF128 /* ProfileUiState.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -485,6 +577,15 @@
 				FA8AD30F2BEAFC630038552C /* BackToolbarContent.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		FA7C2F322C4767E200DF832B /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */,
+				FA7C2F332C47680C00DF832B /* MusicCard.swift */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 		FA7E99A92BE1D5D900F8CB88 /* Root */ = {
@@ -563,8 +664,9 @@
 			isa = PBXGroup;
 			children = (
 				FA88D4CE2BF2AD8F00EB8BEA /* Modelo */,
-				FA88D4CC2BF2AC7E00EB8BEA /* MedicApi.swift */,
+				FA88D4CC2BF2AC7E00EB8BEA /* MedicJSApi.swift */,
 				FA88D4CA2BF2AC5500EB8BEA /* ErrorResponse.swift */,
+				FA6641382C3C68C400E1B039 /* MedicPHPApi.swift */,
 			);
 			path = MedicMeditationWebService;
 			sourceTree = "<group>";
@@ -584,6 +686,7 @@
 				FA88D4D32BF2B2A200EB8BEA /* LoginResponse.swift */,
 				FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */,
 				FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */,
+				FA90AFB42C3F40F10030A185 /* MusicResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -615,17 +718,9 @@
 		FA8E77452BBCE5520093EFC2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FA8E77462BBCE5650093EFC2 /* ButtonStyle */,
+				FA7C2F322C4767E200DF832B /* Componentes */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		FA8E77462BBCE5650093EFC2 /* ButtonStyle */ = {
-			isa = PBXGroup;
-			children = (
-				FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */,
-			);
-			path = ButtonStyle;
 			sourceTree = "<group>";
 		};
 		FA8E77492BBCE83C0093EFC2 /* Resources */ = {
@@ -684,9 +779,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA4592E92BBB569200C141CF /* Build configuration list for PBXNativeTarget "MedicMeditationApp" */;
 			buildPhases = (
+				012C5FCBE42C40D81255D476 /* [CP] Check Pods Manifest.lock */,
 				FA4592BC2BBB569100C141CF /* Sources */,
 				FA4592BD2BBB569100C141CF /* Frameworks */,
 				FA4592BE2BBB569100C141CF /* Resources */,
+				05488080ECDF496A3C1C3C0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -701,6 +798,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA4592EC2BBB569200C141CF /* Build configuration list for PBXNativeTarget "MedicMeditationAppTests" */;
 			buildPhases = (
+				E796E4D69D6920C2C203739C /* [CP] Check Pods Manifest.lock */,
 				FA4592D12BBB569200C141CF /* Sources */,
 				FA4592D22BBB569200C141CF /* Frameworks */,
 				FA4592D32BBB569200C141CF /* Resources */,
@@ -719,9 +817,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA4592EF2BBB569200C141CF /* Build configuration list for PBXNativeTarget "MedicMeditationAppUITests" */;
 			buildPhases = (
+				2B454CFC6E9B7E450A116376 /* [CP] Check Pods Manifest.lock */,
 				FA4592DB2BBB569200C141CF /* Sources */,
 				FA4592DC2BBB569200C141CF /* Frameworks */,
 				FA4592DD2BBB569200C141CF /* Resources */,
+				6C1ADBC4D9FACD11CFB1EA0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -790,12 +890,15 @@
 				FA8E776E2BBCF9D60093EFC2 /* AlegreyaSans-LightItalic.ttf in Resources */,
 				FA7F86992BE08B780081C77F /* Localizable.strings in Resources */,
 				FA8E777A2BBCF9D60093EFC2 /* AlegreyaSans-ExtraBoldItalic.ttf in Resources */,
+				FA67CD4E2C38741700AAF128 /* error_Response_404.json in Resources */,
+				FA67CD4F2C38741700AAF128 /* enviarCodigo_response_200_OK.json in Resources */,
 				FA8E77622BBCF9D60093EFC2 /* AlegreyaSans-BoldItalic.ttf in Resources */,
 				FA7F86922BE073690081C77F /* swiftgen.yml in Resources */,
 				FA4592CB2BBB569200C141CF /* Preview Assets.xcassets in Resources */,
 				FA8E77802BBCF9D60093EFC2 /* AlegreyaSans-ExtraBold.ttf in Resources */,
 				FA8E776B2BBCF9D60093EFC2 /* AlegreyaSans-Light.ttf in Resources */,
 				FA8E77682BBCF9D60093EFC2 /* AlegreyaSans-ThinItalic.ttf in Resources */,
+				FA67CD502C38741700AAF128 /* registrarUsuario_response_200_OK.json in Resources */,
 				FA8E77772BBCF9D60093EFC2 /* AlegreyaSans-Medium.ttf in Resources */,
 				FA8E775C2BBCF9D60093EFC2 /* AlegreyaSans-Bold.ttf in Resources */,
 				FA4592C82BBB569200C141CF /* Imagenes.xcassets in Resources */,
@@ -850,6 +953,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		012C5FCBE42C40D81255D476 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedicMeditationApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		05488080ECDF496A3C1C3C0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedicMeditationApp/Pods-MedicMeditationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedicMeditationApp/Pods-MedicMeditationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MedicMeditationApp/Pods-MedicMeditationApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B454CFC6E9B7E450A116376 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedicMeditationApp-MedicMeditationAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C1ADBC4D9FACD11CFB1EA0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedicMeditationApp-MedicMeditationAppUITests/Pods-MedicMeditationApp-MedicMeditationAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedicMeditationApp-MedicMeditationAppUITests/Pods-MedicMeditationApp-MedicMeditationAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MedicMeditationApp-MedicMeditationAppUITests/Pods-MedicMeditationApp-MedicMeditationAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E796E4D69D6920C2C203739C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedicMeditationAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA4592BC2BBB569100C141CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -859,8 +1065,11 @@
 				FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */,
 				FA7B05072C0188D100312E14 /* SignUpRepository.swift in Sources */,
 				FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */,
+				FA90AFB72C3F64410030A185 /* Music.swift in Sources */,
+				FA67CD562C38B0DF00AAF128 /* ProfileUiState.swift in Sources */,
 				FA7927252BEC42440047F22C /* VerificationView.swift in Sources */,
 				FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */,
+				FA67CD542C38AEE600AAF128 /* ProfileViewModel.swift in Sources */,
 				FA9236782BFE5D8B00433F23 /* SignInViewModel.swift in Sources */,
 				FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */,
 				FA88D4D82BF2E78600EB8BEA /* VerificationResponse.swift in Sources */,
@@ -869,6 +1078,7 @@
 				FA7B05032C01837400312E14 /* SignUpViewModel.swift in Sources */,
 				FA43A57C2BBDC40E001B2A5E /* SignUpView.swift in Sources */,
 				FA8C1B1C2C0A630600943310 /* VerificationViewModel.swift in Sources */,
+				FA90AFB92C3F64820030A185 /* MusicRepository.swift in Sources */,
 				FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */,
 				FA7B05092C01890200312E14 /* SignUp.swift in Sources */,
 				FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */,
@@ -879,15 +1089,16 @@
 				FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */,
 				FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */,
 				FA21A31F2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift in Sources */,
-				FA7927332BEC55A80047F22C /* signUp_response_200_OK.json in Sources */,
 				FA79CBFA2BE2B6AC00B1B612 /* Fonts.swift in Sources */,
-				FA794F852BBE426000FBF372 /* PersonView.swift in Sources */,
+				FA794F852BBE426000FBF372 /* ProfileView.swift in Sources */,
+				FA70EC522C46C987001FF007 /* MusicViewModel.swift in Sources */,
 				FA79CBEE2BE2A7A900B1B612 /* ForgotPasswordView.swift in Sources */,
 				FA92367B2BFE76DE00433F23 /* MemoriaLogin.swift in Sources */,
 				FA7B05052C01838B00312E14 /* SignUpUiState.swift in Sources */,
 				FA79272A2BEC4F280047F22C /* package.json in Sources */,
 				FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */,
 				FA79CBF92BE2B6AC00B1B612 /* Strings.swift in Sources */,
+				FA7C2F342C47680C00DF832B /* MusicCard.swift in Sources */,
 				FA79272C2BEC50EC0047F22C /* VerificationTextField.swift in Sources */,
 				FA83B0502C0EC93E00AD2F75 /* SignUpRequest.swift in Sources */,
 				FA8DF7B82BBF20DA000F3D7A /* SleepSessionView.swift in Sources */,
@@ -895,18 +1106,23 @@
 				FA83B0522C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift in Sources */,
 				FA4592F62BBB673D00C141CF /* SignInView.swift in Sources */,
 				FA8C1B1E2C0A631C00943310 /* VerificationUiState.swift in Sources */,
+				FA70EC542C46CA15001FF007 /* MusicUiState.swift in Sources */,
 				FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */,
 				FA79CBF82BE2B6AC00B1B612 /* JSON.swift in Sources */,
-				FA7927352BEC55C90047F22C /* verification_response_200_OK.json in Sources */,
+				FA70B4E72C3839F2003656E3 /* UsuarioEntity.swift in Sources */,
+				FA6641392C3C68C400E1B039 /* MedicPHPApi.swift in Sources */,
 				FA79272E2BEC542A0047F22C /* index.js in Sources */,
+				FA67CD522C3879D600AAF128 /* Usuario.swift in Sources */,
 				FA43A5822BBDD057001B2A5E /* WelcomeView.swift in Sources */,
 				FA88D4D62BF2E76F00EB8BEA /* SignUpResponse.swift in Sources */,
 				FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */,
 				FA7E99AB2BE1DA2600F8CB88 /* AppRootManager.swift in Sources */,
 				FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */,
 				FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */,
+				FA90AFB52C3F40F10030A185 /* MusicResponse.swift in Sources */,
 				FA8C1B1A2C0A61B300943310 /* VerificationRepository.swift in Sources */,
-				FA88D4CD2BF2AC7E00EB8BEA /* MedicApi.swift in Sources */,
+				FA88D4CD2BF2AC7E00EB8BEA /* MedicJSApi.swift in Sources */,
+				FA718D2D2C1CCF390040B0B7 /* MedicMeditationGRDB.swift in Sources */,
 				FA79CBF72BE2B6AC00B1B612 /* Assets.swift in Sources */,
 				FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */,
 			);
@@ -1080,6 +1296,7 @@
 		};
 		FA4592EA2BBB569200C141CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAC85E31096A9008391502C2 /* Pods-MedicMeditationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1088,6 +1305,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MedicMeditationApp/Preview Content\"";
 				DEVELOPMENT_TEAM = H9JXH336V5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MedicMeditationApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1113,6 +1331,7 @@
 		};
 		FA4592EB2BBB569200C141CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C5E7B0BD43DEF48610A0805 /* Pods-MedicMeditationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1121,6 +1340,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MedicMeditationApp/Preview Content\"";
 				DEVELOPMENT_TEAM = H9JXH336V5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MedicMeditationApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1146,6 +1366,7 @@
 		};
 		FA4592ED2BBB569200C141CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5CAE585E0C92B9D588EE436 /* Pods-MedicMeditationAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1169,6 +1390,7 @@
 		};
 		FA4592EE2BBB569200C141CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 901D9CD5BA885DDE4F131DD4 /* Pods-MedicMeditationAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1192,6 +1414,7 @@
 		};
 		FA4592F02BBB569200C141CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA8FE3C47B98FC87014F7086 /* Pods-MedicMeditationApp-MedicMeditationAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1213,6 +1436,7 @@
 		};
 		FA4592F12BBB569200C141CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 698849F8A1FEF254F37D2DD6 /* Pods-MedicMeditationApp-MedicMeditationAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

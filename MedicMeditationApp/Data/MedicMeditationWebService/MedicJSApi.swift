@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class MedicApi {
+class MedicJSApi {
     
     func fetchLogin(loginRequest: LoginRequest) -> AnyPublisher<LoginResponse,Error> {
         guard let urlComponents = URLComponents(string: "http://localhost:8011/login") else {
