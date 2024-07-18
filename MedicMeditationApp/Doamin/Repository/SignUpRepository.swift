@@ -10,12 +10,12 @@ import Combine
 
 class SignUpRepository {
     
-    private let medicApi: MedicApi
+    private let medicApi: MedicJSApi
     private let memoriaLogin: MemoriaLogin
     
     var cancelLables = Set<AnyCancellable>()
     
-    init(medicApi: MedicApi, memoriaLogin: MemoriaLogin) {
+    init(medicApi: MedicJSApi, memoriaLogin: MemoriaLogin) {
         self.medicApi = medicApi
         self.memoriaLogin = memoriaLogin
     }

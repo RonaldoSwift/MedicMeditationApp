@@ -11,7 +11,7 @@ struct SignUpView: View {
     
     @StateObject private var signUpViewModel = SignUpViewModel(
         signUpRepository: SignUpRepository(
-            medicApi: MedicApi(),
+            medicApi: MedicJSApi(),
             memoriaLogin: MemoriaLogin()
         )
     )

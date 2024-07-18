@@ -52,26 +52,32 @@ final class SignInViewModel: ObservableObject {
             email: correo,
             pasword: password
         )
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                switch (completion) {
-                case .finished:
-                    break
-                case .failure(let error):
-                    self.loginState = LoginUiState.error("Error de Web Service \(error)")
-                }
-            }, receiveValue: {(signIn: SignIn) in
-                self.loginRepository.saveUserLoggedInCache(isLogged: true)
-                self.loginRepository.saveTokenInMemory(jwtToken: signIn.jwt)
-                self.loginState = LoginUiState.success
-                print(signIn)
-            })
-            .store(in: &cancellables)
+        .receive(on: DispatchQueue.main)
+        .sink(receiveCompletion: { completion in
+            switch (completion) {
+            case .finished:
+                break
+            case .failure(let error):
+                self.loginState = LoginUiState.error("Error de Web Service \(error)")
+            }
+        }, receiveValue: {(signIn: SignIn) in
+            self.loginRepository.saveUserLoggedInCache(isLogged: true)
+            self.loginRepository.saveTokenInMemory(jwtToken: signIn.jwt)
+            self.loginRepository.insertarUsuarioEnBaseDeDatos(
+                id: signIn.idDeUsuario,
+                nombreUsuario: signIn.nombreYApellidoDeUsuario,
+                correo: signIn.correo,
+                edad: signIn.edad
+            )
+            self.loginState = LoginUiState.success
+            print(signIn)
+        })
+        .store(in: &cancellables)
     }
     
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
+        
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }

@@ -10,11 +10,11 @@ import Combine
 
 class VerificationRepository {
     
-    private let medicApi: MedicApi
+    private let medicApi: MedicJSApi
     
     var cancelLbales = Set<AnyCancellable>()
     
-    init(medicApi: MedicApi) {
+    init(medicApi: MedicJSApi) {
         self.medicApi = medicApi
     }
     

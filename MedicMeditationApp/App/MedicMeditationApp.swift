@@ -11,6 +11,7 @@ import SwiftUI
 struct MedicMeditationApp: App {
     
     @StateObject private var appRootManager = AppRootManager()
+    let medicMeditationGRDB = MedicMeditationGRDB()
     
     var sharedAuthenticationViewModel = SharedAuthenticationViewModel()
     
@@ -33,5 +34,21 @@ struct MedicMeditationApp: App {
             }
             .environmentObject(appRootManager)
         }
+    }
+    
+    init() {
+        initGRDB()
+    }
+}
+
+extension MedicMeditationApp {
+    
+    private func initGRDB() {
+        if #available(iOS 16, *) {
+            medicMeditationGRDB.inicializadorBaseDeDatosiOS16()
+        } else {
+            medicMeditationGRDB.inicializadorBaseDeDatosiOS14()
+        }
+        medicMeditationGRDB.crearTablaDeUsuario()
     }
 }
