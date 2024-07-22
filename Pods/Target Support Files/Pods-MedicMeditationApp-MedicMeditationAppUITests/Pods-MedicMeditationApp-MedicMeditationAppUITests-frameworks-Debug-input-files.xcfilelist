@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-MedicMeditationApp-MedicMeditationAppUITests/Pods-MedicMeditationApp-MedicMeditationAppUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI/SDWebImageSwiftUI.framework

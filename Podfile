@@ -6,6 +6,7 @@ target 'MedicMeditationApp' do
   use_frameworks!
 
   pod 'GRDB.swift', '6.24.1'
+  pod 'SDWebImageSwiftUI', '3.0.0'
 
   # Pods for MedicMeditationApp
 

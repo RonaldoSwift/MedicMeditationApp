@@ -64,6 +64,7 @@ struct ProfileView: View {
             case .cargando:
                 break
             case .error(let error):
+                print("Error: \(error)")
                 break
             case .success(let nombreCompleto, let usuario):
                 
