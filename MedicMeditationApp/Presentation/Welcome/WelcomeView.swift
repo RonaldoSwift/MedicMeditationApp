@@ -33,7 +33,6 @@ struct WelcomeView: View {
                         
                         Text("Calm")
                             .font(.custom("AlegreyaSans-Regular", size: 12))
-                        
                     }
                     
                     VStack {
@@ -48,7 +47,6 @@ struct WelcomeView: View {
                         
                         Text("Calm")
                             .font(.custom("AlegreyaSans-Regular", size: 12))
-                        
                     }
                     
                     VStack {
@@ -63,7 +61,6 @@ struct WelcomeView: View {
                         
                         Text("Calm")
                             .font(.custom("AlegreyaSans-Regular", size: 12))
-                        
                     }
                     
                     VStack {
@@ -78,116 +75,36 @@ struct WelcomeView: View {
                         
                         Text("Calm")
                             .font(.custom("AlegreyaSans-Regular", size: 12))
-                        
                     }
-                    
                 }
             }
             
-            ZStack {
-                LinearGradient(
-                    gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing
+            VStack(spacing: 50) {
+                WelcomeCard(
+                    onClickInSitioWeb: {
+                        isActiveMeditation = true
+                    },
+                    tituloDeCard: "Meditation 101",
+                    subtituloCardPrimer: "Techniques, Benefits, and",
+                    subtituloCardSegund: "a Beginners How-To",
+                    textoDelButton: "watch now",
+                    imagenDeCard: ImageResource.meditation101
                 )
-                .mask(RoundedRectangle(cornerRadius: 12))
-                .frame(width: 339, height: 170)
-                .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 0)
-
-                VStack(alignment: .leading) {
-                    ZStack {
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Meditation 101")
-                                    .font(.custom("AlegreyaSans-Medium", size: 25))
-
-                                    .foregroundColor(Color.foreGroundTitle)
-                                
-                                Text("Techniques, Benefits, and")
-                                    .font(.custom("AlegreyaSans-Medium", size: 15))
-                                    .foregroundColor(Color.foreGroundCard)
-                                
-                                Text("a Beginners How-To")
-                                    .font(.custom("AlegreyaSans-Medium", size: 15))
-                                    .foregroundColor(Color.foreGroundCard)
-                                
-                                Button(action: {
-                                    isActiveMeditation = true
-                                }, label: {
-                                    HStack {
-                                        Text("watch now")
-                                        Image(ImageResource.play)
-                                    }
-                                    .font(.custom("AlegreyaSans-Medium", size: 15))
-                                    .padding(.all, 15)
-                                    .foregroundStyle(.white)
-                                    .background(Color.buttonBack)
-                                    .cornerRadius(10)
-                                })
-                            }
-                            Image(ImageResource.meditation101)
-                        }
-                        .padding(.bottom,40)
-                    }
-                }
-                .padding(.top, 38)
-                .frame(width: 339, height: 170)
-                .background(Color.backGroundCard)
-                .foregroundColor(Color.white)
-                .cornerRadius(12)
-            }
-            .padding(.leading,10)
-            
-            ZStack {
-                LinearGradient(
-                    gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing
+                
+                WelcomeCard(
+                    onClickInSitioWeb: {
+                        isActiveSleepSession = true
+                    },
+                    tituloDeCard: "Cardio Meditation",
+                    subtituloCardPrimer: "Basics of Yoga for Beginners",
+                    subtituloCardSegund: "or Experienced Professionals",
+                    textoDelButton: "watch now",
+                    imagenDeCard: ImageResource.cardioMeditation
                 )
-                .mask(RoundedRectangle(cornerRadius: 12))
-                .frame(width: 339, height: 170)
-                .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 0)
-
-                VStack(alignment: .leading) {
-                    ZStack {
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Cardio Meditation")
-                                    .font(.custom("AlegreyaSans-Medium", size: 25))
-
-                                    .foregroundColor(Color.foreGroundTitle)
-                                
-                                Text("Basics of Yoga for Beginners")
-                                    .font(.custom("AlegreyaSans-Medium", size: 15))
-                                    .foregroundColor(Color.foreGroundCard)
-                                
-                                Text("or Experienced Professionals")
-                                    .font(.custom("AlegreyaSans-Medium", size: 15))
-                                    .foregroundColor(Color.foreGroundCard)
-                                
-                                Button(action: {
-                                    isActiveSleepSession = true
-                                }, label: {
-                                    HStack {
-                                        Text("watch now")
-                                        Image(ImageResource.play)
-                                    }
-                                    .font(.custom("AlegreyaSans-Medium", size: 15))
-                                    .padding(.all, 15)
-                                    .foregroundStyle(.white)
-                                    .background(Color.buttonBack)
-                                    .cornerRadius(10)
-                                })
-                            }
-                            Image(ImageResource.cardioMeditation)
-                        }
-                        .padding(.bottom,40)
-                    }
-                }
-                .padding(.top, 38)
-                .frame(width: 339, height: 170)
-                .background(Color.backGroundCard)
-                .foregroundColor(Color.white)
-                .cornerRadius(12)
             }
-            .padding(.leading,10)
+            .padding(.top,30)
             .padding(.bottom,100)
+
         }
         .padding()
         .navigation(MeditationView(), $isActiveMeditation)

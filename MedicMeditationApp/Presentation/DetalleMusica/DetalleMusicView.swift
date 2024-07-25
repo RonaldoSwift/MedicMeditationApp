@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import AVFoundation
+import Combine
 
 struct DetalleMusicView: View {
     
@@ -15,12 +17,20 @@ struct DetalleMusicView: View {
     @State private var mensajeDeAlerta: String = ""
     @State private var imagenURL: String = ""
     @State private var nombreDeCantante: String = ""
+    @State private var isButtonPlayed: Bool = false
+    @State private var timeIsSeconds: String = ""
     
     @EnvironmentObject private var sharedMusicViewModel : SharedMusicViewModel
     
-    let reproductorViewModel = DetalleMusicaViewModel.init(
+    @ObservedObject var detalleMusicaViewModel = DetalleMusicaViewModel.init(
         musicDetalleRepository: MusicDetalleRepository(
             medicPHPApi: MedicPHPApi()
+        ),
+        detalleMusicMediaPlayer: DetalleMusicMediaPlayer(
+            avPlayer: AVPlayer(),
+            timeObserverToken: nil,
+            currentProgressPublisher: PassthroughSubject<Float, Never>(),
+            currentTimeInSecondsPublisher: PassthroughSubject<Double, Never>()
         )
     )
     
@@ -39,8 +49,7 @@ struct DetalleMusicView: View {
                     .scaledToFit()
                     .frame(width: 200, height: 200)
             }
-           
-
+            
             VStack {
                 Text("\(sharedMusicViewModel.music?.nombre ?? "Error")")
                     .font(.custom("AlegreyaSans-Medium", size: 30))
@@ -50,14 +59,46 @@ struct DetalleMusicView: View {
                     .foregroundColor(Color.gray)
             }
             
-            Image(ImageResource.reproductorMusica)
-            Image(ImageResource.pausa)
+            HStack {
+                Spacer()
+                Text(timeIsSeconds)
+            }
+            .padding()
+                        
+            Slider(value: $detalleMusicaViewModel.publicadorProgressValue) {
+                didChange in
+                detalleMusicaViewModel.didSliderChanged(didChange)
+            }
+            .padding()
+
+            Button(action: {
+                isButtonPlayed.toggle()
+                if isButtonPlayed {
+                    detalleMusicaViewModel.detalleMusicMediaPlayer.play()
+                } else {
+                    detalleMusicaViewModel.detalleMusicMediaPlayer.pause()
+                }
+            }, label: {
+                ZStack {
+                    Circle()
+                        .frame(width: 80, height: 80)
+                        .accentColor(Color.gray as Color?)
+                        .shadow(radius: 10)
+                    if isButtonPlayed {
+                        Image(systemName: "pause.fill")
+                            .foregroundColor(.white)
+                            .font(.system(.title))
+                    } else {
+                        Image(systemName: "play.fill")
+                            .foregroundColor(.white)
+                            .font(.system(.title))
+                    }
+                }
+            })
+            
+            //Image(ImageResource.pausa)
             
         }
-        .navigationBarBackButtonHidden(true)
-        .toolbar(content: {
-            TextToolbarContent()
-        })
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Error"),
@@ -70,10 +111,10 @@ struct DetalleMusicView: View {
             )
         }
         .onAppear(perform: {
-            reproductorViewModel.starMusicDetalleWebService(id: sharedMusicViewModel.music?.id ?? 0)
+            detalleMusicaViewModel.starMusicDetalleWebService(id: sharedMusicViewModel.music?.id ?? 0)
         })
-        .onReceive(reproductorViewModel.$reproductorUiState, perform: { reproductorMusicState in
-            switch (reproductorMusicState) {
+        .onReceive(detalleMusicaViewModel.$reproductorUiState, perform: { estadoUiState in
+            switch (estadoUiState) {
             case .inicial:
                 break
             case .cargando:
@@ -89,6 +130,9 @@ struct DetalleMusicView: View {
                 showLoading = false
                 break
             }
+        })
+        .onReceive(detalleMusicaViewModel.$publicadorTimeinSeconds, perform: { timeInSeconds in
+            timeIsSeconds = timeInSeconds
         })
     }
 }

@@ -10,15 +10,17 @@ import SwiftUI
 struct MenuView: View {
     var body: some View {
         TabView {
-            WelcomeView()
+            NavigationView{
+                WelcomeView()
+            }
                 .tabItem {
                     Image(systemName: "house")
                 }
-            
-            MusicView()
-                .tabItem {
-                    Image(systemName: "music.note.list")
-                }
+            NavigationView {
+                MusicView()
+            }.tabItem {
+                Image(systemName: "music.note.list")
+            }
             
             ProfileView()
                 .tabItem {

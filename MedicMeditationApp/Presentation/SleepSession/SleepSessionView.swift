@@ -14,51 +14,28 @@ struct SleepSessionView: View {
                 .font(.custom("AlegreyaSans-Medium", size: 35))
             
             HStack(spacing: 25) {
-                ZStack {
-                    Image(ImageResource.cardGreenWhite)
-                    VStack {
-                        Image(ImageResource.sleep)
-                        VStack {
-                            Text("5h 30m")
-                                .font(.custom("AlegreyaSans-Medium", size: 18))
-                            
-                            Text("Sleep")
-                                .font(.custom("AlegreyaSans-Regular", size: 12))
-                        }
-                        .foregroundColor(Color.white)
-                    }
-                }
                 
-                ZStack {
-                    Image(ImageResource.cardGreenBlack)
-                    VStack {
-                        Image(ImageResource.deep)
-                        VStack {
-                            Text("1h 10m")
-                                .font(.custom("AlegreyaSans-Medium", size: 18))
-                            
-                            Text("Deep")
-                                .font(.custom("AlegreyaSans-Regular", size: 12))
-                        }
-                        .foregroundColor(Color.white)
-                    }
-                }
+                SleepCard(
+                    textoDeCard: "5h 30m",
+                    subtextoDeCard: "Sleep",
+                    imagenDeCard: ImageResource.sleep,
+                    fondoCard: ImageResource.cardGreenWhite
+                )
                 
-                ZStack {
-                    Image(ImageResource.cardGreenWhite)
-                    VStack {
-                        Image(ImageResource.quality)
-                        VStack {
-                            Text("3h 30m")
-                                .font(.custom("AlegreyaSans-Medium", size: 18))
-                            
-                            Text("Quality")
-                                .font(.custom("AlegreyaSans-Regular", size: 12))
-                            
-                        }
-                    }
-                    .foregroundColor(Color.white)
-                }
+                SleepCard(
+                    textoDeCard: "1h 10m",
+                    subtextoDeCard: "Deep",
+                    imagenDeCard: ImageResource.deep,
+                    fondoCard: ImageResource.cardGreenBlack
+                )
+                
+                SleepCard(
+                    textoDeCard: "3h 30m",
+                    subtextoDeCard: "Quality",
+                    imagenDeCard: ImageResource.quality,
+                    fondoCard: ImageResource.cardGreenWhite
+                )
+                
             }
             
             Text("Bedtime")
