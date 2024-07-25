@@ -2,17 +2,27 @@ PODS:
   - GRDB.swift (6.24.1):
     - GRDB.swift/standard (= 6.24.1)
   - GRDB.swift/standard (6.24.1)
+  - SDWebImage (5.19.0):
+    - SDWebImage/Core (= 5.19.0)
+  - SDWebImage/Core (5.19.0)
+  - SDWebImageSwiftUI (3.0.0):
+    - SDWebImage (~> 5.10)
 
 DEPENDENCIES:
   - GRDB.swift (= 6.24.1)
+  - SDWebImageSwiftUI (= 3.0.0)
 
 SPEC REPOS:
   trunk:
     - GRDB.swift
+    - SDWebImage
+    - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
   GRDB.swift: 136dcb5d8dddca50aae3ba7d77475f79e7232cd8
+  SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
+  SDWebImageSwiftUI: d0d08ec194f578d184daad619af34260bfbf100c
 
-PODFILE CHECKSUM: b7a959acbfa99ac9d576d97584405078bb693aa9
+PODFILE CHECKSUM: 51590aa9c039d0f052c74867540952f18085214f
 
 COCOAPODS: 1.15.2

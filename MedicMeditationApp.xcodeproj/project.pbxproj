@@ -29,6 +29,13 @@
 		FA67CD522C3879D600AAF128 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CD512C3879D600AAF128 /* Usuario.swift */; };
 		FA67CD542C38AEE600AAF128 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CD532C38AEE600AAF128 /* ProfileViewModel.swift */; };
 		FA67CD562C38B0DF00AAF128 /* ProfileUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CD552C38B0DF00AAF128 /* ProfileUiState.swift */; };
+		FA6878992C51E46200D8BAA7 /* SleepCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6878982C51E46200D8BAA7 /* SleepCard.swift */; };
+		FA68789B2C51E80100D8BAA7 /* WelcomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68789A2C51E80100D8BAA7 /* WelcomeCard.swift */; };
+		FA6A23B12C49DF8A00BD2A70 /* MusicDetalleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A23B02C49DF8A00BD2A70 /* MusicDetalleResponse.swift */; };
+		FA6A23B32C49E1B900BD2A70 /* MusicDetalleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A23B22C49E1B900BD2A70 /* MusicDetalleRepository.swift */; };
+		FA6A23B52C49E1DF00BD2A70 /* MusicDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A23B42C49E1DF00BD2A70 /* MusicDetalle.swift */; };
+		FA6A23B72C49EB4400BD2A70 /* DetalleMusicaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A23B62C49EB4400BD2A70 /* DetalleMusicaViewModel.swift */; };
+		FA6A23B92C49EB5D00BD2A70 /* DetalleMusicUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A23B82C49EB5D00BD2A70 /* DetalleMusicUiState.swift */; };
 		FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */; };
 		FA6DD4A42BF3E66100AE5914 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD4A32BF3E66100AE5914 /* SignIn.swift */; };
 		FA70B4E72C3839F2003656E3 /* UsuarioEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70B4E62C3839F2003656E3 /* UsuarioEntity.swift */; };
@@ -43,7 +50,7 @@
 		FA79272E2BEC542A0047F22C /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = FA79272D2BEC542A0047F22C /* index.js */; };
 		FA7927312BEC55480047F22C /* login_response_200_OK.json in Sources */ = {isa = PBXBuildFile; fileRef = FA7927302BEC55480047F22C /* login_response_200_OK.json */; };
 		FA794F7F2BBE310E00FBF372 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F7E2BBE310E00FBF372 /* MusicView.swift */; };
-		FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F812BBE3CB500FBF372 /* ReproductorView.swift */; };
+		FA794F822BBE3CB500FBF372 /* DetalleMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F812BBE3CB500FBF372 /* DetalleMusicView.swift */; };
 		FA794F852BBE426000FBF372 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA794F842BBE426000FBF372 /* ProfileView.swift */; };
 		FA79CBEE2BE2A7A900B1B612 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBED2BE2A7A900B1B612 /* ForgotPasswordView.swift */; };
 		FA79CBF22BE2B26400B1B612 /* AuthenticationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79CBF12BE2B26400B1B612 /* AuthenticationRootView.swift */; };
@@ -62,6 +69,7 @@
 		FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB00B2BC75D55004767E4 /* TextToolbarContent.swift */; };
 		FA7F86922BE073690081C77F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA7F86912BE073690081C77F /* swiftgen.yml */; };
 		FA7F86992BE08B780081C77F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7F869B2BE08B780081C77F /* Localizable.strings */; };
+		FA82D9A52C518368004447CB /* DetalleMusicMediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82D9A42C518368004447CB /* DetalleMusicMediaPlayer.swift */; };
 		FA83B0502C0EC93E00AD2F75 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */; };
 		FA83B0522C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */; };
 		FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */; };
@@ -129,6 +137,7 @@
 		FA9236782BFE5D8B00433F23 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9236772BFE5D8B00433F23 /* SignInViewModel.swift */; };
 		FA92367B2BFE76DE00433F23 /* MemoriaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92367A2BFE76DE00433F23 /* MemoriaLogin.swift */; };
 		FA92367D2BFE949100433F23 /* LoginUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92367C2BFE949100433F23 /* LoginUiState.swift */; };
+		FAE2968A2C4DE944001FDBA5 /* SharedMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE296892C4DE944001FDBA5 /* SharedMusicViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +190,13 @@
 		FA67CD512C3879D600AAF128 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		FA67CD532C38AEE600AAF128 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FA67CD552C38B0DF00AAF128 /* ProfileUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUiState.swift; sourceTree = "<group>"; };
+		FA6878982C51E46200D8BAA7 /* SleepCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepCard.swift; sourceTree = "<group>"; };
+		FA68789A2C51E80100D8BAA7 /* WelcomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCard.swift; sourceTree = "<group>"; };
+		FA6A23B02C49DF8A00BD2A70 /* MusicDetalleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetalleResponse.swift; sourceTree = "<group>"; };
+		FA6A23B22C49E1B900BD2A70 /* MusicDetalleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetalleRepository.swift; sourceTree = "<group>"; };
+		FA6A23B42C49E1DF00BD2A70 /* MusicDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetalle.swift; sourceTree = "<group>"; };
+		FA6A23B62C49EB4400BD2A70 /* DetalleMusicaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleMusicaViewModel.swift; sourceTree = "<group>"; };
+		FA6A23B82C49EB5D00BD2A70 /* DetalleMusicUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleMusicUiState.swift; sourceTree = "<group>"; };
 		FA6DD4A02BF3E5E400AE5914 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		FA6DD4A32BF3E66100AE5914 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		FA70B4E62C3839F2003656E3 /* UsuarioEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioEntity.swift; sourceTree = "<group>"; };
@@ -195,7 +211,7 @@
 		FA79272D2BEC542A0047F22C /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		FA7927302BEC55480047F22C /* login_response_200_OK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login_response_200_OK.json; sourceTree = "<group>"; };
 		FA794F7E2BBE310E00FBF372 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
-		FA794F812BBE3CB500FBF372 /* ReproductorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReproductorView.swift; sourceTree = "<group>"; };
+		FA794F812BBE3CB500FBF372 /* DetalleMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleMusicView.swift; sourceTree = "<group>"; };
 		FA794F842BBE426000FBF372 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FA79CBED2BE2A7A900B1B612 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		FA79CBF12BE2B26400B1B612 /* AuthenticationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRootView.swift; sourceTree = "<group>"; };
@@ -215,6 +231,7 @@
 		FA7F86912BE073690081C77F /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		FA7F86982BE081C60081C77F /* UserResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserResponse.json; sourceTree = "<group>"; };
 		FA7F869A2BE08B780081C77F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA82D9A42C518368004447CB /* DetalleMusicMediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleMusicMediaPlayer.swift; sourceTree = "<group>"; };
 		FA83B04F2C0EC93E00AD2F75 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		FA83B0512C0ED7C700AD2F75 /* RegistrarUsuarioRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarUsuarioRequest.swift; sourceTree = "<group>"; };
 		FA86AD7D2C04230E00B4A3D1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -255,6 +272,7 @@
 		FA9236772BFE5D8B00433F23 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		FA92367A2BFE76DE00433F23 /* MemoriaLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaLogin.swift; sourceTree = "<group>"; };
 		FA92367C2BFE949100433F23 /* LoginUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUiState.swift; sourceTree = "<group>"; };
+		FAE296892C4DE944001FDBA5 /* SharedMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMusicViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +426,7 @@
 			children = (
 				FA4592C32BBB569100C141CF /* MedicMeditationApp.swift */,
 				FA21A31E2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift */,
+				FAE296892C4DE944001FDBA5 /* SharedMusicViewModel.swift */,
 				FA7E99A92BE1D5D900F8CB88 /* Root */,
 			);
 			path = App;
@@ -421,7 +440,7 @@
 				FA8DF7B32BBF18A6000F3D7A /* Tools */,
 				FA8DF7B02BBF1887000F3D7A /* Meditation */,
 				FA794F832BBE424F00FBF372 /* Person */,
-				FA794F802BBE3C8B00FBF372 /* Reproductor */,
+				FA794F802BBE3C8B00FBF372 /* DetalleMusica */,
 				FA794F7D2BBE30FB00FBF372 /* Music */,
 				FA43A5802BBDD036001B2A5E /* Welcome */,
 				FA43A57D2BBDCBE1001B2A5E /* Menu */,
@@ -469,6 +488,7 @@
 				FA7B05062C0188D100312E14 /* SignUpRepository.swift */,
 				FA8C1B192C0A61B300943310 /* VerificationRepository.swift */,
 				FA90AFB82C3F64820030A185 /* MusicRepository.swift */,
+				FA6A23B22C49E1B900BD2A70 /* MusicDetalleRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -481,6 +501,7 @@
 				FA8C1B172C0A615100943310 /* Verification.swift */,
 				FA67CD512C3879D600AAF128 /* Usuario.swift */,
 				FA90AFB62C3F64410030A185 /* Music.swift */,
+				FA6A23B42C49E1DF00BD2A70 /* MusicDetalle.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -545,12 +566,15 @@
 			path = Music;
 			sourceTree = "<group>";
 		};
-		FA794F802BBE3C8B00FBF372 /* Reproductor */ = {
+		FA794F802BBE3C8B00FBF372 /* DetalleMusica */ = {
 			isa = PBXGroup;
 			children = (
-				FA794F812BBE3CB500FBF372 /* ReproductorView.swift */,
+				FA794F812BBE3CB500FBF372 /* DetalleMusicView.swift */,
+				FA6A23B62C49EB4400BD2A70 /* DetalleMusicaViewModel.swift */,
+				FA6A23B82C49EB5D00BD2A70 /* DetalleMusicUiState.swift */,
+				FA82D9A42C518368004447CB /* DetalleMusicMediaPlayer.swift */,
 			);
-			path = Reproductor;
+			path = DetalleMusica;
 			sourceTree = "<group>";
 		};
 		FA794F832BBE424F00FBF372 /* Person */ = {
@@ -584,6 +608,8 @@
 			children = (
 				FA8E77472BBCE58A0093EFC2 /* PrimaryButton.swift */,
 				FA7C2F332C47680C00DF832B /* MusicCard.swift */,
+				FA6878982C51E46200D8BAA7 /* SleepCard.swift */,
+				FA68789A2C51E80100D8BAA7 /* WelcomeCard.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -687,6 +713,7 @@
 				FA88D4D52BF2E76F00EB8BEA /* SignUpResponse.swift */,
 				FA88D4D72BF2E78600EB8BEA /* VerificationResponse.swift */,
 				FA90AFB42C3F40F10030A185 /* MusicResponse.swift */,
+				FA6A23B02C49DF8A00BD2A70 /* MusicDetalleResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1061,6 +1088,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6A23B52C49E1DF00BD2A70 /* MusicDetalle.swift in Sources */,
 				FA8C1B182C0A615100943310 /* Verification.swift in Sources */,
 				FA8E77482BBCE58A0093EFC2 /* PrimaryButton.swift in Sources */,
 				FA7B05072C0188D100312E14 /* SignUpRepository.swift in Sources */,
@@ -1069,6 +1097,7 @@
 				FA67CD562C38B0DF00AAF128 /* ProfileUiState.swift in Sources */,
 				FA7927252BEC42440047F22C /* VerificationView.swift in Sources */,
 				FA88D4D42BF2B2A200EB8BEA /* LoginResponse.swift in Sources */,
+				FA6A23B92C49EB5D00BD2A70 /* DetalleMusicUiState.swift in Sources */,
 				FA67CD542C38AEE600AAF128 /* ProfileViewModel.swift in Sources */,
 				FA9236782BFE5D8B00433F23 /* SignInViewModel.swift in Sources */,
 				FA43A57F2BBDCBFE001B2A5E /* MenuView.swift in Sources */,
@@ -1080,15 +1109,19 @@
 				FA8C1B1C2C0A630600943310 /* VerificationViewModel.swift in Sources */,
 				FA90AFB92C3F64820030A185 /* MusicRepository.swift in Sources */,
 				FA6DD4A12BF3E5E400AE5914 /* LoginRepository.swift in Sources */,
+				FAE2968A2C4DE944001FDBA5 /* SharedMusicViewModel.swift in Sources */,
 				FA7B05092C01890200312E14 /* SignUp.swift in Sources */,
 				FA86AD7E2C04230E00B4A3D1 /* LoginRequest.swift in Sources */,
+				FA68789B2C51E80100D8BAA7 /* WelcomeCard.swift in Sources */,
 				FA4592D02BBB569200C141CF /* MedicMeditationApp.xcdatamodeld in Sources */,
 				FA4592C42BBB569100C141CF /* MedicMeditationApp.swift in Sources */,
 				FA79CBF22BE2B26400B1B612 /* AuthenticationRootView.swift in Sources */,
 				FA7EB00C2BC75D55004767E4 /* TextToolbarContent.swift in Sources */,
 				FA8DF7B62BBF1C26000F3D7A /* ToolsView.swift in Sources */,
 				FA7EB00A2BC719B6004767E4 /* NavigationModifier.swift in Sources */,
+				FA6A23B12C49DF8A00BD2A70 /* MusicDetalleResponse.swift in Sources */,
 				FA21A31F2C1155AE00A403A2 /* SharedAuthenticationViewModel.swift in Sources */,
+				FA6A23B32C49E1B900BD2A70 /* MusicDetalleRepository.swift in Sources */,
 				FA79CBFA2BE2B6AC00B1B612 /* Fonts.swift in Sources */,
 				FA794F852BBE426000FBF372 /* ProfileView.swift in Sources */,
 				FA70EC522C46C987001FF007 /* MusicViewModel.swift in Sources */,
@@ -1117,6 +1150,7 @@
 				FA88D4D62BF2E76F00EB8BEA /* SignUpResponse.swift in Sources */,
 				FA75097B2BE414030079D5AA /* PrincipalRootView.swift in Sources */,
 				FA7E99AB2BE1DA2600F8CB88 /* AppRootManager.swift in Sources */,
+				FA82D9A52C518368004447CB /* DetalleMusicMediaPlayer.swift in Sources */,
 				FA7EB0082BC71999004767E4 /* View+Extension.swift in Sources */,
 				FA88D4CB2BF2AC5500EB8BEA /* ErrorResponse.swift in Sources */,
 				FA90AFB52C3F40F10030A185 /* MusicResponse.swift in Sources */,
@@ -1124,7 +1158,9 @@
 				FA88D4CD2BF2AC7E00EB8BEA /* MedicJSApi.swift in Sources */,
 				FA718D2D2C1CCF390040B0B7 /* MedicMeditationGRDB.swift in Sources */,
 				FA79CBF72BE2B6AC00B1B612 /* Assets.swift in Sources */,
-				FA794F822BBE3CB500FBF372 /* ReproductorView.swift in Sources */,
+				FA6878992C51E46200D8BAA7 /* SleepCard.swift in Sources */,
+				FA6A23B72C49EB4400BD2A70 /* DetalleMusicaViewModel.swift in Sources */,
+				FA794F822BBE3CB500FBF372 /* DetalleMusicView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

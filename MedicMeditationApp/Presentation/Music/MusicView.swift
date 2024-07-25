@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MusicView: View {
+    //Pasar los datos entre pantallas y pintr solo eso
     
     @State var isActiveReproductor: Bool = false
     @State private var musicArray : [Music] = []
@@ -15,12 +16,15 @@ struct MusicView: View {
     @State private var showLoading: Bool = false
     @State private var mensajeDeAlerta: String = ""
     
+    //No se inicializa
+    @EnvironmentObject private var sharedMusicViewModel : SharedMusicViewModel
+    
     @StateObject private var musicViewModel = MusicViewModel(
         musicRepository: MusicRepository(
             medicPHPApi: MedicPHPApi()
         )
     )
-    
+        
     var body: some View {
         VStack {
             
@@ -33,7 +37,7 @@ struct MusicView: View {
             }
         }
         .padding()
-        .navigation(ReproductorView(), $isActiveReproductor)
+        .navigation(DetalleMusicView(), $isActiveReproductor)
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Error"),
@@ -64,20 +68,27 @@ struct MusicView: View {
     }
     
     func celdaDeMusica(music: Music) -> some View {
-        return  HStack {
-            Image(ImageResource.paintingForest)
-            VStack(alignment:.leading) {
-                Text("\(music.nombre)")
-                    .font(.custom("AlegreyaSans-Medium", size: 20))
-                
-                Text("\(music.reproduccion) Listening")
-                    .font(.custom("AlegreyaSans-Light", size: 12))
+        return Button(action: {
+            sharedMusicViewModel.music = music
+            isActiveReproductor = true
+        }, label: {
+            HStack {
+                Image(ImageResource.paintingForest)
+                VStack(alignment:.leading) {
+                    Text("\(music.nombre)")
+                        .font(.custom("AlegreyaSans-Medium", size: 20))
+                        .foregroundColor(Color.black)
+                    Text("\(music.reproduccion) Listening")
+                        .font(.custom("AlegreyaSans-Light", size: 12))
+                        .foregroundColor(Color.gray)
+                }
+                Spacer()
+                Text("\(music.minuto) Min")
+                    .font(.custom("AlegreyaSans-Medium", size: 15))
+                    .foregroundColor(Color.gray)
             }
-            Spacer()
-            Text("\(music.minuto) Min")
-                .font(.custom("AlegreyaSans-Medium", size: 15))
-        }
-        .padding()
+            .padding()
+        })
     }
 }
 

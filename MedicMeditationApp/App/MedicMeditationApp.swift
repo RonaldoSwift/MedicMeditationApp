@@ -14,6 +14,7 @@ struct MedicMeditationApp: App {
     let medicMeditationGRDB = MedicMeditationGRDB()
     
     var sharedAuthenticationViewModel = SharedAuthenticationViewModel()
+    var sharedMusicViewModel = SharedMusicViewModel()
     
     var memoriaLogin = MemoriaLogin()
     
@@ -24,12 +25,14 @@ struct MedicMeditationApp: App {
                 case .authentication:
                     if memoriaLogin.getUserLogged() == true {
                         PrincipalRootView()
+                            .environmentObject(sharedMusicViewModel)
                     } else {
                         AuthenticationRootView()
                             .environmentObject(sharedAuthenticationViewModel)
                     }
                 case .principal:
                     PrincipalRootView()
+                        .environmentObject(sharedMusicViewModel)
                 }
             }
             .environmentObject(appRootManager)

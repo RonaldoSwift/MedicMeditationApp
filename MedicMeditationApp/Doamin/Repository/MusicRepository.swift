@@ -22,7 +22,8 @@ class MusicRepository {
     {
         return medicPHPApi.fetchMusics()
             .map { (musicResponse:MusicResponse) in
-                musicResponse.data.map { (musicDataResponse:MusicDataResponse) in
+                musicResponse.data
+                    .map { (musicDataResponse:MusicDataResponse) in
                     Music(
                         id: musicDataResponse.id,
                         nombre: musicDataResponse.nombre,
